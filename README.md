@@ -1,2 +1,2 @@
 # cart-253-
-Pippin barr coursework repository for Cart 253 
+Dyna coursework repository for Cart 253 
