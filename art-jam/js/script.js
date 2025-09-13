@@ -20,6 +20,11 @@ function setup() {
 /**
  * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
 */
-function draw() {
+function draw(){
+background(255);
 
+//brown hair 
+noStroke()
+fill(247,221,212)
 }
+
