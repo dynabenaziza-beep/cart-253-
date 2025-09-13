@@ -19,4 +19,7 @@ function setup() {
 function draw(){
 background(255);
 
+//brown hair 
+noStroke()
+fill(247,221,212)
 }
