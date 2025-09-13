@@ -1,17 +1,17 @@
 /**
- * Title of Project
- * Author Name
+ * art jam 
+ * dyna benaziza
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * self portrait lego set inspired 
  */
 
 "use strict";
 
 /**
- * OH LOOK I DIDN'T DESCRIBE SETUP!!
+ * set up for my self portrait artjam project , i want my et up to be simple so the viewer focuse more on the detail of the self portrait !
 */
 function setup() {
+    createCanvas(680,680);
 
 }
 
@@ -20,5 +20,6 @@ function setup() {
  * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
 */
 function draw() {
+    background(300);
 
 }
