@@ -14,7 +14,7 @@
 */
 function setup() {
     // A 640x480 canvas
-    createCanvas(460, 480);
+    createCanvas(480, 480);
 
     // Don't show the cursor
     noCursor();
