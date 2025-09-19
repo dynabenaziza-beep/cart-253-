@@ -24,6 +24,6 @@ fill(245,245,221),
 
 
 //draw the rectangle 
- rect(50,50,50,10);
+ rect(20,50,250,190);
 }
 
