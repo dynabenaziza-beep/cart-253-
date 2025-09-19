@@ -14,6 +14,8 @@
 function setup() {
   createCanvas(520, 520);
 
+  rect(-20,-30,55,55)
+
 }
 
 
@@ -21,10 +23,8 @@ function setup() {
  * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
 */
 function draw(){
-background(255);
+background(0);
 
-//brown hair 
-noStroke()
-fill(247,221,212)
+
 }
 
