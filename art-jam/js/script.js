@@ -12,19 +12,18 @@
  * OH LOOK I DIDN'T DESCRIBE SETUP!!
 */
 function setup() {
-  createCanvas(520, 520);
+  createCanvas(300,300);
 
-  rect(-20,-30,55,55)
 
 }
 
 
-/**
- * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
-*/
 function draw(){
-background(0);
+background(255);
+fill(245,245,221),
 
 
+//draw the rectangle 
+ rect(50,50,50,10);
 }
 
