@@ -12,7 +12,7 @@
  * OH LOOK I DIDN'T DESCRIBE SETUP!!
 */
 function setup() {
-  createCanvas(300,300);
+  createCanvas(800,800);
 
 
 }
@@ -20,10 +20,14 @@ function setup() {
 
 function draw(){
 background(255);
+// collor the rectangle beige to match my skin color 
 fill(245,245,221),
 
 
 //draw the rectangle 
- rect(20,50,250,190);
+ rect(9,50,250,190);
+//
+
+
 }
 
