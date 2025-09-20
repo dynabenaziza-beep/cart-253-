@@ -1,16 +1,4 @@
-/**
- * Title of Project
- * Author Name
- * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
- */
 
-"use strict";
-
-/**
- * OH LOOK I DIDN'T DESCRIBE SETUP!!
-*/
 function setup() {
   createCanvas(800,800);
 
@@ -26,10 +14,18 @@ fill(245,230,200);
 rect(150,100,250,190);
 
 
+
 // draw white of the eye(sclera) 
 noStroke();
 fill(255);
-ellipse(270,200,220,160);
+
+//draw a more almond shape for the eye 
+beginShape();
+vertex(210, 200);
+bezierVertex(240, 160, 300, 160, 330, 200);
+bezierVertex(300,240,240,240,210,200);
+endShape(CLOSE);
+
 
 
 //draw the iris of the eye (green)
@@ -47,5 +43,8 @@ ellipse(290,185,20,40)
 //#2 white highlight 
 fill(255);
 ellipse(240,155,45,50)
+
+
+
 }
 
