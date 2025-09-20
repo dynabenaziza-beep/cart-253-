@@ -26,16 +26,20 @@ fill(245,245,221);
 rect(150,100,250,190);
 
 
-//white of the eye 
+// draw white of the eye(sclera) 
 noStroke();
 fill(255);
-ellipse(270,200,225,160);
+ellipse(270,200,220,160);
 
 
 //draw the iris of the eye (green)
 noStroke();  
 fill(0,255,0);
 ellipse(270,200,90,160);
+
+//draw the pupil 
+fill(0);
+ellipse(270,200,30,50);
 
 }
 
