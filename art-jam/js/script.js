@@ -41,7 +41,11 @@ ellipse(270,200,90,160);
 fill(0);
 ellipse(270,200,30,50);
 
+//#1 white highlight 
 fill(255);
 ellipse(290,185,20,40)
+//#2 white highlight 
+fill(255);
+ellipse(240,155,45,50)
 }
 
