@@ -22,20 +22,20 @@ function draw(){
 background(255);
 // collor the rectangle beige to match my skin color 
 fill(245,245,221);
-
-
-
-
 //draw the rectangle to be at the positon i want it to be 
- rect(150,100,250,190);
- //draw the shape outline 
-stroke();
-noFill();
+rect(150,100,250,190);
+
+
+//white of the eye 
+noStroke();
+fill(255);
+ellipse(270,200,225,160);
+
 
 //draw the iris of the eye (green)
 noStroke();  
 fill(0,255,0);
-ellipse(270,200,90,170); 
+ellipse(270,200,90,160);
 
 }
 
