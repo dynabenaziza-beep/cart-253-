@@ -21,7 +21,7 @@ function setup() {
 function draw(){
 background(255);
 // collor the rectangle beige to match my skin color 
-fill(245,245,221);
+fill(245,230,200);
 //draw the rectangle to be at the positon i want it to be 
 rect(150,100,250,190);
 
