@@ -21,9 +21,9 @@ fill(255);
 
 //draw a more almond shape for the eye 
 beginShape();
-vertex(210, 200);
-bezierVertex(240, 160, 300, 160, 330, 200);
-bezierVertex(300,240,240,240,210,200);
+vertex(150, 195);
+bezierVertex(200 ,90, 350, 90, 400, 195);//top
+bezierVertex(350,300,200,300,150,195);// bottom
 endShape(CLOSE);
 
 
