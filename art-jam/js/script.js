@@ -12,8 +12,8 @@ let dragging1= false;
 // variable to make the ( interactive piece #2)
 let rect2X= 400 ;
 let rect2Y= 300;
-let rect2W=300;
-let rect2H= 150;
+let rect2W=430;
+let rect2H= 110;
 let dragging2 = false;
 
 
