@@ -187,8 +187,9 @@ pop();
 // ear 
 push();
 translate(rectX-50,rectY + rectH* 0.4);
+scale(3);
 stroke(0);
-strokeWeight(6);
+strokeWeight(3);
 fill(245,230,200);
 
 
