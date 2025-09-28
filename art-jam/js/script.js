@@ -19,7 +19,7 @@ let dragging2 = false;
 
 
 function setup() {
-  createCanvas(800,800);
+  createCanvas(900,900);
 
 
 
@@ -113,11 +113,24 @@ bezierVertex(
 
 endShape(CLOSE);
 
+//BIG EYE 
+push();
+translate(280,600); //move it tot the bottom left 
+rotate(radians(20)); //move the eye sideway 
 
+fill(0);
+ellipse(0,0,200,250);
 
+fill(0,255,0);
+ellipse(10,10,200,200);
 
+fill(0);
+ellipse(10,10,80,80);
 
-
+//highlight
+fill(255);
+ellipse(50,-30,50,50);
+pop();
 
 
 
