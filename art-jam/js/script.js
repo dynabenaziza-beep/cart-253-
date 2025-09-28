@@ -52,18 +52,18 @@ rect(rect2X,rect2Y,rect2W ,rect2H);
 
 
 
-
+//characteristic #1
 // draw white of the eye(sclera) 
 noStroke();
 fill(255);
 
 //draw a more almond shape for the eye 
+//CREATING a custom shape 
 beginShape();
 vertex(rectX, rectY+95);
 bezierVertex(rectX+50 ,rectY-10, rectX+200, rectY-10, rectX+250, rectY+95);//top
 bezierVertex(rectX+200,rectY+200,rectX+50,rectY+200,rectX,rectY+95);// bottom
 endShape(CLOSE);
-
 
 
 //draw the iris of the eye (green)
@@ -81,6 +81,46 @@ ellipse(rectX+140,rectY+85,20,40);
 //#2 white highlight 
 fill(255);
 ellipse(rectX+90,rectY+55,45,50);
+
+//characteristic #2
+noStroke();
+fill(255);
+
+  // male a smaller almond shape inside the rectangle
+let eyeWidth= rect2W* 0.5; // 80% of rectangle width 
+let eyeHeight = rect2H *1.2; // taller so only half shows 
+let eyeX = rect2X + rect2W* 0.25; // centerec horizontally 
+let eyeY = rect2Y+ rect2H* 0.1;  // moove down 
+
+
+// use percentage instead of fixed pixel number 
+beginShape();
+vertex(eyeX,eyeY+ eyeHeight/2);
+
+bezierVertex(
+  eyeX +  eyeWidth * 0.25, eyeY+ eyeHeight* 0.1,
+  eyeX + eyeWidth * 0.75, eyeY + eyeHeight * 0.1,
+  eyeX + eyeWidth,      eyeY + eyeHeight /2  
+
+);
+
+bezierVertex(
+  eyeX + eyeWidth * 0.75, eyeY+ eyeHeight* 1.2 ,
+  eyeX + eyeWidth * 0.25,   eyeY+ eyeHeight * 1.2,
+  eyeX,           eyeY+ eyeHeight/2 // 
+  
+);
+
+endShape(CLOSE);
+
+
+
+
+
+
+
+
+
 }
 //
 function mousePressed(){
