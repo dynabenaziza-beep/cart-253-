@@ -183,6 +183,32 @@ vertex(-65,0);
 endShape(CLOSE);
 pop();
 
+
+// ear 
+push();
+translate(rectX-50,rectY + rectH* 0.4);
+stroke(0);
+strokeWeight(6);
+fill(245,230,200);
+
+
+//ouside shape(ear)
+beginShape();
+vertex(0,-40);
+bezierVertex(-40,-40,-40,40,0,40);
+bezierVertex (20,40,20,-40,0,-40);
+endShape(CLOSE);
+
+noFill();
+stroke(0);
+strokeWeight(4);
+beginShape();
+vertex(-10, -20);
+bezierVertex(-20,-10,-20,10,-10,20);
+endShape();
+pop();
+
+
 }
 //
 function mousePressed(){
