@@ -133,6 +133,23 @@ ellipse(50,-30,50,50);
 pop();
 
 
+//nose (abstarct) shape trapeziod 
+let nx= rectX+ rectW * 0.60;
+let ny= rectY+ rectH * 0.25;
+let nh = rectH * 1.6;
+let ntop = 90;
+let nbot= 50;
+
+stroke(0);
+strokeWeight(6);
+strokeJoin(ROUND);
+fill(245,200,160);
+beginShape();
+vertex(nx,ny);
+vertex(nx+ ntop,ny);
+vertex(nx+nbot, ny +nh);
+vertex(nx,ny + nh);
+endShape(CLOSE);
 
 }
 //
