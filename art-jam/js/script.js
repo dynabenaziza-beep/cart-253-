@@ -151,6 +151,38 @@ vertex(nx+nbot, ny +nh);
 vertex(nx,ny + nh);
 endShape(CLOSE);
 
+// mouth 
+push ();
+translate(500,700);
+scale(2.1);
+
+//outline of the mouth 
+noStroke ();
+fill(0);//black
+beginShape();
+vertex(-70,0);
+bezierVertex(-50,-40,50,-40,70,0);
+bezierVertex(50,40,-50,40,-70,0);
+endShape(CLOSE);
+
+
+//upperliip
+fill(255,140,140);//red 
+beginShape();
+vertex(-65,0);
+bezierVertex(-45,-30,45,-30,65,0);
+vertex(-65,0);
+endShape(CLOSE);
+
+//Lower lip 
+fill(255,140,140);
+beginShape();
+vertex(-65,0);
+bezierVertex(-45,30,45,30,65,0);
+vertex(-65,0);
+endShape(CLOSE);
+pop();
+
 }
 //
 function mousePressed(){
