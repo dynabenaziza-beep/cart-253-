@@ -112,6 +112,15 @@ bezierVertex(
 );
 
 endShape(CLOSE);
+//abstract head shape 
+stroke(0);
+strokeWeight(4);
+fill(245,230,160);
+vertex(rectX+ 30, rectY);//top left of the head 
+vertex(rectX+180,rectY-40);//start curve at the top 
+bezierVertex(rectX+350,rectY+ 20, rectX+ 350,rectY+ 250 ,rectX+180, rectY+ 380);
+vertex(rectX+ 30 , rectY+380);
+endShape(CLOSE);
 
 //BIG EYE 
 push();
