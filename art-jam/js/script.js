@@ -218,6 +218,27 @@ bezierVertex(-20,-10,-20,10,-10,20);
 endShape();
 pop();
 
+//neck abstract 
+stroke(0);
+strokeWeight(4);
+fill(240,200,160);
+
+beginShape();
+vertex(500,500);
+vertex(640,500);
+vertex(680,740);
+vertex(470,760);
+endShape(CLOSE);
+// base of neck 
+fill(230,180,150);
+  stroke(0);
+  strokeWeight(4);
+  beginShape();
+  vertex(450,760);
+  vertex(720,760);
+  vertex(850,900);
+  vertex(300,900);
+endShape(CLOSE);
 
 }
 //
