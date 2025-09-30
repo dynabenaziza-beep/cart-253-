@@ -93,6 +93,20 @@ strokeWeight(6);
 fill(160,100,50);
 ellipse(550,80,260,180); //oval shape for the top of the hair 
 
+//8
+stroke
+strokeWeight(6);
+//(x,y(up-down),w,h)
+fill(160,100,50);
+ellipse(400,95,260,180);
+
+
+//9
+
+//10
+
+
+
 // head shape 
 stroke(0);
 strokeWeight(6);
@@ -104,6 +118,9 @@ bezierVertex(200,100,700,80,800,250);
 bezierVertex(780,550,700,850,500,900);
 vertex(500,200);
 endShape(CLOSE);
+
+
+
 
 //second half of the head  right side 
 
@@ -129,7 +146,7 @@ endShape(CLOSE);
 //dividing line head shape 
 stroke(0);
 strokeWeight(8);
-line(250,210,90);
+line(500,210,90);
 
 //yellow face block ( bottom right )
 stroke(0);
@@ -335,13 +352,6 @@ fill(230,180,150);
   vertex(850,900);
   vertex(300,900);
 endShape(CLOSE);
-
-
-
-
-
-
-
 
 }
 //
