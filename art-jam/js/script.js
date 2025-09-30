@@ -95,7 +95,7 @@ ellipse(550,80,260,180); //oval shape for the top of the hair
 
 //8 
 //eigth curly hair layered (top left)
-stroke
+stroke(0);
 strokeWeight(6);
 //(x,y(up-down),w,h)
 fill(160,100,50);
@@ -112,6 +112,37 @@ stroke(0);
 strokeWeight(6);
 fill(160,100,50);
 ellipse(750,350,220,160);
+
+//2
+stroke (0);
+strokeWeight(6);
+fill(160,100,50);
+ellipse(870,340,110,140);
+
+//7
+stroke(0);
+strokeWeight(6);
+fill(160,100,50);
+ellipse(840,340,110,140);
+
+//3
+stroke(0);
+ellipse (820,400,95,130)
+fill(160,100,50);
+
+//4
+stroke(0);
+ellipse(820,500,85,120)
+fill(160,100,50);
+//5
+stroke(0);
+ellipse (820,600,75,110);
+fill(160,100,50);
+//6
+stroke(0);
+ellipse(820,700,65,100);
+fill(160,100,50);
+
 
 
 
