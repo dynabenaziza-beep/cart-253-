@@ -42,7 +42,58 @@ if (dragging2) {
     rect2X = mouseX;
     rect2Y = mouseY;
 }
-// head shhap 
+
+//Hair first layer (top)
+stroke (0);
+strokeWeight(6);
+fill(160,100,50);
+ellipse(700,200,260,180); //oval shape for the top of the hair 
+
+
+//Hair second curly layer (top)
+stroke (0);
+strokeWeight(6);
+fill(160,100,50);
+ellipse(650,160,260,180); //oval shape for the top of the hair 
+
+//3
+//Hair third curly layer (top)
+stroke (0);
+strokeWeight(6);
+fill(160,100,50);
+ellipse(750,130,260,180); //oval shape for the top of the hair 
+
+//3 
+//Hair fourth curly layer (top)
+stroke (0);
+strokeWeight(6);
+fill(160,100,50);
+ellipse(790,220,260,180); //oval shape for the top of the hair 
+
+
+//4/
+//Hair  fifth curly layer (top)
+stroke (0);
+strokeWeight(6);
+fill(160,100,50);
+ellipse(590,100,260,180); //oval shape for the top of the hair 
+
+//6
+//Hair 6 curly layer (top)
+stroke (0);
+strokeWeight(6);
+fill(160,100,50);
+ellipse(700,220,260,180); //oval shape for the top of the hair 
+
+
+//7
+//Hair seven curly layer (top)
+stroke (0);
+strokeWeight(6);
+fill(160,100,50);
+ellipse(550,80,260,180); //oval shape for the top of the hair 
+
+// head shape 
 stroke(0);
 strokeWeight(6);
 //lleft side head 
@@ -284,6 +335,10 @@ fill(230,180,150);
   vertex(850,900);
   vertex(300,900);
 endShape(CLOSE);
+
+
+
+
 
 
 
