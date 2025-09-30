@@ -30,6 +30,8 @@ function draw() {
 background(255);
 
 
+
+
 //when dragging it will update the position of the rectangle 
 if (dragging1) {
     rectX = mouseX;
@@ -40,6 +42,18 @@ if (dragging2) {
     rect2X = mouseX;
     rect2Y = mouseY;
 }
+// head shape 
+stroke(0);
+strokeWeight(6);
+fill(245,220,160);
+
+beginShape();
+vertex(500,200);
+bezierVertex(650,180,700,400,500,500);
+vertex(400,500);
+vertex(400,500);
+endShape(CLOSE);
+
 //rect1 
 // collor the rectangle beige to match my skin color 
 fill(245,230,200);
@@ -111,16 +125,8 @@ bezierVertex(
   
 );
 
-endShape(CLOSE);
-//abstract head shape 
-stroke(0);
-strokeWeight(4);
-fill(245,230,160);
-vertex(rectX+ 30, rectY);//top left of the head 
-vertex(rectX+180,rectY-40);//start curve at the top 
-bezierVertex(rectX+350,rectY+ 20, rectX+ 350,rectY+ 250 ,rectX+180, rectY+ 380);
-vertex(rectX+ 30 , rectY+380);
-endShape(CLOSE);
+
+
 
 //BIG EYE 
 push();
@@ -159,6 +165,8 @@ vertex(nx+ ntop,ny);
 vertex(nx+nbot, ny +nh);
 vertex(nx,ny + nh);
 endShape(CLOSE);
+
+
 
 // mouth 
 push ();
