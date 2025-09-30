@@ -93,17 +93,19 @@ strokeWeight(6);
 fill(160,100,50);
 ellipse(550,80,260,180); //oval shape for the top of the hair 
 
-//8
+//8 
+//eigth curly hair layered (top left)
 stroke
 strokeWeight(6);
 //(x,y(up-down),w,h)
 fill(160,100,50);
 ellipse(400,95,260,180);
 
+//9 ninth curly har layered (top left 
+// bigger then the other 
+fill(160,100,50);
+ellipse(400,95,300,180);
 
-//9
-
-//10
 
 
 
