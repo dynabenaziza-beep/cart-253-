@@ -42,16 +42,53 @@ if (dragging2) {
     rect2X = mouseX;
     rect2Y = mouseY;
 }
-// head shape 
+// head shhap 
 stroke(0);
 strokeWeight(6);
+//lleft side head 
 fill(245,220,160);
+beginShape();
+vertex(250,150);
+bezierVertex(200,100,700,80,800,250);
+bezierVertex(780,550,700,850,500,900);
+vertex(500,200);
+endShape(CLOSE);
+
+//second half of the head  right side 
+
+fill(255,190,180);
 
 beginShape();
 vertex(500,200);
-bezierVertex(650,180,700,400,500,500);
+bezierVertex(750,250,720,500,500,500);
+vertex(500,200);
+endShape(CLOSE);
+
+//third half of the head 
+stroke(0);
+strokeWeight(6);
+fill(180,210,180);
+
+beginShape();
+vertex(520,200);
+bezierVertex(700,520,720,720,520,800);
+bezierVertex(460,780,480,600,520,500)
+endShape(CLOSE);
+
+//dividing line head shape 
+stroke(0);
+strokeWeight(8);
+line(250,210,90);
+
+//yellow face block ( bottom right )
+stroke(0);
+strokeWeight(6);
+fill(250,210,90);
+beginShape();
 vertex(400,500);
-vertex(400,500);
+vertex(520,500);
+vertex(520,760);
+vertex(300,760);
 endShape(CLOSE);
 
 //rect1 
@@ -247,6 +284,9 @@ fill(230,180,150);
   vertex(850,900);
   vertex(300,900);
 endShape(CLOSE);
+
+
+
 
 }
 //
