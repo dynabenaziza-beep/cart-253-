@@ -101,10 +101,18 @@ strokeWeight(6);
 fill(160,100,50);
 ellipse(400,95,260,180);
 
-//9 ninth curly har layered (top left 
+//9 ninth curly har layered (top left )
 // bigger then the other 
 fill(160,100,50);
 ellipse(400,95,300,180);
+
+//hair bottom rigth 
+//1
+stroke(0);
+strokeWeight(6);
+fill(160,100,50);
+ellipse(750,350,220,160);
+
 
 
 
@@ -160,6 +168,8 @@ vertex(520,500);
 vertex(520,760);
 vertex(300,760);
 endShape(CLOSE);
+
+
 
 //rect1 
 // collor the rectangle beige to match my skin color 
