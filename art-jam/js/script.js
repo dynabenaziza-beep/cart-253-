@@ -235,6 +235,21 @@ rect(rectX, rectY,rectW,rectH);
 fill(245,230,200);
 rect(rect2X,rect2Y,rect2W ,rect2H);
 
+///spiral (inside second moving rectangle)
+//element never been done before 
+push();
+translate(rect2X+ rect2W/2,rect2Y+rect2H/2);
+stroke(0);
+noFill();
+beginShape();
+for (let a = 0; a< TWO_PI *5; a += 0.1 ){
+  let r = a *  5;
+  let x = r * cos(a);
+  let y = r * sin(a);
+  vertex(x,y);
+}
+endShape();
+pop();
 
 
 //characteristic #1
