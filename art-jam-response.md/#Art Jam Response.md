@@ -1,4 +1,5 @@
 #Art Jam Response
+
 ##Daniel’s Project
 
 https://cakeallen.github.io/cart253/art-jam/ 
@@ -29,6 +30,7 @@ The grab offset lets the viewer pick up the object from any point, not just the 
 The project has a clear Halloween theme, and the interaction fits well with it.
 
 #Overall Reflection
+
 All three projects have clear and well-structured code. Each one uses functions to control how things move and react. The use of variables and conditions shows a good understanding of how to make the code respond to the viewer.
 Functions like mouseDragged() and constrain() are used in smart ways to keep movements smooth and inside the canvas. The commit messages are short but easy to understand, showing a clear and organized process.
 The code in all three projects is well planned and makes everything work together nicely. It showed me how important good structure and organization are when building interactive work.
