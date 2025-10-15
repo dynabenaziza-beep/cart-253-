@@ -1,4 +1,9 @@
-// events  challenge 
+/**
+ * The Only Move Is Not To Play
+ * Pippin Barr (Modified by Dyna Benaziza)
+ *
+ * A game where your score increases so long as you do nothing.
+ */
 
 "use strict";
 
@@ -13,6 +18,27 @@ let gameOver = false;
  */
 function setup() {
   createCanvas(400, 400);
+
+  // Lose if internet connection changes (Step 5)
+  window.addEventListener("online", lose);
+  window.addEventListener("offline", lose);
+
+  // Lose if the page/tab loses focus (Step 6)
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) {
+      lose();
+    }
+  });
+
+  // Lose if any keyboard or mouse events occur (Step 3 & 4)
+  window.addEventListener("keydown", lose);
+  window.addEventListener("keyup", lose);
+  window.addEventListener("mousemove", lose);
+  window.addEventListener("mousedown", lose);
+  window.addEventListener("mouseup", lose);
+  window.addEventListener("click", lose);
+  window.addEventListener("dblclick", lose);
+  window.addEventListener("wheel", lose);
 }
 
 /**
@@ -55,3 +81,11 @@ function displayScore() {
   text(floor(score), width/2, height/2);
   pop();
 }
+
+/**
+ * Handles losing the game
+ */
+function lose() {
+  gameOver = true;
+}
+
