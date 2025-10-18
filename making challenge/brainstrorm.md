@@ -25,17 +25,17 @@
 #  12: instead of just making the flies invisible at night, i could make invisible flies that appear only for a second before disappearing again, so the player has to be more focused and attentive to catch them in time. 
 
 
-#  13:
+#  13: make the frong tired if it move too much ( the frog goes slower and slower or just not able to jump high ) 
 
-#  14:
+#  14:  make the backgound change depending on the time ( if i put a timer, i can make the timer the hour of the day , for example if it is 30 second  into the game it is 12pm and if it is  45 second , it become night ) 
 
-# 15:
+# 15: if i take idea 14 , i call the game " a day in the life of a frog " ( making a sort of context for the game , where would i put the tittle , on top of the screen ? ) 
 
-#  16:
+#  16: for the visual could add a sun at the top left of the screen and make it slowly dissapear depending on the timer 
 
-#  17: 
+#  17:  make a special potion to be able to pause the day ( could slie one or two magic potion to be able to stop time for the frog to eat the most flies , how would the potion look ? , how much time should it be ?) 
 
-#  18:
+#  18: make the fliew more realistic by adding small gray wings and giving their body a more detailed shape ( how will the body look ? should i stay the same size or make it a litlle bit bigger 
 
 #  19 :
 
