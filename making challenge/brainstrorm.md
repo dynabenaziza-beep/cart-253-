@@ -1,35 +1,42 @@
-# TITLE OF PROJECT
+#  1: There could be a time limit of 1 minute max where the player catch the most flies( is 1 mins too much , how should the timer look like , should it be simple or part of the aesthetic of the ga,e ) 
 
-AUTHOR NAME
+#  2: the  frog can moove around the entire square , and the player can moove it up and down with the keyboard ( will it be too hard to code ) 
 
-[View this project online](URL_FOR_THE_RUNNING_PROJECT)
+#  3: could change the algorithm of the flies, istead of just fleeing in one direction they could go fast or slow , or even come from different directions ( it need to be a fixed alogrithm , will the player notice the pattern and guess when the next flie will come , how do i make it hard to gues ?) 
 
-## Description
+#   4:  There could be a night mode where the game trun dark and the flies become invisible ( how will the player   know that they killed a flies , maybe with a sound effect ?) 
 
-This description should help the reader understand what the program is, anything they should know to be able to experience it (controls, special features, etc.), and what the desired user experience is. For example:
+#   5: replace the flies with other objects, so it’s harder for the frog to catch things (for example, if there’s a cup or another random object, the frog can’t eat it and dies, so the player has to be careful to eat only the real flies).
 
-> *The Mayor of Clown Town* is a simulator experience that allows the user to control a small town populated entirely by clowns.
 
-> The experience is controlled via the mouse, with left click selecting a clown and bringing up a menu of options such as "slip of banana peel" or "get into impossible capacious clown-car."
+#  6:  could add levels, where the player has to survive for a certain time (like 1 minute) and try to reach the maximum level.
 
-> The project is meant to give the user a sense of what it would be the mayor of a town of clowns, eventually getting the sense that clowns are not taking their civic duties seriously.
+#  7: could add red flies that are not eatable (if the frog eats them, it dies. Maybe to make it fair, the player could have 3 hearts, and if they eat a red fly three times, the game is over)
 
-## Screenshot(s)
+#  8: In terms of visuals, I’d add a background inspired by the swamp in the Shrek movie (maybe add un marais , or a river )
 
-This bit should have some images of the program running so that the reader has a sense of what it looks like. For example:
+#  9:  I could put a fly at the top of the screen, and the only way to reach it is to make the frog jump. The frog would jump up and then go back to its original position ( will this work)
 
-> ![Image of a clown face](./assets/images/clown.png)
+#  10: I could make small and big flies, where some are easier and some are harder to catch. Maybe the frog has to bite the big fly twice to eat it completely.
 
-## Attribution
+# 11:could add sound effects ( a  really soft  sound when the frog catches a fly, and a loud sound when it catches something that isn’t a fly)
 
-This bit should attribute any code, assets or other elements used taken from other sources. For example:
 
-> - This project uses [p5.js](https://p5js.org).
-> - The clown image is a capture of the clown from the Apple emoji character set.
-> - The barking sound effect is "single dog bark 1" by crazymonke9 from freesound.org: https://freesound.org/people/crazymonke9/sounds/418107/
+#  12: instead of just making the flies invisible at night, i could make invisible flies that appear only for a second before disappearing again, so the player has to be more focused and attentive to catch them in time. 
 
-## License
 
-This bit should include the license you want to apply to your work. For example:
+#  13:
 
-> This project is licensed under a Creative Commons Attribution ([CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.en)) license with the exception of libraries and other components with their own licenses.
+#  14:
+
+# 15:
+
+#  16:
+
+#  17: 
+
+#  18:
+
+#  19 :
+
+#   20 : 
