@@ -9,10 +9,10 @@
 "use strict";
 
 /**
- * OH LOOK I DIDN'T DESCRIBE SETUP!!
+ * Creates the canvas and initializes the fly 
 */
 function setup() {
-
+ createCanvas(640,480);
 }
 
 
