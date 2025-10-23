@@ -41,10 +41,11 @@ function drawFrog() {
     pop();
 
     //frog ears
-    //left frog ears 
+    
       push();
   fill("#00ff00");
   noStroke();
-  ellipse(260,420,80,75);
+  ellipse(260,420,80,75); //left frog ear 
+  ellipse(390,420,80,75); //rigth frog ear  
 pop();
 }
