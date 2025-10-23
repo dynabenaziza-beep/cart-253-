@@ -39,14 +39,15 @@ function drawFrog() {
     noStroke();
     ellipse(frog.body.x, frog.body.y, frog.body.size);
     pop();
+    
 
     //frog ears
     
-      push();
+    push();
   fill("#00ff00");
   noStroke();
-  ellipse(260,420,80,75); //left frog ear 
-  ellipse(390,420,80,75); //rigth frog ear  
+  ellipse(frog.body.x - 60,frog.body.y- 100,80,75); //left frog ear 
+  ellipse(frog.body.x + 70,frog.body.y-100,80,75); //rigth frog ear  
 pop();
 }
 function moveFrog(){
