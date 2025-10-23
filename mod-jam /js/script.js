@@ -13,7 +13,7 @@ const frog ={
 body:{
     x: 320,
     y: 520,
-    size: 150 
+    size: 220
 }
 
 };
