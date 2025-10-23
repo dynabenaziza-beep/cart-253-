@@ -27,7 +27,7 @@ function setup() {
 function draw() {
     background("#87ceeb"); // creating the background ( bleu) for the game 
     drawFrog();
-    drawEar();
+  moveFrog();
 
 }
 
@@ -48,4 +48,7 @@ function drawFrog() {
   ellipse(260,420,80,75); //left frog ear 
   ellipse(390,420,80,75); //rigth frog ear  
 pop();
+}
+function moveFrog(){
+    frog.body.x =mouseX;
 }
