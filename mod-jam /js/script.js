@@ -29,7 +29,7 @@ const frog = {
 // sun 
 const day = {
 sunX: 600,  //left side 
-sunY: 100,  //high = moring 
+sunY: 0,  //high = moring 
  
 };
 
