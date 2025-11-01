@@ -91,6 +91,12 @@ flies.push({
 
 function draw() {
    background("#87ceeb");
+
+
+    // add the darkness ( night) 
+fill(0,0, 150 + day.darkness/2);
+rect(0, 0, width , height); 
+
    
     //move the flies 
     moveFlies();
@@ -111,9 +117,6 @@ function draw() {
     ellipse( day.sunX, day.sunY,  150 , 150 );
 
 
-    // add the darkness ( night) 
-fill(0,0, 150 + day.darkness/2);
-rect(0, 0, width , height); 
 
 }
 
