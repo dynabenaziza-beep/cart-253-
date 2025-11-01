@@ -105,10 +105,16 @@ function draw() {
     //check if tongue touch flies 
     checkTongueFliesOverlap();
 
-    //draw the sun 
+    //draw the sun  
     fill("yellow");
     noStroke();
     ellipse( day.sunX, day.sunY,  150 , 150 );
+
+
+    // add the darkness ( night) 
+fill(0,0, 150 + day.darkness/2);
+rect(0, 0, width , height); 
+
 }
 
 /**
@@ -240,6 +246,12 @@ const eaten = (d < frog.tongue.size/2 + fly.size/2);
          // make the sun goes down 
 day.sunY+= 48;
 if (day.sunY > 480) day.sunY= 480 ;  // make the sun stop at the bottom 
+
+
+//make sky goes darker and darker 
+day.darkness+= 20;
+if (day.darkness >  255)  day.darkness = 255;
+
 
  // tongues goes back in 
         frog.tongue.state = "inbound";
