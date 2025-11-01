@@ -54,7 +54,7 @@ function setup() {
 
 });
 
-
+//second fly
 flies.push({
 x: 640,  //start rigth edge 
 y : 150,
@@ -62,6 +62,19 @@ size: 10,
 speedX: -3  // move left 
 
 }); 
+
+//third fly : this one is going to move up and down 
+flies.push({
+
+  x:  0 , 
+  y:200, 
+  size: 10 ,
+  speedX: 0, 
+  speedY: 2 // make it go up and down 
+
+});
+
+
 }
 
 /**
@@ -105,6 +118,16 @@ if(fly.x > 640){
 if(fly.x< 0){
   fly.x = 640;
   fly.y= random(50,300);
+}
+//if flies is moving on the y make it go up and down 
+if (fly.speedY) {
+fly.y = fly.y+ fly.speedY;
+
+// when it hit the limit that i put( 300, 100)  it has to go down 
+if (fly.y > 300 || fly.y < 100 ){
+  fly.speedY=-fly.speedY;
+}
+
 }
    }
   }
@@ -206,7 +229,7 @@ const eaten = (d < frog.tongue.size/2 + fly.size/2);
 }
 
 /**
- * Launch the tongue on click (if it's not launched yet)
+ * move tongue on click 
  */
 function mousePressed() {
     if (frog.tongue.state === "idle") {
