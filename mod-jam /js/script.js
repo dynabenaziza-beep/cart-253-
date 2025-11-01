@@ -98,6 +98,11 @@ function draw() {
 
     //check if tongue touch flies 
     checkTongueFliesOverlap();
+
+    //draw the sun 
+    fill("yellow");
+    noStroke();
+    ellipse( 600, 100, 150 , 150 );
 }
 
 /**
