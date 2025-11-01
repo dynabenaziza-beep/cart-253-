@@ -28,9 +28,9 @@ const frog = {
 };
 // sun 
 const day = {
-sunX: 80,  //left side 
+sunX: 600,  //left side 
 sunY: 100,  //high = moring 
-score: 0  //score count of hte lfies eaten 
+ 
 };
 
 // Our fly
@@ -108,7 +108,7 @@ function draw() {
     //draw the sun 
     fill("yellow");
     noStroke();
-    ellipse( 600, 100, 150 , 150 );
+    ellipse( day.sunX, day.sunY,  150 , 150 );
 }
 
 /**
@@ -230,15 +230,22 @@ function checkTongueFliesOverlap() {
     const d= dist(frog.tongue.x, frog.tongue.y, fly.x, fly.y);
   
 const eaten = (d < frog.tongue.size/2 + fly.size/2);
+
     if (eaten) {
         // Reset the fly
         fly.x = 0;
         fly.y = random(50,300);
+
+
+         // make the sun goes down 
+day.sunY+= 48;
+if (day.sunY > 480) day.sunY= 480 ;  // make the sun stop at the bottom 
+
+ // tongues goes back in 
         frog.tongue.state = "inbound";
     }
+  } 
 }
-}
-
 /**
  * move tongue on click 
  */
