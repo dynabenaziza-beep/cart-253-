@@ -29,8 +29,8 @@ const frog = {
 // sun 
 const day = {
 sunX: 600,  //left side 
-sunY: 0,  //high = moring 
- 
+sunY: 0,  //high = morning 
+  darkness: 0 // so that it start brigth 
 };
 
 // Our fly
