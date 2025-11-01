@@ -26,6 +26,12 @@ const frog = {
         state: "idle" // State can be: idle, outbound, inbound
     }
 };
+// sun 
+const day = {
+sunX: 80,  //left side 
+sunY: 100,  //high = moring 
+score: 0  //score count of hte lfies eaten 
+};
 
 // Our fly
 // Has a position, size, and speed of horizontal movement
