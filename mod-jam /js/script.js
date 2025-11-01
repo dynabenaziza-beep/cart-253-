@@ -69,7 +69,7 @@ flies.push({
   x:  0 , 
   y:200, 
   size: 10 ,
-  speedX: 0, 
+  speedX: 2, 
   speedY: 2 // make it go up and down 
 
 });
