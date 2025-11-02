@@ -28,6 +28,7 @@ sunY: 0,  //high = morning
   darkness: 0 // so that it start brigth 
 };
 
+let gameStarted = false;
 let flies = []; // empty list to store flies 
 let bees =[]; // empty list to store the bees 
 let lives = 3 ; //numbr of heart the frog has 
