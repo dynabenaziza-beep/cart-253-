@@ -27,7 +27,7 @@ sunX: 600,  //left side
 sunY: 0,  //high = morning 
   darkness: 0 // so that it start brigth 
 };
-
+let showInstructions = false; // for the instruction at the begingin 
 let gameStarted = false;
 let flies = []; // empty list to store flies 
 let bees =[]; // empty list to store the bees 
