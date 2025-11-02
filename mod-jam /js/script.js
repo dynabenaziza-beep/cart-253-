@@ -308,7 +308,8 @@ if (bee.y> 200 || bee.y < 100){
  * Handles the tongue overlapping the fly
  */
 function checkTongueFliesOverlap() {
-   
+
+  // eat the flies  
   for(let fly of flies){
     const d= dist(frog.tongue.x, frog.tongue.y, fly.x, fly.y);
   
@@ -329,15 +330,27 @@ if (day.sunY > 480) day.sunY= 480 ;  // make the sun stop at the bottom
 day.darkness+= 20;
 if (day.darkness >  255)  day.darkness = 255;
 
+//eat the bees 
+ for (let bee of bees){
+  const d = dist(frog.tongue.x, frog.tongue.y, bee.x, bee.y); //
+  const eaten = ( d < frog.tongue.size / 2 + bee.size/ 2 );
+
+  if (eaten) {
+// reset bee to left side like the flies 
+// copy paste same code as the flies 
+bee.x = 0;
+bee.y = ramdom( 50,300);
+  }
+ }
+
 
  // tongues goes back in 
         frog.tongue.state = "inbound";
     }
   } 
 }
-/**
- * move tongue on click 
- */
+//move tongue on click 
+ 
 function mousePressed() {
     if (frog.tongue.state === "idle") {
         frog.tongue.state = "outbound";
