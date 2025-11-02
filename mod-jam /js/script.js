@@ -1,11 +1,6 @@
-/**
- * mod-jam
- * Title of Project
- * dyna benaziza 
- * 
-
- */
-
+// mod-jam
+ // Title of Project
+ // dyna benaziza 
 "use strict";
 
 // Our frog
@@ -97,18 +92,16 @@ bees.push({
   speedY: fly.speedY
 
 });
-
+  }
 }
-}
 
-/**
- * Creates the canvas and initializes the fly
- */
-
-    
-
+/// Creates the canvas and initializes the fly
 function draw() {
-   //background("#87ceeb");
+   // if no heart is left on the screen - make it bright green = game over
+   if(lives<=0){
+    background(0, 0,0);
+    return;  //stop the game 
+   }
 
    // add the darkness 
    let skyColor= 255 - day.darkness; // start ligth bleu 
@@ -296,11 +289,8 @@ if (bee.y> 200 || bee.y < 100){
   }
 
 
-/**
- * Handles the tongue overlapping the fly
- */
-function checkTongueFliesOverlap() {
-
+// Handles the tongue overlapping the fly
+ function checkTongueFliesOverlap() {
   // eat the flies  
   for(let fly of flies){
     const d= dist(frog.tongue.x, frog.tongue.y, fly.x, fly.y);
