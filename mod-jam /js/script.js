@@ -99,7 +99,7 @@ bees.push({
 function draw() {
    // if no heart is left on the screen - make it bright green = game over
    if(lives<=0){
-    background(0, 0,0);
+    background(44,255,5);
     return;  //stop the game 
    }
 
