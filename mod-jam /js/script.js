@@ -45,6 +45,7 @@ sunY: 0,  //high = morning
 
 let flies = []; // empty list to store flies 
 let bees =[]; // empty list to store the bees 
+let lives = 3 ; //numbr of heart the frog has 
 
 
 /**
@@ -336,6 +337,8 @@ frog.tongue.state = "inbound";
 // copy paste same code as the flies 
 bee.x = 0;
 bee.y = random(50,300);
+
+
 
  // tongues goes back in 
         frog.tongue.state = "inbound";
