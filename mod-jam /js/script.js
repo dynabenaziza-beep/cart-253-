@@ -109,6 +109,9 @@ if (!gameStarted){
    if (skyColor < 15) skyColor = 15; // stop whne it become totaly dark 
    background(skyColor * 0.3 , skyColor * 0.5, skyColor); //gradually darken 
 
+///
+   
+
 //move the flies 
     moveFlies();
     drawFlies();
@@ -360,10 +363,20 @@ textSize(60);
 textFont("Share Tech Mono");
 text ("Sleepy Frog", width / 2 , height /2);
 
-//instruction 
+//instruction  step 1 
 textSize(24);
 fill(200);
 text("Click the frog to start", width / 2 ,height / 2 -60 );
+
+// instruction step 2 
+if(showInstructions){
+  fill(255);
+  textSize(20);
+   text("Sleepy the frog needs your help to fall asleep.Todo that , he must eat flies but be careful of the bees! If he eats them , he'll die !", width /2 , height / 2 + 80 , 500 , 200);
+//instruction step3 
+textSize(20);
+text("Click again to begin !", width /2 ,height / 2 + 160);
+}
 
 // add giant frog body 
 noStroke();
@@ -377,18 +390,21 @@ ellipse(width/3 + 260, height -180 , 120,120); //right eye
 fill(0);
 ellipse(width /3 -45, height -180, 90 ,90);
 ellipse(width /3 + 260, height -180, 90 ,90);  //left puppil
-
-
 }
 function mousePressed() {
   if(!gameStarted) {
     let d = dist (mouseX, mouseY, width /2, height -50);
-    if(d< 250) {
-    gameStarted = true;
+    // first click show the intruction 
+   
+    if(d < 250 && !showInstructions) {
     showInstructions = true; 
   }
 
- }else  if (frog.tongue.state === "idle") {
+  else if (d< 250 && showInstructions){
+   gameStarted = true;
+    }
+  }
+ else  if (frog.tongue.state === "idle") {
         frog.tongue.state = "outbound";
     }
   }
