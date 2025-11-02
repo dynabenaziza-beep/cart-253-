@@ -81,7 +81,22 @@ flies.push({
 
 });
 
+// for every flies there is 1 bees ( copy the fly )
 
+for (let fly of flies ) {
+// first bee 
+
+bees.push({
+
+  x: fly.x,
+  y: fly.y,
+  size: 15,
+  speedX: fly.speedX,
+  speedY: fly.speedY
+
+});
+
+}
 }
 
 /**
@@ -112,6 +127,10 @@ function draw() {
     moveFrog();
     moveTongue();
     drawFrog();
+
+    // beee 
+    moveBees();
+    drawBees();
 
     //check if tongue touch flies 
     checkTongueFliesOverlap();
@@ -233,6 +252,11 @@ function drawFrog() {
     noStroke();
     ellipse(frog.body.x, frog.body.y, frog.body.size);
     pop();
+}
+
+// draw the bee 
+function drawBees(){
+
 }
 
 /**
