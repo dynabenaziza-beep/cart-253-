@@ -259,6 +259,11 @@ function drawBees(){
 
 }
 
+//move the bees 
+function  MoveBees (){
+  
+}
+
 /**
  * Handles the tongue overlapping the fly
  */
