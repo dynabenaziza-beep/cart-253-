@@ -364,10 +364,10 @@ text ("Sleepy Frog", width / 2 , height /2);
 noStroke();
 fill("#00ff00"); // green body 
 ellipse (width / 2, height -15, 640, 400);
-//frog eye 
-//left eye 
+//frog eye  
 fill(255);
-ellipse(width /3 -40, height -180, 120 , 120);
+ellipse(width /3 -40, height -180, 120 , 120); //left eye 
+ellipse(width/3 + 260, height -180 , 120,120); //right eye
 
 }
 function mousePressed() {
