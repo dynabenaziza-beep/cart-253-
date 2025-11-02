@@ -28,16 +28,6 @@ sunY: 0,  //high = morning
   darkness: 0 // so that it start brigth 
 };
 
-// Our fly
-// Has a position, size, and speed of horizontal movement
-//const fly = {
-   // x: 0,
-   // y: 200, // Will be random
-   // size: 10,
-   // speed: 3
-//};
-
-
 let flies = []; // empty list to store flies 
 let bees =[]; // empty list to store the bees 
 let lives = 3 ; //numbr of heart the frog has 
@@ -99,7 +89,7 @@ bees.push({
 function draw() {
    // if no heart is left on the screen - make it bright green = game over
    if(lives<=0){
-    background(44,255,5);
+    background(44,255,5); // neon green 
     return;  //stop the game 
    }
 
@@ -337,7 +327,6 @@ if(lives < 0) lives = 0; // only 3 lives not negative number
     }
   } 
 }
-
 function drawHeart(x,y){
 fill("red");
 noStroke();
@@ -351,6 +340,12 @@ endShape();
 }
 //move tongue on click 
  
+function drawStartScreen(){
+// dark bleu background color
+background(20,40,80); // deep bleu tone 
+
+
+}
 function mousePressed() {
     if (frog.tongue.state === "idle") {
         frog.tongue.state = "outbound";
