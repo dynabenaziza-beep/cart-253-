@@ -172,10 +172,8 @@ if (fly.y > 300 || fly.y < 100 ){
    }
   }
 
-/**
- * Draws the fly as a black circle
- */
-function drawFlies() {
+// Draws the fly as a black circle
+ function drawFlies() {
   for(let fly of flies) { //call all flies 
     push();
     noStroke();
@@ -185,13 +183,8 @@ function drawFlies() {
   }
 }
 
-/**
- * Resets the fly to the left with a random y
- */
-
-/**
- * Moves the frog to the mouse position on x
- */
+//Resets the fly to the left with a random y
+// moves the frog to the mouse position on x
 function moveFrog() {
     frog.body.x = mouseX;
 }
@@ -223,10 +216,8 @@ function moveTongue() {
         }
     }
 }
-
-/**
- * Displays the tongue (tip and line connection) and the frog (body)
- */
+// Displays the tongue (tip and line connection) and the frog (body)
+ 
 function drawFrog() {
     // Draw the tongue tip
     push();
@@ -351,6 +342,16 @@ bee.y = ramdom(50,300);
 }
 
 function drawHeart(){
+fill("red");
+noStroke();
+
+beginShape();
+vertext(320,60);
+bezierVertex(320, 40, 360, 50, 320, 85);
+vertex(320, 60);
+bezierVertex(320, 40 , 280, 50 , 320, 85);
+endShape();
+
 
 
 
