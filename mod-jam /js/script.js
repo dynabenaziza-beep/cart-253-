@@ -138,9 +138,8 @@ function draw() {
 
     // add the 3 heart 
     drawHeart(60,60);
-    drawHeart(120,60);
-    drawHeart(180, 60);
-
+    drawHeart(150,60);
+    drawHeart(240, 60);
 }
 
 /**
@@ -344,15 +343,15 @@ bee.y = random(50,300);
   } 
 }
 
-function drawHeart(){
+function drawHeart(x,y){
 fill("red");
 noStroke();
 
 beginShape();
-vertex(60,60);
-bezierVertex(60, 40, 100, 50, 60, 85);
-vertex(60, 60);
-bezierVertex(60, 40 ,20, 50 ,60, 85);
+vertex(x,y);
+bezierVertex(x, y-40, x+ 40 , y-20, x, y+ 45);
+vertex(x, y);
+bezierVertex(x,y -40,x-40, y -20, x, y + 45 );
 endShape();
 }
 //move tongue on click 
