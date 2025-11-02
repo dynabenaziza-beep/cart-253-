@@ -333,7 +333,7 @@ frog.tongue.state = "inbound";
 // reset bee to left side like the flies 
 // copy paste same code as the flies 
 bee.x = 0;
-bee.y = ramdom(50,300);
+bee.y = random(50,300);
 
  // tongues goes back in 
         frog.tongue.state = "inbound";
@@ -346,16 +346,11 @@ fill("red");
 noStroke();
 
 beginShape();
-vertext(320,60);
+vertex(320,60);
 bezierVertex(320, 40, 360, 50, 320, 85);
 vertex(320, 60);
 bezierVertex(320, 40 , 280, 50 , 320, 85);
 endShape();
-
-
-
-
-
 }
 //move tongue on click 
  
