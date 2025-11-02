@@ -363,7 +363,7 @@ text ("Sleepy Frog", width / 2 , height /2);
 // add giant frog body 
 noStroke();
 fill("#00ff00"); // green body 
-ellipse (width / 2 , height -50, 400, 200);
+ellipse (width / 2, height -15, 640, 400);
 
 }
 function mousePressed() {
