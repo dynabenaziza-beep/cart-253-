@@ -360,6 +360,11 @@ textSize(60);
 textFont("Share Tech Mono");
 text ("Sleepy Frog", width / 2 , height /2);
 
+//instruction 
+textSize(24);
+fill(200);
+text("Click the frog to start", width / 2 ,height / 2 -60 );
+
 // add giant frog body 
 noStroke();
 fill("#00ff00"); // green body 
@@ -372,6 +377,8 @@ ellipse(width/3 + 260, height -180 , 120,120); //right eye
 fill(0);
 ellipse(width /3 -45, height -180, 90 ,90);
 ellipse(width /3 + 260, height -180, 90 ,90);  //left puppil
+
+
 }
 function mousePressed() {
     if (frog.tongue.state === "idle") {
