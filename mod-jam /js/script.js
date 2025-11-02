@@ -368,7 +368,9 @@ ellipse (width / 2, height -15, 640, 400);
 fill(255);
 ellipse(width /3 -40, height -180, 120 , 120); //left eye 
 ellipse(width/3 + 260, height -180 , 120,120); //right eye
-
+//pupill
+fill(0);
+ellipse(width /3 -45, height -180, 90 ,90); //left puppil
 }
 function mousePressed() {
     if (frog.tongue.state === "idle") {
