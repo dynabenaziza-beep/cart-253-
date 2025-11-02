@@ -42,6 +42,7 @@ sunY: 0,  //high = morning
    // speed: 3
 //};
 
+
 let flies = []; // empty list to store flies 
 let bees =[]; // empty list to store the bees 
 
@@ -135,8 +136,8 @@ function draw() {
     noStroke();
     ellipse( day.sunX, day.sunY,  150 , 150 );
 
-
-
+    // add the heart 
+    drawHeart();
 }
 
 /**
@@ -264,10 +265,7 @@ for (let bee of bees){
 //body yellow 
 fill("yellow");
 ellipse(bee.x,bee.y, bee.size + 5 , bee.size);
-
-
-
-}
+      }
 
 }
 
@@ -350,6 +348,13 @@ bee.y = ramdom(50,300);
         frog.tongue.state = "inbound";
     }
   } 
+}
+
+function drawHeart(){
+
+
+
+
 }
 //move tongue on click 
  
