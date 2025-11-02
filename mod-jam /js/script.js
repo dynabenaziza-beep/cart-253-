@@ -261,7 +261,34 @@ function drawBees(){
 
 //move the bees 
 function  MoveBees (){
-  
+for (let bee of bees){
+  // loop throught bee in the bees list 
+bee.x = bee.x + bee.speedX;
+
+if ( bee.x> 640 ){ // if the bee goes more then 640 
+bee.x = 0 ;  // make it appear on left side 
+bee.y= random (50,300);  //  pick random  
+
+// if bee goes too. far to the left side 
+if(bee.x<0 ){
+
+  bee.x = 640; // make it appear on right side 
+  bee.y = random(50,300); // pick random heigth 
+}
+
+//if bee has vertical speed = move up and down 
+if (bee.speedY){
+  bee.y = bee.y + bee.speedY;
+
+//if bee goes too high (100) or too low (300)= rever the direction 
+// so its stay inside the range i want witotu going to far 
+if (bee.y> 200 || bee.y < 100){
+  bee.speedY = - bee.speedY;
+}
+
+}
+}
+}
 }
 
 /**
