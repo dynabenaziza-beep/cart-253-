@@ -39,6 +39,10 @@ let lives = 3 ; //numbr of heart the frog has
  */
 function setup() {
     createCanvas(640, 480);
+    textAlign(CENTER , CENTER);
+    textSize (32);
+
+    textFont("Share Tech Mono");
 
     // one fly come from the left 
     flies.push({
@@ -350,6 +354,12 @@ endShape();
 function drawStartScreen(){
 // dark bleu background color
 background(20,40,80); // deep bleu tone 
+
+fill(255);// white text 
+textSize(60);
+textFont("Share Tech Mono");
+text ("Sleepy Frog", width / 2 , height /2);
+
 
 
 }
