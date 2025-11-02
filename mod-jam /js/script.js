@@ -113,12 +113,7 @@ function draw() {
    if (skyColor < 15) skyColor = 15; // stop whne it become totaly dark 
    background(skyColor * 0.3 , skyColor * 0.5, skyColor); //gradually darken 
 
-
-
-    
-
-   
-    //move the flies 
+//move the flies 
     moveFlies();
     drawFlies();
 
@@ -277,15 +272,16 @@ ellipse(bee.x,bee.y, bee.size + 5 , bee.size);
 }
 
 //move the bees 
-function  MoveBees (){
+function  moveBees (){
 for (let bee of bees){
   // loop throught bee in the bees list 
 bee.x = bee.x + bee.speedX;
 
 if ( bee.x> 640 ){ // if the bee goes more then 640 
-bee.x = 0 ;  // make it appear on left side 
+bee.x = 0;  // make it appear on left side 
 bee.y= random (50,300);  //  pick random  
 
+}
 // if bee goes too. far to the left side 
 if(bee.x<0 ){
 
@@ -303,10 +299,10 @@ if (bee.y> 200 || bee.y < 100){
   bee.speedY = - bee.speedY;
 }
 
-}
-}
-}
-}
+      }
+    }
+  }
+
 
 /**
  * Handles the tongue overlapping the fly
