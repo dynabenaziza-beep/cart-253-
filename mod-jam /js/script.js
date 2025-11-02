@@ -256,6 +256,23 @@ function drawFrog() {
 
 // draw the bee 
 function drawBees(){
+// body +  wings + stripes 
+
+for (let bee of bees){
+
+  //wings 
+  fill("lightblue"); // almost clear blleu
+  noStroke();
+  ellipse(bee.x-5, bee.y-10,12,8);
+  ellipse(bee.x + 5, bee.y - 10 , 12 , 8 );
+
+//body yellow 
+fill("yellow");
+ellipse(bee.x,bee.y, bee.size + 5 , bee.size);
+
+
+
+}
 
 }
 
