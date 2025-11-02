@@ -90,12 +90,16 @@ flies.push({
     
 
 function draw() {
-   background("#87ceeb");
+   //background("#87ceeb");
+
+   // add the darkness 
+   let skyColor= 255 - day.darkness; // start ligth bleu 
+   if (skyColor < 15) skyColor = 15; // stop whne it become totaly dark 
+   background(skyColor * 0.3 , skyColor * 0.5, skyColor); //gradually darken 
 
 
-    // add the darkness ( night) 
-fill(0,0, 150 + day.darkness/2);
-rect(0, 0, width , height); 
+
+    
 
    
     //move the flies 
