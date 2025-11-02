@@ -360,7 +360,10 @@ textSize(60);
 textFont("Share Tech Mono");
 text ("Sleepy Frog", width / 2 , height /2);
 
-
+// add giant frog body 
+noStroke();
+fill("#00ff00"); // green body 
+ellipse (width / 2 , height -50, 400, 200);
 
 }
 function mousePressed() {
