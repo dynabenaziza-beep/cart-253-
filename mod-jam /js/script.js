@@ -138,9 +138,9 @@ function draw() {
     ellipse( day.sunX, day.sunY,  150 , 150 );
 
     // add the 3 heart 
-    drawHeart(60,60);
-    drawHeart(150,60);
-    drawHeart(240, 60);
+   if (lives >= 1 ) drawHeart(60,60);
+   if (lives >= 2) drawHeart(150,60);
+    if(lives >= 3 ) drawHeart(240, 60);
 }
 
 /**
@@ -338,7 +338,9 @@ frog.tongue.state = "inbound";
 bee.x = 0;
 bee.y = random(50,300);
 
-
+//remove on heart every time the frog eat a bee 
+lives= lives- 1 ;  // remove 1 
+if(lives < 0) lives = 0; // only 3 lives not negative number 
 
  // tongues goes back in 
         frog.tongue.state = "inbound";
