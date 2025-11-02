@@ -346,10 +346,10 @@ fill("red");
 noStroke();
 
 beginShape();
-vertex(320,60);
-bezierVertex(320, 40, 360, 50, 320, 85);
-vertex(320, 60);
-bezierVertex(320, 40 , 280, 50 , 320, 85);
+vertex(60,60);
+bezierVertex(60, 40, 100, 50, 60, 85);
+vertex(60, 60);
+bezierVertex(60, 40 ,20, 50 ,60, 85);
 endShape();
 }
 //move tongue on click 
