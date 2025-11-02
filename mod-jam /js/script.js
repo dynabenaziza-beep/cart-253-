@@ -43,6 +43,7 @@ sunY: 0,  //high = morning
 //};
 
 let flies = []; // empty list to store flies 
+let bees =[]; // empty list to store the bees 
 
 
 /**
