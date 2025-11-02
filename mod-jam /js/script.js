@@ -330,7 +330,12 @@ if (day.sunY > 480) day.sunY= 480 ;  // make the sun stop at the bottom
 day.darkness+= 20;
 if (day.darkness >  255)  day.darkness = 255;
 
-//eat the bees 
+// tongue goes back in 
+frog.tongue.state = "inbound"; 
+    }
+ }
+
+ // eat the bees 
  for (let bee of bees){
   const d = dist(frog.tongue.x, frog.tongue.y, bee.x, bee.y); //
   const eaten = ( d < frog.tongue.size / 2 + bee.size/ 2 );
@@ -339,10 +344,7 @@ if (day.darkness >  255)  day.darkness = 255;
 // reset bee to left side like the flies 
 // copy paste same code as the flies 
 bee.x = 0;
-bee.y = ramdom( 50,300);
-  }
- }
-
+bee.y = ramdom(50,300);
 
  // tongues goes back in 
         frog.tongue.state = "inbound";
@@ -356,3 +358,4 @@ function mousePressed() {
         frog.tongue.state = "outbound";
     }
 }
+
