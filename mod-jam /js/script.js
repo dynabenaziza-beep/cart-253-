@@ -136,8 +136,11 @@ function draw() {
     noStroke();
     ellipse( day.sunX, day.sunY,  150 , 150 );
 
-    // add the heart 
-    drawHeart();
+    // add the 3 heart 
+    drawHeart(60,60);
+    drawHeart(120,60);
+    drawHeart(180, 60);
+
 }
 
 /**
