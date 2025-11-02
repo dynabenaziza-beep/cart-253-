@@ -88,6 +88,12 @@ bees.push({
 
 /// Creates the canvas and initializes the fly
 function draw() {
+// show start screen before the game begins 
+if (!gameStarted){
+  drawStartScreen();
+  return; // stop when player start 
+}
+
    // if no heart is left on the screen - make it bright green = game over
    if(lives<=0){
     background(44,255,5); // neon green 
