@@ -385,6 +385,7 @@ function mousePressed() {
     let d = dist (mouseX, mouseY, width /2, height -50);
     if(d< 250) {
     gameStarted = true;
+    showInstructions = true; 
   }
 
  }else  if (frog.tongue.state === "idle") {
