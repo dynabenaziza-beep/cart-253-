@@ -381,8 +381,13 @@ ellipse(width /3 + 260, height -180, 90 ,90);  //left puppil
 
 }
 function mousePressed() {
-    if (frog.tongue.state === "idle") {
+  if(!gameStarted) {
+    let d = dist (mouseX, mouseY, width /2, height -50);
+    if(d< 250) {
+    gameStarted = true;
+  }
+
+ }else  if (frog.tongue.state === "idle") {
         frog.tongue.state = "outbound";
     }
-}
-
+  }
