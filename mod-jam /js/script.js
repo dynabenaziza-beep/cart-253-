@@ -110,10 +110,12 @@ if (!gameStarted){
    background(skyColor * 0.3 , skyColor * 0.5, skyColor); //gradually darken 
 
     //wooden barrage 
-   // wonden barrage #1 
+   // wooden barrage #1 
 fill(160,82,45);
 rect(0,260,40,400);
-
+//wooden barrage # 2
+fill(160,82,45);
+rect(55,300,30,400);
 //lake water
 fill(120,180,255);
 rect(0,430,640,160);
