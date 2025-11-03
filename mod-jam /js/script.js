@@ -111,7 +111,7 @@ if (!gameStarted){
 
    //lake water
 fill(120,180,255);
-rect(0,320,640,160);
+rect(0,430,640,160);
 
 //move the flies 
     moveFlies();
