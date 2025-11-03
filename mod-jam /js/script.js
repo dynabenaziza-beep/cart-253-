@@ -102,7 +102,7 @@ if (!gameStarted){
    //when the sun goes down = you won!
    if(lives<=0 || day.sunY >=480){
 background(44,255,5); // neon green 
-fill(255);
+fill(0);
 textSize(60);
 
 if (lives <=0){
