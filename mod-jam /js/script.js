@@ -99,10 +99,19 @@ if (!gameStarted){
 }
 
    // if no heart is left on the screen - make it bright green = game over
-   if(lives<=0){
-    background(44,255,5); // neon green 
-    return;  //stop the game 
-   }
+   //when the sun goes down = you won!
+   if(lives<=0 || day.sunY >=480){
+background(44,255,5); // neon green 
+fill(255);
+textSize(60);
+
+if (lives <=0){
+  text("YOU LOSE!", width /2, height /2);
+} else 
+  text("YOU WON!" ,width/2,height /2);
+   
+   return;  //stop the game 
+  }
 
    // add the darkness 
    let skyColor= 255 - day.darkness; // start ligth bleu 
