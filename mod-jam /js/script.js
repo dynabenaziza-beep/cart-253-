@@ -109,6 +109,10 @@ if (!gameStarted){
    if (skyColor < 15) skyColor = 15; // stop whne it become totaly dark 
    background(skyColor * 0.3 , skyColor * 0.5, skyColor); //gradually darken 
 
+   //wooden barrage 
+fill(160,82,45);
+rect(50,370,20,60);
+
    //lake water
 fill(120,180,255);
 rect(0,430,640,160);
