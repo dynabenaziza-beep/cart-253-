@@ -265,7 +265,7 @@ function drawFrog() {
   //draw frog puppil 
   fill(0); //black
   ellipse(frog.body.x - 60 , frog.body.y - 70 , 50, 50); //left puppil 
-
+ellipse(frog.body.x+60, frog.body.y -70, 50 ,50); //rigth puppil 
 
 }
 
