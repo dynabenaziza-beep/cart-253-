@@ -89,7 +89,6 @@ bees.push({
 });
   }
 }
-
 /// Creates the canvas and initializes the fly
 function draw() {
 // show start screen before the game begins 
@@ -167,11 +166,8 @@ ellipse(50,500,400,200);
     if(lives >= 3 ) drawHeart(240, 60);
 }
 
-/**
- * Moves the fly according to its speed
- * Resets the fly if it gets all the way to the right
- */
-function moveFlies() {
+// Moves the fly according to its speed, Resets the fly if it gets all the way to the right
+ function moveFlies() {
    for (let fly of flies ){
 
   fly.x = fly.x + fly.speedX; //update position frames 
@@ -198,7 +194,6 @@ if (fly.y > 300 || fly.y < 100 ){
 }
    }
   }
-
 // Draws the fly as a black circle
  function drawFlies() {
   for(let fly of flies) { //call all flies 
@@ -209,16 +204,14 @@ if (fly.y > 300 || fly.y < 100 ){
     pop();
   }
 }
-
 //Resets the fly to the left with a random y
 // moves the frog to the mouse position on x
 function moveFrog() {
     frog.body.x = mouseX;
 }
 
-/**
- * Handles moving the tongue based on its state
- */
+///Handles moving the tongue based on its state
+ 
 function moveTongue() {
     // Tongue matches the frog's x
     frog.tongue.x = frog.body.x;
@@ -244,8 +237,7 @@ function moveTongue() {
     }
 }
 // Displays the tongue (tip and line connection) and the frog (body)
- 
-function drawFrog() {
+ function drawFrog() {
     // Draw the tongue tip
     push();
     fill("#ff0000");
@@ -297,7 +289,6 @@ ellipse(bee.x,bee.y, bee.size + 5 , bee.size);
       }
 
 }
-
 //move the bees 
 function  moveBees (){
 for (let bee of bees){
@@ -341,17 +332,12 @@ const eaten = (d < frog.tongue.size/2 + fly.size/2);
         // Reset the fly
         fly.x = 0;
         fly.y = random(50,300);
-
-
-         // make the sun goes down 
+ // make the sun goes down 
 day.sunY+= 48;
 if (day.sunY > 480) day.sunY= 480 ;  // make the sun stop at the bottom 
-
-
 //make sky goes darker and darker 
 day.darkness+= 20;
 if (day.darkness >  255)  day.darkness = 255;
-
 // tongue goes back in 
 frog.tongue.state = "inbound"; 
     }
