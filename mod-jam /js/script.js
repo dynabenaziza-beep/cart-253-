@@ -116,6 +116,9 @@ rect(0,260,40,400);
 //wooden barrage # 2
 fill(160,82,45);
 rect(55,300,30,400);
+// wooden barrage # 3 
+fill(160,82,45);
+rect(100,340,30,400);
 //lake water
 fill(120,180,255);
 rect(0,430,640,160);
