@@ -121,7 +121,8 @@ fill(160,82,45);
 rect(100,340,30,400);
 //wooden barrage # 4
 fill(160,82,45);
-rect(140,380,30,400);
+rect(140,370,30,400);
+
 //lake water
 fill(120,180,255);
 rect(0,430,640,160);
@@ -255,6 +256,10 @@ function drawFrog() {
     noStroke();
     ellipse(frog.body.x, frog.body.y, frog.body.size);
     pop();
+
+  //draw the frog eye 
+  fill(255);
+  ellipse(frog.body.x - 60 , frog.body.y-70,80,80); //left eye 
 }
 
 // draw the bee 
