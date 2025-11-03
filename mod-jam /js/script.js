@@ -104,7 +104,7 @@ if (!gameStarted){
 background(44,255,5); // neon green 
 fill(0);
 textSize(60);
-textFont("Share techno mono")
+textFont("Share Tech Mono")
 
 if (lives <=0){
   text("YOU LOSE!", width /2, height /2);
