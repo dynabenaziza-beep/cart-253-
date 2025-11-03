@@ -1,35 +1,38 @@
 # MOD JAM!!!!!!!1111!!!
 
-AUTHOR NAME
+DYNA BENAZIZA 
+sleepy frog 
 
 [View this project online](URL_FOR_THE_RUNNING_PROJECT)
 
 ## Description
 
-This description should help the reader understand what the program is, anything they should know to be able to experience it (controls, special features, etc.), and what the desired user experience is. For example:
+Sleepy the frog is an interactive game where the player help a tired frog fall asleep by catching flies while avoiding the bees 
 
-> *The Mayor of Clown Town* is a simulator experience that allows the user to control a small town populated entirely by clowns.
 
-> The experience is controlled via the mouse, with left click selecting a clown and bringing up a menu of options such as "slip of banana peel" or "get into impossible capacious clown-car."
+> The frog is controled entirely with the mouse - move the mouse left or right to guide hte frog , and click to extend his tongue . Each time the frog eats a fly , the sky darkens and the sun slowly sets, bringing him closer to sleep . But beware of the bess becaause the frog lose a heart , and if all hearts are gone , the game end 
 
-> The project is meant to give the user a sense of what it would be the mayor of a town of clowns, eventually getting the sense that clowns are not taking their civic duties seriously.
+> what i added 
+- a title and instruction screen where you click the frog to start the game 
+- made a two click system
+- a heart sytem sot he frog loses lives when it eats a bee 
+- instead of a score number , the sky get darker and the sun does down each time a fly is eaten
 
-## Screenshot(s)
-
-This bit should have some images of the program running so that the reader has a sense of what it looks like. For example:
-
-> ![Image of a clown face](./assets/images/clown.png)
+- added diferent fly movement 
+ - made ending screen for win or lose 
+-  drew a lake , rock and  woodens barriers 
+- improved frog design with big eyes pupils like the start screen 
+- made colors chnange from day to night  
 
 ## Attribution
+this project use :
+- heart design 
+> - https://editor.p5js.org/Mithru/sketches/Hk1N1mMQg 
 
-This bit should attribute any code, assets or other elements used taken from other sources. For example:
+tutorial for bee
+>- https://editor.p5js.org/koolaid_krusade/sketches/5f4tRpmFj 
 
-> - This project uses [p5.js](https://p5js.org).
-> - The clown image is a capture of the clown from the Apple emoji character set.
-> - The barking sound effect is "single dog bark 1" by crazymonke9 from freesound.org: https://freesound.org/people/crazymonke9/sounds/418107/
-
-## License
-
-This bit should include the license you want to apply to your work. For example:
-
-> This project is licensed under a Creative Commons Attribution ([CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.en)) license with the exception of libraries and other components with their own licenses.
+tutorial for the sun 
+>-https://editor.p5js.org/giresunc23/sketches/z_46KsS2T
+>-https://p5js.org/tutorials/conditionals-and-interactivity 
+> -
