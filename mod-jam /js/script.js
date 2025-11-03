@@ -110,7 +110,7 @@ if (!gameStarted){
    background(skyColor * 0.3 , skyColor * 0.5, skyColor); //gradually darken 
 
    //lake water
-fill(60,130,230);
+fill(120,180,255);
 rect(0,320,640,160);
 
 //move the flies 
