@@ -1,5 +1,5 @@
 // mod-jam
- // Title of Project
+ // sleepy the frog 
  // dyna benaziza 
 "use strict";
 
@@ -109,15 +109,10 @@ if (!gameStarted){
    if (skyColor < 15) skyColor = 15; // stop whne it become totaly dark 
    background(skyColor * 0.3 , skyColor * 0.5, skyColor); //gradually darken 
 
-///
-   
-
 //move the flies 
     moveFlies();
     drawFlies();
 
-
-   
     moveFrog();
     moveTongue();
     drawFrog();
@@ -291,8 +286,6 @@ if (bee.y> 200 || bee.y < 100){
       }
     }
   }
-
-
 // Handles the tongue overlapping the fly
  function checkTongueFliesOverlap() {
   // eat the flies  
@@ -366,16 +359,19 @@ text ("Sleepy Frog", width / 2 , height /2);
 //instruction  step 1 
 textSize(24);
 fill(200);
-text("Click the frog to start", width / 2 ,height / 2 -60 );
+text("Click the frog to start", width / 2, 60 );
 
 // instruction step 2 
 if(showInstructions){
   fill(255);
-  textSize(20);
-   text("Sleepy the frog needs your help to fall asleep.Todo that , he must eat flies but be careful of the bees! If he eats them , he'll die !", width /2 , height / 2 + 80 , 500 , 200);
+  textSize(18);
+  textAlign(CENTER);
+  textLeading(24);
+   text("Sleepy the frog needs your help to fall asleep.\nTo do that,he must eat flies but be careful of the bees! \nIf he eats them , he'll die !",
+     width / 2 , height / 3 - 40);
 //instruction step3 
 textSize(20);
-text("Click again to begin !", width /2 ,height / 2 + 160);
+text("Click again to begin !", width /2, height/2 - 40);
 }
 
 // add giant frog body 
