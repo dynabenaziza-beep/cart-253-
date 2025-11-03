@@ -27,17 +27,12 @@ sunX: 600,  //left side
 sunY: 0,  //high = morning 
   darkness: 0 // so that it start brigth 
 };
-let eatSound;
+
 let showInstructions = false; // for the instruction at the begingin 
 let gameStarted = false;
 let flies = []; // empty list to store flies 
 let bees =[]; // empty list to store the bees 
 let lives = 3 ; //numbr of heart the frog has 
-  //sound function 
-function preload(){
-  fliesSound =loadSound("flies.wav");
-}
-
 
 /**
  * Creates the canvas and initializes the fly
@@ -342,8 +337,7 @@ if (bee.y> 200 || bee.y < 100){
   
 const eaten = (d < frog.tongue.size/2 + fly.size/2);
 
-    if (eaten) {
-      eatSound.play(); //sound when the frog eats fly 
+  if(eaten){
         // Reset the fly
         fly.x = 0;
         fly.y = random(50,300);
