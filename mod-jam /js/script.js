@@ -109,6 +109,10 @@ if (!gameStarted){
    if (skyColor < 15) skyColor = 15; // stop whne it become totaly dark 
    background(skyColor * 0.3 , skyColor * 0.5, skyColor); //gradually darken 
 
+   //lake water
+fill(60,130,230);
+rect(0,320,640,160);
+
 //move the flies 
     moveFlies();
     drawFlies();
@@ -369,6 +373,7 @@ if(showInstructions){
   textLeading(24);
    text("Sleepy the frog needs your help to fall asleep.\nTo do that,he must eat flies but be careful of the bees! \nIf he eats them , he'll die !",
      width / 2 , height / 3 - 40);
+
 //instruction step3 
 textSize(20);
 text("Click again to begin !", width /2, height/2 - 40);
