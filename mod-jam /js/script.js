@@ -259,8 +259,8 @@ function drawFrog() {
 
   //draw the frog eye 
   fill(255);
-  ellipse(frog.body.x - 60 , frog.body.y-70,80,80); //left eye 
-  ellipse(frog.body.x +60 ,frog.body.y -70 ,80,80 ); //rigth eye 
+  ellipse(frog.body.x - 60 , frog.body.y-90,80,80); //left eye 
+  ellipse(frog.body.x +60 ,frog.body.y -90 ,80,80 ); //rigth eye 
 
   //draw frog puppil 
   fill(0); //black
