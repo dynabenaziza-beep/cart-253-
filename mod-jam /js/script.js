@@ -103,7 +103,7 @@ if (!gameStarted){
    if(lives<=0 || day.sunY >=480){
 background(44,255,5); // neon green 
 fill(0);
-textSize(60);
+textSize(100);
 textFont("Share Tech Mono")
 
 if (lives <=0){
