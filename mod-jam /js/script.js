@@ -261,6 +261,12 @@ function drawFrog() {
   fill(255);
   ellipse(frog.body.x - 60 , frog.body.y-70,80,80); //left eye 
   ellipse(frog.body.x +60 ,frog.body.y -70 ,80,80 ); //rigth eye 
+
+  //draw frog puppil 
+  fill(0); //black
+  ellipse(frog.body.x - 60 , frog.body.y - 70 , 50, 50); //left puppil 
+
+
 }
 
 // draw the bee 
