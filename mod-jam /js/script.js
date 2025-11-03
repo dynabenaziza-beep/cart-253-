@@ -394,7 +394,7 @@ function drawStartScreen(){
 // dark bleu background color
 background(20,40,80); // deep bleu tone 
 
-fill(255);// white text 
+fill(255,215,0);// GOLD text 
 textSize(60);
 textFont("Share Tech Mono");
 text ("Sleepy Frog", width / 2 , height /2);
