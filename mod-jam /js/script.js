@@ -260,6 +260,7 @@ function drawFrog() {
   //draw the frog eye 
   fill(255);
   ellipse(frog.body.x - 60 , frog.body.y-70,80,80); //left eye 
+  ellipse(frog.body.x +60 ,frog.body.y -70 ,80,80 ); //rigth eye 
 }
 
 // draw the bee 
