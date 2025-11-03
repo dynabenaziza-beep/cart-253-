@@ -343,6 +343,7 @@ if (bee.y> 200 || bee.y < 100){
 const eaten = (d < frog.tongue.size/2 + fly.size/2);
 
     if (eaten) {
+      eatSound.play(); //sound when the frog eats fly 
         // Reset the fly
         fly.x = 0;
         fly.y = random(50,300);
