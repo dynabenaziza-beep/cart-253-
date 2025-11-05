@@ -22,6 +22,15 @@ function setup() {
 function draw() {
     background("pink");
 
+
+    // background
+    for(let x= 0 ; x <widht; x+= 2){ // move 2 pixel each time 
+        stroke(shade);
+        line(x,0,x,height); //draw vertical line 
+        shade +=1; // make it lighter for next line 
+
+    }
+
     //vertical lines 
     
     let  x = 0; //starting position 
@@ -44,7 +53,7 @@ function draw() {
         stroke(shade);
         line(y,0,width,y);
         y+=50;
-        tone+=25; 
+        tone+=25;  
     
 }
 }
