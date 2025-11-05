@@ -26,5 +26,5 @@ function draw() {
 
     while(x<= 500); //repeated till the end of the canvas 
     stroke(shade); // setting the line color 
-    line(x,0,x); // drawing  vertical line 
+    line(x,0,x, height); // drawing  vertical line 
 }
