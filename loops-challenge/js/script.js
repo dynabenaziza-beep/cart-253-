@@ -1,6 +1,7 @@
 /**
- * Lines
- * Pippin Barr
+ * Loop challenges 
+ * dyna benaziza
+ * 
  * 
  * A series of lines across the canvas
  */
@@ -24,11 +25,12 @@ function draw() {
     let  x = 0; //starting position 
     let shade = 0; // start the stroke color 
 
-    while(x<= 500); //repeated till the end of the canvas 
+    while(x<= 500) {//repeated till the end of the canvas 
     stroke(shade); // setting the line color 
     line(x,0,x, height); // drawing  vertical line 
 
     //increase the value ( like in thr exemple )
     x += 50; // 50 pixel to the rigth 
     shade += 25; // shade for each line ( get ligther and ligther )
+}
 }
