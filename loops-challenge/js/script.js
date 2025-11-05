@@ -21,6 +21,8 @@ function setup() {
  */
 function draw() {
     background("pink");
+
+    //vertical lines 
     
     let  x = 0; //starting position 
     let shade = 0; // start the stroke color 
@@ -32,5 +34,17 @@ function draw() {
     //increase the value ( like in thr exemple )
     x += 50; // 50 pixel to the rigth 
     shade += 25; // shade for each line ( get ligther and ligther )
+
+    // horizontal line 
+
+    let y = 0 ; 
+    let shade= 0;
+
+    while(y<= 500){
+        stroke(shade);
+        line(y,0,width,y);
+        y+=50;
+        tone+=25; 
+    }
 }
 }
