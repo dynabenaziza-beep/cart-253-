@@ -30,4 +30,5 @@ function draw() {
 
     //increase the value ( like in thr exemple )
     x += 50; // 50 pixel to the rigth 
+    shade += 25; // shade for each line ( get ligther and ligther )
 }
