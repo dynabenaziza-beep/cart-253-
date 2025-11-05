@@ -20,29 +20,27 @@ function setup() {
  * gradually lightening colour
  */
 function draw() {
-    background("pink");
-
-
-    // background
-    for(let x= 0 ; x <widht; x+= 2){ // move 2 pixel each time 
+  
+// background
+    let shade= 0;
+    for(let x= 0 ; x <width; x+= 2){ // move 2 pixel each time 
         stroke(shade);
         line(x,0,x,height); //draw vertical line 
         shade +=1; // make it lighter for next line 
-
     }
 
     //vertical lines 
     
     let  x = 0; //starting position 
-    let shade = 0; // start the stroke color 
+    let dark = 0; // start the stroke color 
 
     while(x<= 500) {//repeated till the end of the canvas 
-    stroke(shade); // setting the line color 
+    stroke(dark); // setting the line color 
     line(x,0,x, height); // drawing  vertical line 
 
     //increase the value ( like in thr exemple )
     x += 50; // 50 pixel to the rigth 
-    shade += 25; // shade for each line ( get ligther and ligther )
+    dark += 25; // shade for each line ( get ligther and ligther )
     }
     // horizontal line 
 
@@ -50,8 +48,8 @@ function draw() {
     let tone = 0;
 
     while(y<= 500){
-        stroke(shade);
-        line(y,0,width,y);
+        stroke(tone);
+        line(0,y,width,y);
         y+=50;
         tone+=25;  
     
