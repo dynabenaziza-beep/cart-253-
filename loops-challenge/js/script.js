@@ -23,4 +23,8 @@ function draw() {
     
     let  x = 0; //starting position 
     let shade = 0; // start the stroke color 
+
+    while(x<= 500); //repeated till the end of the canvas 
+    stroke(shade); // setting the line color 
+    line(x,0,x); // drawing  vertical line 
 }
