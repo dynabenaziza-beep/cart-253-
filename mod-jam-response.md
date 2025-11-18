@@ -12,16 +12,16 @@ The only thing I struggled with was the frog movement. Sometimes it stretched or
 What impressed me the most was the amount of code — around 955 lines. Seeing that much work made me realize how much effort went into small details. It felt more like an art project than just a game mod.
 
 
-3. Emmett Walthers’ Project
+2. Emmett Walthers’ Project
 Links:
 https://emmettwalthers.github.io/cart253/Topics/mod-jam/
 https://github.com/EmmettWalthers/cart253/tree/main/Topics/mod-jam
-Emmett Walthers’ game had a totally different tone. It was fun, playful, and very polished. The home page immediately caught my eye because of the cute frog design that reminded me of old-school googly-eye toys. What surprised me the most was the moving title. This small animation made it feel like a real game you would download on Itch.io. It gave the game a strong identity.
+Emmett Walthers’ game had a totally different tone. It was fun, playful, and very polished. The home page immediately caught my eye because of the cute frog design that reminded me of old-school googly-eye toys. What surprised me the most was the moving title. This small animation made it feel like a real game you would download . It gave the game a strong identity.
 The flies coming from the top instead of the sides was a smart twist. It changed the rhythm of the game and made it feel more vertical, which I thought was refreshing. The code was simple, but the visuals were clean and showed real effort — especially the circles drawn repeatedly to build shapes. Everything felt handcrafted, which added charm.
 Overall, Emmett’s project surprised me with how polished and confident it felt, even with simple code.
 
 
-4. Ray Hernaez’s Project
+3. Ray Hernaez’s Project
 Links:
 https://rayhernaez.github.io/cart253/projects/mod-jam/index.html
 https://github.com/rayhernaez/cart253/tree/main/projects/mod-jam
