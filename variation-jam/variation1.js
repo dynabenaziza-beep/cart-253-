@@ -17,10 +17,10 @@ const frog = {
     }
 };
 
-function variation1Draw(){
+function Variation1Draw(){
     background(240);
 moveFrogVariation1();
-functionDrawFrogvariation1();
+DrawFrogVariation1();
 moveTongueVariation1();
 
 }
@@ -29,7 +29,7 @@ function moveFrogVariation1() {
     frog.body.x=mouseX;
 }
 
-function DrawFrogvariation1() {
+function DrawFrogVariation1() {
     //Draw frog body 
     fill("00ff00");
     noStroke();
@@ -45,6 +45,19 @@ function DrawFrogvariation1() {
   ellipse(frog.body.x - 60 , frog.body.y - 90 , 50, 50); //left puppil 
 ellipse(frog.body.x+60, frog.body.y -90, 50 ,50); //rigth puppil 
 
+// Draw the tongue tip
+    push();
+    fill("#ff0000");
+    noStroke();
+    ellipse(frog.tongue.x, frog.tongue.y, frog.tongue.size);
+    pop();
+
+    // Draw the rest of the tongue
+    push();
+    stroke("#ff0000");
+    strokeWeight(frog.tongue.size);
+    line(frog.tongue.x, frog.tongue.y, frog.body.x, frog.body.y);
+    pop();
 }
 
 function moveTongueVariation1() {
