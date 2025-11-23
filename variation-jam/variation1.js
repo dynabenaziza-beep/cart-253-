@@ -19,4 +19,9 @@ const frog = {
 
 function variation1Draw(){
     background(240);
+moveFrogVariation1();
+}
+
+function moveFrogVariation1() {
+    frog.body.x=mouseX
 }
