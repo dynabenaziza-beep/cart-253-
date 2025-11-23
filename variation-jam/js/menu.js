@@ -79,4 +79,8 @@ else if (mouseX > 150 && mouseX < 350 &&
         state = "variation3";
     }
    }
+//Variation 1 click 
+else if (state =="variation1"){
+    variation1MousePressed();
+}
   }
