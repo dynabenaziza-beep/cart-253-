@@ -21,6 +21,8 @@ function variation1Draw(){
     background(240);
 moveFrogVariation1();
 functionDrawFrogvariation1();
+
+
 }
 
 function moveFrogVariation1() {
@@ -45,3 +47,27 @@ ellipse(frog.body.x+60, frog.body.y -90, 50 ,50); //rigth puppil
 
 }
 
+function moveTongueVariation1() {
+    // Tongue matches the frog's x
+    frog.tongue.x = frog.body.x;
+    // If the tongue is idle, it doesn't do anything
+    if (frog.tongue.state === "idle") {
+        // Do nothing
+    }
+    // If the tongue is outbound, it moves up
+    else if (frog.tongue.state === "outbound") {
+        frog.tongue.y += -frog.tongue.speed;
+        // The tongue bounces back if it hits the top
+        if (frog.tongue.y <= 0) {
+            frog.tongue.state = "inbound";
+        }
+    }
+    // If the tongue is inbound, it moves down
+    else if (frog.tongue.state === "inbound") {
+        frog.tongue.y += frog.tongue.speed;
+        // The tongue stops if it hits the bottom
+        if (frog.tongue.y >= 480) {
+            frog.tongue.state = "idle";
+        }
+    }
+}
