@@ -7,7 +7,7 @@
 let state ="menu"
 
 function setup() {
-    createCanvas(600, 400);
+    createCanvas(640, 480);
     textAlign(CENTER,CENTER);
     textSize(24);
 }
