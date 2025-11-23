@@ -21,7 +21,7 @@ function variation1Draw(){
     background(240);
 moveFrogVariation1();
 functionDrawFrogvariation1();
-
+moveTongueVariation1();
 
 }
 
