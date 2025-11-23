@@ -15,19 +15,21 @@ function setup() {
  * Display the menu or the current variation
 */
 function draw() {
-    switch (state) {
-        case "menu":
-            menuDraw();
-            break;
-        case "variation 1":
+    if(state =="menu"){
+        drawMneu();
+    }
+        else if (state =="variation1") {
             variation1Draw();
-            break
-        case "variation 2":
-            variation2Draw();
-            break;
-        case "variation 3":
-            variation3Draw();
-            break;
+        }
+else if(state=="variation1"){
+    variation1Draw();
+}
+else if (state =="variation2"){
+    variation2Draw();
+    }
+        
+    else if (state == "variation3"){
+        variation3Draw();
     }
 }
 
