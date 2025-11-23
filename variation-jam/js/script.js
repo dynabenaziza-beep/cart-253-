@@ -74,6 +74,15 @@ function keyPressed(event) {
 }
 
 function menuDraw(){
-    
+    background(240); //light grey 
+    //button 1 
+    fill(255);  //white rectangle 
+    stroke(0);   // black outline 
+
+    rect(150,150,200,60); //(x,y, width, height)
+    //button 2 
+    drawButton("variation 2", width/2,260);
+    //button 3
+    drawButton("variation 3", width/2,340);
 }
 
