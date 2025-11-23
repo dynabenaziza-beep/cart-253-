@@ -83,4 +83,10 @@ function moveTongueVariation1() {
             frog.tongue.state = "idle";
         }
     }
+
+    function variation1MousePressed(){
+        if (frog.tongue.state =="idle") {
+            frog.tongue.state ="outbound";
+        }
+    }
 }
