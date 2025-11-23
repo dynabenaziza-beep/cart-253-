@@ -16,3 +16,7 @@ const frog = {
         state: "idle" // State can be: idle, outbound, inbound
     }
 };
+
+function variation1Draw(){
+    background(240);
+}
