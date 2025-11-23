@@ -78,11 +78,17 @@ function menuDraw(){
     //button 1 
     fill(255);  //white rectangle 
     stroke(0);   // black outline 
+rect(150,150,200,60); //(x,y, width, height)
+fill(0);  //black  text 
+noStroke();
+text("variation 1", 150+100,150+30);
 
-    rect(150,150,200,60); //(x,y, width, height)
     //button 2 
     drawButton("variation 2", width/2,260);
     //button 3
     drawButton("variation 3", width/2,340);
 }
 
+function menuMousePressed(){
+    
+}
