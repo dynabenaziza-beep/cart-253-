@@ -7,7 +7,9 @@
 let state ="menu"
 
 function setup() {
-    createCanvas(500, 500);
+    createCanvas(600, 400);
+    textAlign(CENTER,CENTER);
+    textSize(24);
 }
 
 
@@ -16,11 +18,8 @@ function setup() {
 */
 function draw() {
     if(state =="menu"){
-        drawMneu();
+        drawMenu();
     }
-        else if (state =="variation1") {
-            variation1Draw();
-        }
 else if(state=="variation1"){
     variation1Draw();
 }
@@ -33,71 +32,51 @@ else if (state =="variation2"){
     }
 }
 
-/**
- * Listen for mouse pressed and call the function for it in the
- * current state
- */
-function mousePressed() {
-    switch (state) {
-        case "menu":
-            menuMousePressed();
-            break;
-        case "variation 1" :
-            variation1dMousePressed();
-            break
-        case "variation 2":
-            variation2MousePressed();
-            break;
-        case "variation 3":
-            variation3MousePressed();
-            break;
-    }
-}
 
-/**
- * Listen for keypressed and call the function for it in the
- * current state
- */
-function keyPressed(event) {
-    switch (state) {
-        case "menu":
-            menuKeyPressed(event);
-            break;
-        case "varition 1":
-            variation1KeyPressed(event);
-            break
-        case "variation 2":
-            variation2KeyPressed(event);
-            break;
-        case "variation 3":
-            variation3KeyPressed(event);
-            break;
-    }
-}
-
-function menuDraw(){
-    background(240); //light grey 
+function drawMenu(){
+    background(230); //light grey 
+   
     //button 1 
     fill(255);  //white rectangle 
     stroke(0);   // black outline 
-rect(150,150,200,60); //(x,y, width, height)
-fill(0);  //black  text 
-noStroke();
-text("variation 1", 150+100,150+30);
+    rect(150,100,200,60); //(x,y, width, height)
+    fill(0);  //black  text 
+    noStroke();
+    text("variation 1",250,130);
 
     //button 2 
-    drawButton("variation 2", width/2,260);
+    fill(255);
+    stroke(0);
+    rect(150,200,200,60); // x,y,width,heigth
+    fill(0);
+    noStroke();
+    text("variation 2", 250,230);
     //button 3
-    drawButton("variation 3", width/2,340);
+    fill(255);
+    stroke(0);
+    rect(150,300,200,60);
+    fill(0);
+    noStroke();
+    text("variaton 3", 250,330);
 }
 
-function menuMousePressed(){
+function mousePressed(){
+    if(state =="menu"){
     //button 1 area 
    if(
     mouseX> 150 && mouseX< 350 && //button widtd
-    mouseY> 150 && mouseY< 210 //button height 
-   ) {
-state="variation1";        //go to variation1 
-
+    mouseY> 100 && mouseY< 160) { //button height 
+  state="variation1";        //go to variation1 
+ }
+ //button 2
+else if(mouseX> 150 && mouseX <350 &&
+    mouseY > 200 && mouseY < 260 ) {
+        state= "variation2";
+    }
+//button 3 
+else if (mouseX > 150 && mouseX < 350 &&
+         mouseY > 300 && mouseY < 360) {
+        state = "variation3";
+    }
    }
-}
+  }
