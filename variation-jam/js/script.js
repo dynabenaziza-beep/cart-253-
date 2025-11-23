@@ -90,5 +90,12 @@ text("variation 1", 150+100,150+30);
 }
 
 function menuMousePressed(){
-    
+    //button 1 area 
+   if(
+    mouseX> 150 && mouseX< 350 && //button widtd
+    mouseY> 150 && mouseY< 210 //button height 
+   ) {
+state="variation1";        //go to variation1 
+
+   }
 }
