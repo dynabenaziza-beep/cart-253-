@@ -73,3 +73,7 @@ function keyPressed(event) {
     }
 }
 
+function menuDraw(){
+    
+}
+
