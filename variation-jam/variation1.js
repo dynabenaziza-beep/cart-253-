@@ -20,8 +20,16 @@ const frog = {
 function variation1Draw(){
     background(240);
 moveFrogVariation1();
+functionDrawFrogvariation1();
 }
 
 function moveFrogVariation1() {
     frog.body.x=mouseX
+}
+
+functionDrawFrogvariation1(){
+    //Draw frog body 
+    fill("00ff00");
+    noStroke();
+    ellipse(frog.body.x, frog.body.y,frog.body.size);
 }
