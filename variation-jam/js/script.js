@@ -19,14 +19,14 @@ function draw() {
         case "menu":
             menuDraw();
             break;
-        case "red-variation":
-            redDraw();
+        case "variation 1":
+            variation1Draw();
             break
-        case "green-variation":
-            greenDraw();
+        case "variation 2":
+            variation2Draw();
             break;
-        case "blue-variation":
-            blueDraw();
+        case "variation 3":
+            variation3Draw();
             break;
     }
 }
@@ -40,14 +40,14 @@ function mousePressed() {
         case "menu":
             menuMousePressed();
             break;
-        case "red-variation":
-            redMousePressed();
+        case "variation 1" :
+            variation1dMousePressed();
             break
-        case "green-variation":
-            greenMousePressed();
+        case "variation 2":
+            variation2MousePressed();
             break;
-        case "blue-variation":
-            blueMousePressed();
+        case "variation 3":
+            variation3MousePressed();
             break;
     }
 }
@@ -61,14 +61,14 @@ function keyPressed(event) {
         case "menu":
             menuKeyPressed(event);
             break;
-        case "red-variation":
-            redKeyPressed(event);
+        case "varition 1":
+            variation1KeyPressed(event);
             break
-        case "green-variation":
-            greenKeyPressed(event);
+        case "variation 2":
+            variation2KeyPressed(event);
             break;
-        case "blue-variation":
-            blueKeyPressed(event);
+        case "variation 3":
+            variation3KeyPressed(event);
             break;
     }
 }
