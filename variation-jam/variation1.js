@@ -228,7 +228,15 @@ function checkTrash5Collision(){
 }
 
 function checkGoodTrashcans(){
-    
+   for (let i=0; i < 4 ; i++) { //only 0-3 trashcans 
+    let tc = trashcans[i];
+
+    score++;
+    frog.tongue.state="inbound";
+    if(score >=3 ){
+        caseSolved=true;
+    }
+   }
 }
 function moveTongueVariation1() {
     // Tongue matches the frog's x
