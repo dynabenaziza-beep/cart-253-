@@ -4,7 +4,7 @@ let trashcansCreated = false;
 let trashcans=[];
 
 let showInstructions =false;
-let gamestarted = false;
+let gameStarted = false;
 
 const frog = {
     // The frog's body has a position and size
@@ -77,16 +77,6 @@ centerY: 200,
 dangerous: true //kilfrog 
 });
 }
-
-function draw() {
-  if (!gameStarted) {
-    drawStartScreen();
-    return;
-  }
-
-  variation1Draw();
-}
-
 
 function moveTrashcans(){ //to move the trashcans 
 //t.c #1 moves left and rigth 
@@ -241,7 +231,7 @@ function moveTongueVariation1() {
         }
 }
 
-  function mousePressed() {
+  function variation1MousePressed() {
   if (!gameStarted) {
     let d = dist(mouseX, mouseY, width / 2, height - 50);
 

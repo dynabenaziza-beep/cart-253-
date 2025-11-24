@@ -30,6 +30,16 @@ else if (state =="variation2"){
     else if (state == "variation3"){
         variation3Draw();
     }
+
+    function draw() {
+  if (!gameStarted) {
+    drawStartScreen();
+    return;
+  }
+
+  variation1Draw();
+}
+
 }
 
 function drawMenu(){
