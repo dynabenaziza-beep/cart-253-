@@ -75,7 +75,7 @@ if (trashcans[1].x + trashcans[1].w > width){
     trashcans[1].speedX = trashcans[1].speedX * -1;
 }
 //trashcans #3 
-trash[2].y = trashcans[2].y + trashcans [2].speedY;
+trashcans[2].y = trashcans[2].y + trashcans [2].speedY;
 //bounce at the top
 if(trashcans[2].y<0){
     trashcans[2].speedY = trashcans[2].speedY * -1;
@@ -95,7 +95,6 @@ function variation1Draw(){
      }
      moveTrashcans();
      drawTrashcans();
-    drawTrashcans();
 
 moveFrogVariation1();
 moveTongueVariation1();
@@ -154,7 +153,7 @@ function moveTongueVariation1() {
    
     // If the tongue is outbound, it moves up
      if (frog.tongue.state === "outbound") {
-        frog.tongue.y -= -frog.tongue.speed;
+        frog.tongue.y -= frog.tongue.speed;
         // The tongue bounces back if it hits the top
         if (frog.tongue.y <= 0) frog.tongue.state = "inbound";
          }
