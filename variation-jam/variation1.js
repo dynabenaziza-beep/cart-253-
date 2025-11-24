@@ -35,11 +35,13 @@ speedY:0.    //DOES NOT MOOVE VERTICALLY
 }
 function variation1Draw(){
     background(240);
-    if (!trashcans){
+
+       drawTrashcans();
+    if (!trashcansCreated){
         setupTrashcans();
         trashcansCreated = true;
 
-        drawTrashcans();
+      
     }
 
 moveFrogVariation1();
@@ -58,7 +60,7 @@ function drawTrashcans(){
 push();
 fill(100);   //grey trashcans 
 stroke(0);
-rect(tc.x.tc.y.tc.w,tc.h);
+rect(tc.x, tc.y, tc.w, tc.h);
 pop();
     }
 }
@@ -91,8 +93,6 @@ function drawFrogVariation1() {
   ellipse(frog.body.x - 60 , frog.body.y - 90 , 50, 50); //left puppil 
 ellipse(frog.body.x+60, frog.body.y -90, 50 ,50); //rigth puppil 
 
-
- 
 }
 
 function moveTongueVariation1() {
