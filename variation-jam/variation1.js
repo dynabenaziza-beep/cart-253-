@@ -38,6 +38,8 @@ function variation1Draw(){
     if (!trashcans){
         setupTrashcans();
         trashcansCreated = true;
+
+        drawTrashcans();
     }
 
 moveFrogVariation1();
@@ -52,7 +54,12 @@ function moveFrogVariation1() {
 
 function drawTrashcans(){
     for (let tc of trashcans){
-        
+  
+push();
+fill(100);   //grey trashcans 
+stroke(0);
+rect(tc.x.tc.y.tc.w,tc.h);
+pop();
     }
 }
 function drawFrogVariation1() {
