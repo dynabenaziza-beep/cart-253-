@@ -3,6 +3,9 @@ let gameOver = false
 let trashcansCreated = false;
 let trashcans=[];
 
+let showInstructions =false;
+let gamestarted = false;
+
 const frog = {
     // The frog's body has a position and size
     body: {
@@ -75,9 +78,16 @@ dangerous: true //kilfrog
 });
 }
 
-function draw(){
-    variation1Draw();
+function draw() {
+  if (!gameStarted) {
+    drawStartScreen();
+    return;
+  }
+
+  variation1Draw();
 }
+
+
 function moveTrashcans(){ //to move the trashcans 
 //t.c #1 moves left and rigth 
 trashcans[0].x =trashcans[0].x+ trashcans[0].speedX;
@@ -232,8 +242,19 @@ function moveTongueVariation1() {
 }
 
   function mousePressed() {
-    // This makes the tongue start ONLY when it is not already moving
-    if (frog.tongue.state === "idle") {
-        frog.tongue.state = "outbound";
+  if (!gameStarted) {
+    let d = dist(mouseX, mouseY, width / 2, height - 50);
+
+    // First click → show instructions
+    if (d < 250 && !showInstructions) {
+      showInstructions = true;
     }
+    // Second click → start game
+    else if (d < 250 && showInstructions) {
+      gameStarted = true;
+    }
+  }
+  else if (frog.tongue.state === "idle") {
+    frog.tongue.state = "outbound";
+  }
 }
