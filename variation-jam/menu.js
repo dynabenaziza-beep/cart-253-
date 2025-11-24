@@ -59,7 +59,7 @@ rect(170,150,300,70,10); // rounded button
 noStroke();
 fill(255,220,180);
 textSize(35);
-text("Detective Frog", 200 ,200 )
+text("Detective Frog", 200 ,200 );
 
 //BUTTON 2 
 fill(180,20,30); //medium brown button 
@@ -78,13 +78,13 @@ function mousePressed(){
     if(state =="menu"){
     //button 1 area 
    if(
-    mouseX> 150 && mouseX< 350 && //button widtd
-    mouseY> 100 && mouseY< 160) { //button height 
+    mouseX> 170 && mouseX< 470 && //button widtd
+    mouseY> 150 && mouseY< 220) { //button height 
   state="variation1";        //go to variation1 
  }
  //button 2
-else if(mouseX> 150 && mouseX <350 &&
-    mouseY > 200 && mouseY < 260 ) {
+else if(mouseX> 170 && mouseX <470 &&
+    mouseY > 250 && mouseY < 320 ) {
         state= "variation2";
     }
 //button 3 
