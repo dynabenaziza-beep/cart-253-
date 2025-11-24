@@ -49,7 +49,7 @@ function draw(){
 }
 function moveTrashcans(){ //to move the trashcans 
 //t.c #1 moves left and rigth 
-trashcan[0].x =trashcans[0].x+ trashcans[0].speedX;
+trashcans[0].x =trashcans[0].x+ trashcans[0].speedX;
 //if touches left edge= flipe direction 
 if(trashcans[0].x<0){
     trashcans[0]. speedX= trashcans[0].speedX * -1;
@@ -62,14 +62,12 @@ if (trashcans[0].x + trashcans[0].w >width){
 function variation1Draw(){
     background(240);
 
-       drawTrashcans();
     if (!trashcansCreated){
         setupTrashcans();
         trashcansCreated = true;
-
-      
-    }
-    moveTrashcans();
+     }
+     moveTrashcans();
+     drawTrashcans();
     drawTrashcans();
 
 moveFrogVariation1();
@@ -128,28 +126,22 @@ function moveTongueVariation1() {
     // Tongue matches the frog's x
     frog.tongue.x = frog.body.x;
     // If the tongue is idle, it doesn't do anything
-    if (frog.tongue.state === "idle") {
-        // Do nothing
-    }
+   
     // If the tongue is outbound, it moves up
-    else if (frog.tongue.state === "outbound") {
-        frog.tongue.y += -frog.tongue.speed;
+     if (frog.tongue.state === "outbound") {
+        frog.tongue.y -= -frog.tongue.speed;
         // The tongue bounces back if it hits the top
-        if (frog.tongue.y <= 0) {
-            frog.tongue.state = "inbound";
-        }
-    }
+        if (frog.tongue.y <= 0) frog.tongue.state = "inbound";
+         }
+
     // If the tongue is inbound, it moves down
     else if (frog.tongue.state === "inbound") {
         frog.tongue.y += frog.tongue.speed;
         // The tongue stops if it hits the bottom
-        if (frog.tongue.y >= 480) {
-            frog.tongue.state = "idle";
+        if (frog.tongue.y >= 480) frog.tongue.state = "idle";
         }
-    }
 }
-
-    function variation1MousePressed(){
+function variation1MousePressed(){
         if (frog.tongue.state =="idle") {
             frog.tongue.state ="outbound";
         }
