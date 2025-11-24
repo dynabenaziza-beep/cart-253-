@@ -1,4 +1,5 @@
 /* variation 1 - Frod Detective */
+let gameOver = false
 let trashcansCreated = false;
 let trashcans=[];
 
@@ -126,12 +127,11 @@ trashcans[4].y = trashcans[4].centerY + sin(trashcans[4].angle) * trashcans[4].r
 
 function variation1Draw(){
 if(gameOver) {
-    
-        background(255,50,50); //red background 
-        fill(0);
-        textSize(64);
-        text("GAME OVER", width/2,height/2);
-        return; //stop the game 
+    background(255,50,50); //red background 
+     fill(0);
+    textSize(64);
+    text("GAME OVER", width/2,height/2);
+    return; //stop the game 
     }
       background(240);
 
@@ -191,11 +191,11 @@ ellipse(frog.body.x+60, frog.body.y -90, 50 ,50); //rigth puppil
 
 }
 function checkTrash5Collision(){
-    let tc=trashcans[4]; //the fifth tc 
+    let tc = trashcans[4]; //the fifth tc 
     let d= dist(frog.body.x, frog.body.y, tc.x + tc.w/2, tc.y + tc.h/2);
     // if frog closer then 20 px = game over 
-    if(d< 20){
-        gameOver =true;
+    if(d< 80){
+        gameOver = true;
     }
 }
 
