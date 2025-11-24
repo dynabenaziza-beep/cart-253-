@@ -162,6 +162,7 @@ if(gameOver) {
      }
      moveTrashcans();
      checkTrash5Collision();
+     checkGoodTrashcans();
      drawTrashcans();
 
 moveFrogVariation1();
