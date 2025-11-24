@@ -70,8 +70,8 @@ angle:0, //used for cicrcle
 radius:40,  //size circle 
 centerX:400, //center rotation
 centerY: 200,
-dnagerous: true //kilfrog 
-})
+dangerous: true //kilfrog 
+});
 }
 
 function draw(){
@@ -116,6 +116,12 @@ trashcans[3].speedX*= -1;
 if(trashcans[3].y < 0 || trashcans[3].y + trashcans[3].h > height){
     trashcans[3].speedY *=-1;
 }
+// trashcan #5 - circle movement
+trashcans[4].angle += 0.05; // how fast it rotates (small = smoother)
+
+//  new x/y based on angle
+trashcans[4].x = trashcans[4].centerX + cos(trashcans[4].angle) * trashcans[4].radius;
+trashcans[4].y = trashcans[4].centerY + sin(trashcans[4].angle) * trashcans[4].radius;
 
 
 }
@@ -133,8 +139,6 @@ function variation1Draw(){
 moveFrogVariation1();
 moveTongueVariation1();
 drawFrogVariation1();
-
-
 }
 
 function moveFrogVariation1() {
@@ -184,24 +188,29 @@ function moveTongueVariation1() {
     // Tongue matches the frog's x
     frog.tongue.x = frog.body.x;
     // If the tongue is idle, it doesn't do anything
-   
-    // If the tongue is outbound, it moves up
+   //reset
+   if(frog.tongue.state=="idle"){
+    frog.tongue.y = frog.body.y;
+   }
+    
+// outbound(go up)
      if (frog.tongue.state === "outbound") {
         frog.tongue.y -= frog.tongue.speed;
         // The tongue bounces back if it hits the top
         if (frog.tongue.y <= 0) frog.tongue.state = "inbound";
          }
 
-    // If the tongue is inbound, it moves down
+    // inbound go down 
     else if (frog.tongue.state === "inbound") {
         frog.tongue.y += frog.tongue.speed;
         // The tongue stops if it hits the bottom
         if (frog.tongue.y >= 480) frog.tongue.state = "idle";
         }
 }
-function variation1MousePressed(){
-        if (frog.tongue.state =="idle") {
-            frog.tongue.state ="outbound";
-        }
-    }
 
+  function mousePressed() {
+    // This makes the tongue start ONLY when it is not already moving
+    if (frog.tongue.state === "idle") {
+        frog.tongue.state = "outbound";
+    }
+}
