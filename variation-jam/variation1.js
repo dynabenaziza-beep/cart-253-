@@ -300,7 +300,7 @@ function moveTongueVariation1() {
 
 function drawStartScreen() {
   background(20, 40, 80); // deep blue
-
+textAlign(CENTER, CENTER); //center title 
   // Title
   fill(255, 215, 0); 
   textSize(50);
