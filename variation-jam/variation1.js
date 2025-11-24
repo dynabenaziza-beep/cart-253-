@@ -325,11 +325,11 @@ textAlign(CENTER, CENTER); //center title
   // Instructions after first click
   if (showInstructions) {
     fill(255);
-    textSize(16);
+    textSize(23);
     textLeading(50);
     text("Use your tongue to catch clues.\nAvoid dangerous trashcans.\nStay alive.", width / 2, 220);
 
-    textSize(18);
+    textSize(20);
     text("Click again to begin!", width / 2, 270);
   }
 
