@@ -1,5 +1,6 @@
 /* variation 1 - Frod Detective */
 let bgImage;
+
 function preload(){
 bgImage = loadImage("dt.jpg");
 }
@@ -143,7 +144,7 @@ if(gameOver) {
     text("GAME OVER", width/2,height/2);
     return; //stop the game 
     }
-      background(240);
+      background(bgImage);
 
     if (!trashcansCreated){
         setupTrashcans();
