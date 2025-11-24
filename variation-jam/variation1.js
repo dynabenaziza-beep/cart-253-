@@ -306,7 +306,12 @@ function drawStartScreen() {
   strokeWeight(6);
   noFill();
   ellipse(300,200,90,90);
-  
+
+  //handle 
+  stroke(80,50,20);
+  strokeWeigth(12);
+  line(340, 240, 400, 300);
+
 textAlign(CENTER, CENTER); //center title 
   // Title
   fill(255, 215, 0); 
