@@ -32,6 +32,15 @@ h: 80,
 speedX:2,
 speedY:0.    //DOES NOT MOOVE VERTICALLY
     });
+//second transh cans 
+trashcans.push({
+x:650,
+y: 150,
+w:  60,
+h: 80,
+speedX: -3,
+speedY: 0 
+})
 }
 function variation1Draw(){
     background(240);
