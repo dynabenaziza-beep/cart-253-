@@ -60,7 +60,17 @@ trashcans.push({
     speedX: 2,
     speedY: 2
 });
-
+//trashcans fifth 
+trashcans.push({
+x: 400,
+y: 200,
+w: 60,
+h:80,
+angle:0,
+radius:40,
+centerX:400,
+centerY: 200,
+})
 }
 
 function draw(){
