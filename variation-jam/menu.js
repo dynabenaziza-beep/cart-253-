@@ -45,13 +45,22 @@ else if (state =="variation2"){
 function drawMenu(){
     background(230); //light grey 
    
-    //button 1 
-    fill(255);  //white rectangle 
-    stroke(0);   // black outline 
-    rect(150,100,200,60); //(x,y, width, height)
-    fill(0);  //black  text 
-    noStroke();
-    text("variation 1",250,130);
+    //  TITLE
+    fill(255,215,120);  //title
+    textSize(40);
+    text("GAME MENU",width /2, 80);
+
+//BUTTON 1 
+fill(90,60,40); //medium brown button 
+stroke(255,230,180); //ligth beige outline 
+strokeWeight(3); //
+rect(170,150,300,70,10); // rounded button 
+//BUTTON 1 TEXT 
+noStroke();
+fill(255,220,180);
+textSize(35);
+text("Detective Frog", 200 ,200 )
+
 
     //button 2 
     fill(255);
@@ -66,7 +75,7 @@ function drawMenu(){
     rect(150,300,200,60);
     fill(0);
     noStroke();
-    text("variation 3", 250,330);
+    text("variaton 3", 250,330);
 }
 
 function mousePressed(){
