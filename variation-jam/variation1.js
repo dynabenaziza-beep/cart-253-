@@ -303,7 +303,7 @@ function drawStartScreen() {
 //drawing the detective frog loop 
   //loop 
   stroke(255);
-  strokeWeight(6);
+  strokeWeight(10);
   noFill();
   ellipse(300,200,90,90);
 // loop handle 
