@@ -1,4 +1,7 @@
 /* variation 1 - Frod Detective */
+
+let trashcans=[];
+
 const frog = {
     // The frog's body has a position and size
     body: {
