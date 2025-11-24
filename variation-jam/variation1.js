@@ -35,7 +35,7 @@ speedY:0,   //DOES NOT MOOVE VERTICALLY
     });
 //second transh cans 
 trashcans.push({
-x:650,
+x:600,
 y: 150,
 w:  60,
 h: 80,
@@ -58,6 +58,7 @@ if(trashcans[0].x<0){
 if (trashcans[0].x + trashcans[0].w >width){
     trashcans[0].speedX = trashcans[0].speedX *-1;
 }
+trashcans[1].x = trashcans[1].x + trashcans[1].speedX; //trashcans #2 move rigth left 
 }
 function variation1Draw(){
     background(240);
@@ -99,10 +100,8 @@ function drawFrogVariation1() {
     noStroke();
     ellipse(frog.tongue.x, frog.tongue.y, frog.tongue.size);
     
-
-    // Draw the rest of the tongue
-
-    stroke("#ff0000");
+// Draw the rest of the tongue
+ stroke("#ff0000");
     strokeWeight(frog.tongue.size);
     line(frog.tongue.x, frog.tongue.y, frog.body.x, frog.body.y);
     //Draw frog body 
