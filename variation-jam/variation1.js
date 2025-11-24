@@ -300,16 +300,15 @@ function moveTongueVariation1() {
 
 function drawStartScreen() {
   background(20, 40, 80); // deep blue
-
+//drawing the detective frog loop 
   //loop 
   stroke(255);
   strokeWeight(6);
   noFill();
   ellipse(300,200,90,90);
-
-  //handle 
+// loop handle 
   stroke(80,50,20);
-  strokeWeigth(12);
+  strokeWeight(12);
   line(340, 240, 400, 300);
 
 textAlign(CENTER, CENTER); //center title 
