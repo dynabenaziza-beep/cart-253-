@@ -32,7 +32,6 @@ else if (state =="variation2"){
     }
 }
 
-
 function drawMenu(){
     background(230); //light grey 
    
