@@ -35,7 +35,7 @@ speedY:0,   //DOES NOT MOOVE VERTICALLY
     });
 //second transh cans 
 trashcans.push({
-x:600,
+x:550,
 y: 150,
 w:  60,
 h: 80,
@@ -58,7 +58,13 @@ if(trashcans[0].x<0){
 if (trashcans[0].x + trashcans[0].w >width){
     trashcans[0].speedX = trashcans[0].speedX *-1;
 }
-trashcans[1].x = trashcans[1].x + trashcans[1].speedX; //trashcans #2 move rigth left 
+trashcans[1].x = trashcans[1].x + trashcans[1].speedX;//trashcans #2 move rigth left 
+if(trashcans[1].x<0){//bounce on left edge 
+    trashcans[1].speedX = trashcans[1].speedX*-1;
+}
+if (trashcans[1].x + trashcans[1].w > width){
+    trashcans[1].speedX = trashcans[1].speedX * -1;
+}
 }
 function variation1Draw(){
     background(240);
