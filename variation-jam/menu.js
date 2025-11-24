@@ -70,7 +70,7 @@ rect(170,250,300,70,10); // rounded button
 noStroke();
 fill(255);
 textSize(35);
-text("Detective Frog", 200 ,200 )
+text("spider frog ", 200 ,200 )
 
     //button 3
     fill(255);
