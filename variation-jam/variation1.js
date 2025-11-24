@@ -1,5 +1,4 @@
 /* variation 1 - Frod Detective */
-let canvas;
 let trashcansCreated = false;
 let trashcans=[];
 
@@ -21,8 +20,8 @@ const frog = {
     }
 };
 function setup(){
-    canvas = createCanvas(640,480);
-    centerCanvas(); //put canvas in middle 
+createCanvas(640,480);
+   
 }
 
 function setupTrashcans() {
