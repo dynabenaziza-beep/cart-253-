@@ -192,9 +192,16 @@ ellipse(frog.body.x+60, frog.body.y -90, 50 ,50); //rigth puppil
 }
 function checkTrash5Collision(){
     let tc = trashcans[4]; //the fifth tc 
-    let d= dist(frog.body.x, frog.body.y, tc.x + tc.w/2, tc.y + tc.h/2);
-    // if frog closer then 20 px = game over 
-    if(d< 80){
+
+
+    //center roating trascans 
+    let tcCenterX = tc.x + tc.w / 2;
+    let tcCenterY = tc.y + tc.h / 2;
+//distance from tongue tip 
+    let dTongue = dist(frog.tongue.x, frog.tongue.y, tcCenterX,tcCenterY);
+
+    // if frog  tongue closer then 20 px = game over 
+    if(dTongue <50){
         gameOver = true;
     }
 }
@@ -204,6 +211,7 @@ function moveTongueVariation1() {
     frog.tongue.x = frog.body.x;
     // If the tongue is idle, it doesn't do anything
    //reset
+   
    if(frog.tongue.state=="idle"){
     frog.tongue.y = frog.body.y;
    }
