@@ -125,7 +125,15 @@ trashcans[4].y = trashcans[4].centerY + sin(trashcans[4].angle) * trashcans[4].r
 }
 
 function variation1Draw(){
-    background(240);
+if(gameOver) {
+    
+        background(255,50,50); //red background 
+        fill(0);
+        textSize(64);
+        text("GAME OVER", width/2,height/2);
+        return; //stop the game 
+    }
+      background(240);
 
     if (!trashcansCreated){
         setupTrashcans();
