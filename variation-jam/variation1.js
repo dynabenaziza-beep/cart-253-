@@ -61,7 +61,6 @@ trashcans.push({
     speedY: 2
 });
 
-
 }
 
 function draw(){
@@ -95,6 +94,19 @@ if(trashcans[2].y<0){
 if (trashcans[2].y + trashcans[2].h > height){
     trashcans[2].speedY = trashcans[2].speedY *-1;
 }
+//trashcan #4 = diagonally 
+trashcans[3].x =trashcans[3].x + trashcans[3].speedX;
+trashcans[3].y = trashcans[3].y+ trashcans[3].speedY;
+    //bounce on left or rrigth 
+if (trashcans[3].x <0 || trashcans[3].x + trashcans[3].w > width){
+trashcans[3].speedX*= -1;
+}
+//bounce on top or bottom
+if(trashcans[3].y < 0 || trashcans[3].y + trashcans[3].h > height){
+    trashcans[3].speedY *=-1;
+}
+
+
 }
 
 function variation1Draw(){
