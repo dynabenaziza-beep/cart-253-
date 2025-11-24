@@ -1,4 +1,5 @@
 /* variation 1 - Frod Detective */
+let score =0; 
 let bgImage;
 
 function preload(){
