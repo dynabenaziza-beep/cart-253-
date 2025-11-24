@@ -69,8 +69,8 @@ rect(170,250,300,70,10); // rounded button
 //BUTTON 2 TEXT 
 noStroke();
 fill(255);
-textSize(35);
-text("spider frog ", 200,300 );
+textSize(38);
+text("Spider frog ", 200,300 );
 
 }
 
