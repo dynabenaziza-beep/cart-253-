@@ -122,8 +122,6 @@ trashcans[4].angle += 0.05; // how fast it rotates (small = smoother)
 //  new x/y based on angle
 trashcans[4].x = trashcans[4].centerX + cos(trashcans[4].angle) * trashcans[4].radius;
 trashcans[4].y = trashcans[4].centerY + sin(trashcans[4].angle) * trashcans[4].radius;
-
-
 }
 
 function variation1Draw(){
@@ -183,6 +181,14 @@ function drawFrogVariation1() {
   ellipse(frog.body.x - 60 , frog.body.y - 90 , 50, 50); //left puppil 
 ellipse(frog.body.x+60, frog.body.y -90, 50 ,50); //rigth puppil 
 
+}
+function checkTrash5Collision(){
+    let tc=trashcans[4]; //the fifth tc 
+    let d= dist(frog.body.x, frog.body.y, tc.x + tc.w/2, tc.y + tc.h/2);
+    // if frog closer then 20 px = game over 
+    if(d< 20){
+        gameOver =true;
+    }
 }
 
 function moveTongueVariation1() {
