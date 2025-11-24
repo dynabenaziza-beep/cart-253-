@@ -134,6 +134,7 @@ function variation1Draw(){
         trashcansCreated = true;
      }
      moveTrashcans();
+     checkTrash5Collision();
      drawTrashcans();
 
 moveFrogVariation1();
