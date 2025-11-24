@@ -261,7 +261,7 @@ function moveTongueVariation1() {
     // If the tongue is idle, it doesn't do anything
    //reset
    
-   if(frog.tongue.state=="idle"){
+ if(frog.tongue.state=="idle"){
     frog.tongue.y = frog.body.y;
    }
     
@@ -327,14 +327,13 @@ textAlign(CENTER, CENTER); //center title
     fill(255);
     textSize(23);
     textLeading(50);
-    text("Use your tongue to catch clues.\nAvoid dangerous trashcans.\nStay alive.", width / 2, 220);
+    text("As a detective, use your tongue to catch the good trashcans.\n Avoid the bad one or you lose.", width / 2, 220);
 
     textSize(20);
     text("Click again to begin!", width / 2, 270);
   }
 
-
-  // Frog body (only top part)
+// Frog body (only top part)
   noStroke();
   fill("#00ff00");
   ellipse(width / 2, height + 120, 640, 400);
