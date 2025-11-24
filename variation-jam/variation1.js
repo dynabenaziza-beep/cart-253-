@@ -305,11 +305,11 @@ function drawStartScreen() {
   stroke(255);
   strokeWeight(10);
   noFill();
-  ellipse(300,200,90,90);
+  ellipse(500,80,90,90);
 // loop handle 
   stroke(80,50,20);
   strokeWeight(20);
-  line(340, 240, 400, 300);
+  line(540, 110, 600, 160);
 
 textAlign(CENTER, CENTER); //center title 
   // Title
