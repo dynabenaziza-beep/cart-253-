@@ -66,10 +66,11 @@ x: 400,
 y: 200,
 w: 60,
 h:80,
-angle:0,
-radius:40,
-centerX:400,
+angle:0, //used for cicrcle 
+radius:40,  //size circle 
+centerX:400, //center rotation
 centerY: 200,
+dnagerous: true //kilfrog 
 })
 }
 
