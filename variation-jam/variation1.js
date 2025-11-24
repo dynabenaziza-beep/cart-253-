@@ -154,9 +154,14 @@ if(gameOver) {
     text("GAME OVER", width/2,height/2);
     return; //stop the game 
     }
-      background(bgImage);
+      background(bgImage)
 
-    if (!trashcansCreated){
+      //draw score icons (3 total )
+      if (score>= 1) drawScoreTrashcan(20,20);
+      if (score>= 2) drawScoreTrashcan(70,20);
+     if (score>= 3) drawScoreTrashcan(120,20);
+
+if (!trashcansCreated){
         setupTrashcans();
         trashcansCreated = true;
      }
