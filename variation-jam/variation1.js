@@ -227,6 +227,9 @@ function checkTrash5Collision(){
     }
 }
 
+function checkGoodTrashcans(){
+    
+}
 function moveTongueVariation1() {
     // Tongue matches the frog's x
     frog.tongue.x = frog.body.x;
