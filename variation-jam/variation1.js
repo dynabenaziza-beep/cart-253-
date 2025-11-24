@@ -338,7 +338,7 @@ textAlign(CENTER, CENTER); //center title
   fill("#00ff00");
   ellipse(width / 2, height + 120, 640, 400);
 
-  // Eyes
+// Eyes
   fill(255);
   ellipse(width / 3 - 40, height - 40, 120, 120);
   ellipse(width / 3 + 260, height - 40, 120, 120);
