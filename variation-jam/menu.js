@@ -66,7 +66,7 @@ function drawMenu(){
     rect(150,300,200,60);
     fill(0);
     noStroke();
-    text("variaton 3", 250,330);
+    text("variation 3", 250,330);
 }
 
 function mousePressed(){
