@@ -42,6 +42,15 @@ h: 80,
 speedX: -3,
 speedY: 0,
 })
+// third trashcan - up and down
+trashcans.push({
+    x: 300,
+    y: 100,
+    w: 60,
+    h: 80,
+    speedX: 0,
+    speedY: 2
+});
 }
 
 function draw(){
