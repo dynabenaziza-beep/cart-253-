@@ -69,16 +69,9 @@ rect(170,250,300,70,10); // rounded button
 //BUTTON 2 TEXT 
 noStroke();
 fill(255);
-textSize(28);
-text("spider frog ", 200 ,200 )
+textSize(35);
+text("spider frog ", 200,300 );
 
-    //button 3
-    fill(255);
-    stroke(0);
-    rect(150,300,200,60);
-    fill(0);
-    noStroke();
-    text("variaton 3", 250,330);
 }
 
 function mousePressed(){
