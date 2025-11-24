@@ -248,3 +248,41 @@ function moveTongueVariation1() {
     frog.tongue.state = "outbound";
   }
 }
+
+function drawStartScreen() {
+  background(20, 40, 80); // deep blue
+
+  // Title
+  fill(255, 215, 0); 
+  textSize(50);
+  text("FROD DETECTIVE", width / 2, 120);
+
+  // Subtext
+  fill(200);
+  textSize(20);
+  text("Click the frog to start", width / 2, 160);
+
+  // Instructions after first click
+  if (showInstructions) {
+    fill(255);
+    textSize(16);
+    text("Use your tongue to catch clues.\nAvoid dangerous trashcans.\nStay alive.", width / 2, 220);
+
+    textSize(18);
+    text("Click again to begin!", width / 2, 270);
+  }
+
+  // Frog body (only top part)
+  noStroke();
+  fill("#00ff00");
+  ellipse(width / 2, height + 120, 640, 400);
+
+  // Eyes
+  fill(255);
+  ellipse(width / 3 - 40, height - 40, 120, 120);
+  ellipse(width / 3 + 260, height - 40, 120, 120);
+
+  fill(0);
+  ellipse(width / 3 - 45, height - 40, 90, 90);
+  ellipse(width / 3 + 260, height - 40, 90, 90);
+}
