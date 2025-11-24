@@ -54,6 +54,10 @@ trashcan[0].x =trashcans[0].x+ trashcans[0].speedX;
 if(trashcans[0].x<0){
     trashcans[0]. speedX= trashcans[0].speedX * -1;
 }
+//rigth side of canvas 
+if (trashcans[0].x + trashcans[0].w >width){
+    trashcans[0].speedX = trashcans[0].speedX *-1;
+}
 }
 function variation1Draw(){
     background(240);
