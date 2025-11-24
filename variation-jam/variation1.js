@@ -330,3 +330,9 @@ function drawStartScreen() {
   ellipse(width / 3 - 45, height - 40, 90, 90);
   ellipse(width / 3 + 260, height - 40, 90, 90);
 }
+//trashcans score (similar to heart)
+function drawScoreTrashcan(x,y){
+    fill(120);
+    stroke(0);
+    rect(x,y,30,40,5);//small trashcan icon 
+}
