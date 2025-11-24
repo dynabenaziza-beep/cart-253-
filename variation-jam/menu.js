@@ -61,14 +61,17 @@ fill(255,220,180);
 textSize(35);
 text("Detective Frog", 200 ,200 )
 
+//BUTTON 2 
+fill(90,60,40); //medium brown button 
+stroke(50,80,200); //ligth beige outline 
+strokeWeight(3); //
+rect(170,250,300,70,10); // rounded button 
+//BUTTON 2 TEXT 
+noStroke();
+fill(255);
+textSize(35);
+text("Detective Frog", 200 ,200 )
 
-    //button 2 
-    fill(255);
-    stroke(0);
-    rect(150,200,200,60); // x,y,width,heigth
-    fill(0);
-    noStroke();
-    text("variation 2", 250,230);
     //button 3
     fill(255);
     stroke(0);
