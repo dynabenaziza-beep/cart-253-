@@ -51,6 +51,9 @@ function moveTrashcans(){ //to move the trashcans
 //t.c #1 moves left and rigth 
 trashcan[0].x =trashcans[0].x+ trashcans[0].speedX;
 //if touches left edge= flipe direction 
+if(trashcans[0].x<0){
+    trashcans[0]. speedX= trashcans[0].speedX * -1;
+}
 }
 function variation1Draw(){
     background(240);
