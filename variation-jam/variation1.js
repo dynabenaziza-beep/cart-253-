@@ -50,6 +50,11 @@ function moveFrogVariation1() {
     frog.body.x=mouseX;
 }
 
+function drawTrashcans(){
+    for (let tc of trashcans){
+        
+    }
+}
 function drawFrogVariation1() {
 
     // Draw the tongue tip
