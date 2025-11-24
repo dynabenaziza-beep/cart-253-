@@ -300,6 +300,13 @@ function moveTongueVariation1() {
 
 function drawStartScreen() {
   background(20, 40, 80); // deep blue
+
+  //loop 
+  stroke(255);
+  strokeWeight(6);
+  noFill();
+  ellipse(300,200,90,90);
+  
 textAlign(CENTER, CENTER); //center title 
   // Title
   fill(255, 215, 0); 
@@ -320,6 +327,7 @@ textAlign(CENTER, CENTER); //center title
     textSize(18);
     text("Click again to begin!", width / 2, 270);
   }
+
 
   // Frog body (only top part)
   noStroke();
