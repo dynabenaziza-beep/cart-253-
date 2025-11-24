@@ -40,7 +40,7 @@ y: 150,
 w:  60,
 h: 80,
 speedX: -3,
-speedY: 0 
+speedY: 0,
 })
 }
 
@@ -48,7 +48,9 @@ function draw(){
     variation1Draw();
 }
 function moveTrashcans(){ //to move the trashcans 
-
+//t.c #1 moves left and rigth 
+trashcan[0].x =trashcans[0].x+ trashcans[0].speedX;
+//if touches left edge= flipe direction 
 }
 function variation1Draw(){
     background(240);
