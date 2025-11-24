@@ -326,6 +326,7 @@ textAlign(CENTER, CENTER); //center title
   if (showInstructions) {
     fill(255);
     textSize(16);
+    textLeading(50);
     text("Use your tongue to catch clues.\nAvoid dangerous trashcans.\nStay alive.", width / 2, 220);
 
     textSize(18);
