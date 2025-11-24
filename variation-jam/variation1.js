@@ -1,5 +1,5 @@
 /* variation 1 - Frod Detective */
-
+let trashcansCreated = false;
 let trashcans=[];
 
 const frog = {
@@ -24,7 +24,7 @@ function setup(){
 }
 
 function setupTrashcans() {
-    trashcans.push({
+    trashcans.push({ //first trashcans
 x: 100,
 y: 120,
 w:60,
@@ -35,6 +35,10 @@ speedY:0.    //DOES NOT MOOVE VERTICALLY
 }
 function variation1Draw(){
     background(240);
+    if (!trashcans){
+        setupTrashcans();
+        trashcansCreated = true;
+    }
 
 moveFrogVariation1();
 moveTongueVariation1();
