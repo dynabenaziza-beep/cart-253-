@@ -126,6 +126,14 @@ trashcans[4].y = trashcans[4].centerY + sin(trashcans[4].angle) * trashcans[4].r
 }
 
 function variation1Draw(){
+// start screen 
+if (!gameStarted){
+    drawStartScreen;
+    return; //stop here until the player starts
+}
+
+
+    // game over screen 
 if(gameOver) {
     background(255,50,50); //red background 
      fill(0);
