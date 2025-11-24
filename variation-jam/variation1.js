@@ -162,8 +162,10 @@ if(gameOver) {
      }
      moveTrashcans();
      checkTrash5Collision();
-     checkGoodTrashcans();
+     checkGoodTrashcans(); //commit the 3 trashcans 
      drawTrashcans();
+     
+     
 
 moveFrogVariation1();
 moveTongueVariation1();
@@ -231,13 +233,22 @@ function checkTrash5Collision(){
 function checkGoodTrashcans(){
    for (let i=0; i < 4 ; i++) { //only 0-3 trashcans 
     let tc = trashcans[i];
-
-    score++;
-    frog.tongue.state="inbound";
+// center of trashcan 
+let cx = tc.x + tc.w/2;
+let cy = tc.y + tc.h /2;
+//distance tongue -> trashcans center 
+let d = dist(frog.tongue.x, frog.tongue.y, cx , cy );
+//if tongue hit trashcans 
+if (d < 50) {
+ score++; //ad point 
+    frog.tongue.state="inbound"; //pull tongue bakc 
+    // move trashcans off screen so it doesnt count again 
+    tc.x =-9999; 
     if(score >=3 ){
         caseSolved=true;
     }
    }
+ }
 }
 function moveTongueVariation1() {
     // Tongue matches the frog's x
