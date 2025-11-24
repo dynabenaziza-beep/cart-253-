@@ -6,7 +6,7 @@ const frog = {
     // The frog's body has a position and size
     body: {
         x: 320,
-        y: 520,
+        y: 420,
         size: 220
     },
     // The frog's tongue has a position, size, speed, and state
@@ -43,10 +43,13 @@ function variation1Draw(){
 
       
     }
+    moveTrashcans();
+    drawTrashcans();
 
 moveFrogVariation1();
 moveTongueVariation1();
 drawFrogVariation1();
+
 
 }
 
