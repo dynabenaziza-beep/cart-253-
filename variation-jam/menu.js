@@ -43,7 +43,7 @@ else if (state =="variation2"){
 }
 
 function drawMenu(){
-    background(230); //light grey 
+    background(0); //light grey 
    
     //  TITLE
     fill(255,215,120);  //title
