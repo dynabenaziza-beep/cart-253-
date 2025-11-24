@@ -51,6 +51,17 @@ trashcans.push({
     speedX: 0,
     speedY: 2,
 });
+// fourth trashcan - diagonal movement
+trashcans.push({
+    x: 200,
+    y: 200,
+    w: 60,
+    h: 80,
+    speedX: 2,
+    speedY: 2
+});
+
+
 }
 
 function draw(){
