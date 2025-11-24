@@ -138,6 +138,14 @@ if (!gameStarted){
     drawStartScreen();
     return; //stop here until the player starts
 }
+if (caseSolved) {
+  background(0, 180, 0);
+  fill(255);
+  textSize(48);
+  text("YOU SOLVED THE CASE!", width/2, height/2);
+  return;
+}
+
  // game over screen 
 if(gameOver) {
     background(255,50,50); //red background 
