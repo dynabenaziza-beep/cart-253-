@@ -62,7 +62,7 @@ textSize(35);
 text("Detective Frog", 200 ,200 )
 
 //BUTTON 2 
-fill(90,60,40); //medium brown button 
+fill(180,20,30); //medium brown button 
 stroke(50,80,200); //ligth beige outline 
 strokeWeight(3); //
 rect(170,250,300,70,10); // rounded button 
