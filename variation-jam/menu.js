@@ -18,7 +18,7 @@ function setup() {
 */
 function draw() {
     background(0);
-    
+
     if(state =="menu"){
         drawMenu();
     }
@@ -28,21 +28,8 @@ else if(state=="variation1"){
 else if (state =="variation2"){
     variation2Draw();
     }
-        
-    else if (state == "variation3"){
-        variation3Draw();
-    }
-
-    function draw() {
-  if (!gameStarted) {
-    drawStartScreen();
-    return;
-  }
-
-  variation1Draw();
-}
-
-}
+    
+     }
 
 function drawMenu(){
     background(0); //light grey 
@@ -61,7 +48,7 @@ rect(170,150,300,70,10); // rounded button
 noStroke();
 fill(255,220,180);
 textSize(35);
-text("Detective Frog", 200 ,200 );
+text("Detective Frog", 200,200 );
 
 //BUTTON 2 
 fill(180,20,30); //medium brown button 
