@@ -17,6 +17,8 @@ function setup() {
  * Display the menu or the current variation
 */
 function draw() {
+    background(0);
+    
     if(state =="menu"){
         drawMenu();
     }
