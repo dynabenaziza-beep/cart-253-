@@ -1,3 +1,10 @@
+let spiderFrog={
+    x: 320,
+    y: 240,
+    size: 80,
+    speed: 4 
+};
+
 
 function variation2Draw() {
 background("pink");
