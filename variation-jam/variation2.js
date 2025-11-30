@@ -37,6 +37,10 @@ function moveSpiderFrog(){
     if (keyIsDown(87)){//W
 spiderFrog.y-=spiderFrog.speed;
     }
+//S KEY DOWN
+    if(keyIsDown(83)){
+        spiderFrog.y+=spiderFrog.speed;
+    }
 }
 function drawSpiderFrog(){
     fill(0,255,0);
