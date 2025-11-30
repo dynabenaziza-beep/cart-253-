@@ -45,6 +45,10 @@ spiderFrog.y-=spiderFrog.speed;
     if(keyIsDown(65)){ ///a
         spiderFrog.x-=spiderFrog.speed;
  }
+ //D key right 
+ if(keyIsDown(68)){ //D
+    spiderFrog.x += vspiderFrog.speed;
+ }
 }
 function drawSpiderFrog(){
     fill(0,255,0);
