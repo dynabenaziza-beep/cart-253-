@@ -9,6 +9,9 @@ let spiderFrog={
 function variation2Draw() {
 background("pink");
 
+//drawspider
+drawSpiderFrog();
+
 fill(0);
 textSize(32);
 text("variation 2 is WORKING!", width/2,height/2);
