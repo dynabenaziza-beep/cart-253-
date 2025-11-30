@@ -86,4 +86,7 @@ else if (mouseX > 150 && mouseX < 350 &&
 else if (state =="variation1"){
     variation1MousePressed();
 }
+if (state ==="variation2"){
+    variation2Draw();
+}
   }
