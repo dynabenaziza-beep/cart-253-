@@ -49,6 +49,11 @@ spiderFrog.y-=spiderFrog.speed;
  if(keyIsDown(68)){ //D
     spiderFrog.x += vspiderFrog.speed;
  }
+
+ //keep the frog inside the canavas 
+spiderFrog.x = constrain(spiderFrog.x, spiderFrog.size/2, width - spiderFrog.size/2);
+spiderFrog.y = constrain(spiderFrog.y, spiderFrog.size/2, height - spiderFrog.size/2);
+
 }
 function drawSpiderFrog(){
     fill(0,255,0);
