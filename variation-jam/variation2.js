@@ -9,9 +9,16 @@ let spiderFrog={
 function variation2Draw() {
 background("pink");
 
+
+//move the frog //
+moveSpiderFrog();
+
 //drawspider
 drawSpiderFrog();
 
+
+
+//text//
 fill(0);
 textSize(32);
 text("variation 2 is WORKING!", width/2,height/2);
@@ -24,4 +31,8 @@ function  variation2MousePressed(){
     if (state== "variation2"){
         state="menu"; //go back to menu 
     }
+}
+
+function moveSpiderFrog(){
+
 }
