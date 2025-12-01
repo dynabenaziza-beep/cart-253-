@@ -13,7 +13,7 @@ function variation2Draw() {
 
     //load background image 
     if(!spiderBg){
-        spiderBg = loadImage("dt.jpg");
+        spiderBg = loadImage("wall.jpeg");
          }
 
     image(spiderBg, 0, 0, width, height);
