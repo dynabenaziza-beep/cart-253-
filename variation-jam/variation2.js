@@ -7,7 +7,7 @@ let spiderFrog={
 
 
 function variation2Draw() {
-background("pink");
+background("red");
 
 
 //move the frog //
