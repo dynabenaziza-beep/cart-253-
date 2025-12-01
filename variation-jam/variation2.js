@@ -139,6 +139,16 @@ function checkFlyCollision() {
         state = "gameover";  
     }
 }
+
+function checkFly2Collision() {
+    let d = dist(fly2.x, fly2.y, spiderFrog.x, spiderFrog.y);
+
+    if (d < (fly2.size/2 + spiderFrog.size/2)) {
+        state = "gameover";
+    }
+}
+
+
 function checkStoneCollection() {
     // if stone is already collected == nothing
     if (stone.collected) return;
