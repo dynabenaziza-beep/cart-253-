@@ -108,16 +108,14 @@ function drawStone2() {
 }
 
 
-
-
-
 function drawFly() {
     fill(0);
     ellipse(fly.x, fly.y, fly.size);
 }
-
-
-
+function drawFly2() {
+    fill(0);
+    ellipse(fly2.x, fly2.y, fly2.size);
+}
 
 function updateFly() {
     // increase angle a bit every frame
