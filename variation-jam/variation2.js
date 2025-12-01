@@ -99,10 +99,25 @@ function drawStone(){
         ellipse(stone.x, stone.y, stone.size);
     }
 }
+
+function drawStone2() {
+    if (!stone2.collected) {
+        fill(255, 215, 0); 
+        ellipse(stone2.x, stone2.y, stone2.size);
+    }
+}
+
+
+
+
+
 function drawFly() {
     fill(0);
     ellipse(fly.x, fly.y, fly.size);
 }
+
+
+
 
 function updateFly() {
     // increase angle a bit every frame
