@@ -37,9 +37,10 @@ function variation2Draw() {
 moveSpiderFrog();
 //drawspider
 drawSpiderFrog();
+
 drawStone();
 drawFly();
-
+checkFlyCollision();
 updateFly();
 
 //text//
@@ -103,4 +104,13 @@ function updateFly() {
     // make fly orbit around the stone
     fly.x = stone.x + cos(fly.angle) * fly.radius;
     fly.y = stone.y + sin(fly.angle) * fly.radius;
+}
+
+function checkFlyCollision() {
+    let d = dist(fly.x, fly.y, spiderFrog.x, spiderFrog.y);
+
+    // if the fly touches the frog
+    if (d < (fly.size/2 + spiderFrog.size/2)) {
+        state = "gameover";  
+    }
 }
