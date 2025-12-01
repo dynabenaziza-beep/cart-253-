@@ -15,6 +15,13 @@ size: 40,
 collected: false 
 };
 
+let stone2 = {
+    x: 450,
+    y: 150,
+    size: 40,
+    collected: false
+};
+
 let fly  ={
  x: 0,
     y: 0,
