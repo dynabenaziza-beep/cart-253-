@@ -107,7 +107,6 @@ function drawStone2() {
     }
 }
 
-
 function drawFly() {
     fill(0);
     ellipse(fly.x, fly.y, fly.size);
@@ -150,5 +149,14 @@ function checkStoneCollection() {
  // if frog touches the stone
     if (d < (spiderFrog.size/2 + stone.size/2)) {
         stone.collected = true; // stone disappears
+    }
+}
+function checkStone2Collection() {
+    if (stone2.collected) return;
+
+    let d = dist(spiderFrog.x, spiderFrog.y, stone2.x, stone2.y);
+
+    if (d < (spiderFrog.size/2 + stone2.size/2)) {
+        stone2.collected = true;
     }
 }
