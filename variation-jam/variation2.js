@@ -26,9 +26,9 @@ function variation2Draw() {
 
 //move the frog //
 moveSpiderFrog();
-
 //drawspider
 drawSpiderFrog();
+drawStone();
 
 //text//
 fill(0);
@@ -72,4 +72,10 @@ spiderFrog.y = constrain(spiderFrog.y, spiderFrog.size/2, height - spiderFrog.si
 function drawSpiderFrog(){
     fill(0,255,0);
     ellipse(spiderFrog.x, spiderFrog.y, spiderFrog.size);
+}
+function drawStone(){
+    if(stone.collected) {
+        fill(255,215,0); //gold 
+        ellipse(stone.x, stone.y, stone.size);
+    }
 }
