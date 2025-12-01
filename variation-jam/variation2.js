@@ -1,3 +1,6 @@
+let spiderBg; // background image 
+
+
 let spiderFrog={
     x: 320,
     y: 240,
@@ -8,6 +11,8 @@ let spiderFrog={
 
 function variation2Draw() {
 background("red");
+
+
 
 
 //move the frog //
