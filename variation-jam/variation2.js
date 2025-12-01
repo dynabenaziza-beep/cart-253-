@@ -10,11 +10,11 @@ let spiderFrog={
 
 
 function variation2Draw() {
-background("red");
 
-
-
-
+    //load background image 
+    if(!spiderBg){
+        spiderBg = loadImages("dt.jpg");
+    }
 //move the frog //
 moveSpiderFrog();
 
