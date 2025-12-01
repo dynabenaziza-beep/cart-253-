@@ -47,7 +47,7 @@ spiderFrog.y-=spiderFrog.speed;
  }
  //D key right 
  if(keyIsDown(68)){ //D
-    spiderFrog.x += vspiderFrog.speed;
+    spiderFrog.x += spiderFrog.speed;
  }
 
  //keep the frog inside the canavas 
