@@ -13,7 +13,7 @@ x: 200,
 y: 200, 
 size: 40,
 collected: false 
-;
+};
 
 let fly  ={
  x: 0,
@@ -23,6 +23,7 @@ let fly  ={
     radius: 60,
     speed: 0.03
 };
+
 function variation2Draw() {
 
     //load background image 
@@ -38,6 +39,8 @@ moveSpiderFrog();
 drawSpiderFrog();
 drawStone();
 drawFly();
+
+updateFly();
 
 //text//
 fill(0);
@@ -83,7 +86,7 @@ function drawSpiderFrog(){
     ellipse(spiderFrog.x, spiderFrog.y, spiderFrog.size);
 }
 function drawStone(){
-    if(stone.collected) {
+    if(!stone.collected) {
         fill(255,215,0); //gold 
         ellipse(stone.x, stone.y, stone.size);
     }
@@ -91,4 +94,13 @@ function drawStone(){
 function drawFly() {
     fill(0);
     ellipse(fly.x, fly.y, fly.size);
+}
+
+function updateFly() {
+    // increase angle a bit every frame
+    fly.angle += fly.speed;
+
+    // make fly orbit around the stone
+    fly.x = stone.x + cos(fly.angle) * fly.radius;
+    fly.y = stone.y + sin(fly.angle) * fly.radius;
 }
