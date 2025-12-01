@@ -52,11 +52,21 @@ moveSpiderFrog();
 //drawspider
 drawSpiderFrog();
 
+//--stone 1 and ffly 1 
 drawStone();
 updateFly();
 drawFly();
 checkFlyCollision();
 checkStoneCollection();
+
+
+// --- Stone 2 + Fly 2 ---
+drawStone2();
+updateFly2();
+drawFly2();
+checkFly2Collision();
+checkStone2Collection();
+
 
  }
 function  variation2MousePressed(){
