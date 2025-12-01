@@ -13,8 +13,11 @@ function variation2Draw() {
 
     //load background image 
     if(!spiderBg){
-        spiderBg = loadImages("dt.jpg");
-    }
+        spiderBg = loadImage("dt.jpg");
+         }
+
+    image(spiderBg, 0, 0, width, height);
+
 //move the frog //
 moveSpiderFrog();
 
