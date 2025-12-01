@@ -44,17 +44,7 @@ drawFly();
 checkFlyCollision();
 checkStoneCollection();
 
-
-
-//text//
-fill(0);
-textSize(32);
-text("variation 2 is WORKING!", width/2,height/2);
-
-textSize(18);
-    text("Click to return", width/2,height/2+40);
-}
-
+ }
 function  variation2MousePressed(){
     if (state== "variation2"){
         state="menu"; //go back to menu 
