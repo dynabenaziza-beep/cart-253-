@@ -9,7 +9,10 @@ let spiderFrog={
 };
 //--new infinity stone and fly ---
 let stone ={
-
+x: 200,
+y: 200, 
+size: 40,
+collected: false 
 }
 
 let fly  ={
