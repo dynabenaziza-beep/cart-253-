@@ -39,9 +39,12 @@ moveSpiderFrog();
 drawSpiderFrog();
 
 drawStone();
+updateFly();
 drawFly();
 checkFlyCollision();
-updateFly();
+checkStoneCollection();
+
+
 
 //text//
 fill(0);
@@ -112,5 +115,17 @@ function checkFlyCollision() {
     // if the fly touches the frog
     if (d < (fly.size/2 + spiderFrog.size/2)) {
         state = "gameover";  
+    }
+}
+function checkStoneCollection() {
+    // if stone is already collected == nothing
+    if (stone.collected) return;
+
+  // distance between frog and stone
+    let d = dist(spiderFrog.x, spiderFrog.y, stone.x, stone.y);
+
+ // if frog touches the stone
+    if (d < (spiderFrog.size/2 + stone.size/2)) {
+        stone.collected = true; // stone disappears
     }
 }
