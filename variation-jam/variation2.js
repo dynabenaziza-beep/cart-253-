@@ -22,6 +22,13 @@ let stone2 = {
     collected: false
 };
 
+let stone3 = {
+    x: 320,
+    y: 350,
+    size: 40,
+    collected: false
+};
+
 let fly  ={
  x: 0,
     y: 0,
