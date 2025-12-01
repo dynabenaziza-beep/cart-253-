@@ -30,7 +30,14 @@ let fly  ={
     radius: 60,
     speed: 0.03
 };
-
+let fly2 = {
+    x: 0,
+    y: 0,
+    size: 25,
+    angle: 0,
+    radius: 60,
+    speed: 0.03
+};
 function variation2Draw() {
 
     //load background image 
