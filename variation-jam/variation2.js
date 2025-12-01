@@ -7,8 +7,14 @@ let spiderFrog={
     size: 80,
     speed: 4 
 };
+//--new infinity stone and fly ---
+let stone ={
 
+}
 
+let fly  ={
+
+}
 function variation2Draw() {
 
     //load background image 
