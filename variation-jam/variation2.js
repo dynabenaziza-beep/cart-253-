@@ -13,11 +13,16 @@ x: 200,
 y: 200, 
 size: 40,
 collected: false 
-}
+;
 
 let fly  ={
-
-}
+ x: 0,
+    y: 0,
+    size: 25,
+    angle: 0,
+    radius: 60,
+    speed: 0.03
+};
 function variation2Draw() {
 
     //load background image 
@@ -32,6 +37,7 @@ moveSpiderFrog();
 //drawspider
 drawSpiderFrog();
 drawStone();
+drawFly();
 
 //text//
 fill(0);
@@ -81,4 +87,8 @@ function drawStone(){
         fill(255,215,0); //gold 
         ellipse(stone.x, stone.y, stone.size);
     }
+}
+function drawFly() {
+    fill(0);
+    ellipse(fly.x, fly.y, fly.size);
 }
