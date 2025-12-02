@@ -66,7 +66,7 @@ let fly5 = {
     x: 550,
     y: 300,
     size: 25,
-    speed: 3,
+    speed: 6,
     direction: 1
 };
 
