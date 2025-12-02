@@ -84,6 +84,12 @@ drawFly2();
 checkFly2Collision();
 checkStone2Collection();
 
+// Stone 3 + Fly 3
+drawStone3();
+updateFly3();
+drawFly3();
+checkFly3Collision();
+checkStone3Collection();
 
  }
 function  variation2MousePressed(){
@@ -195,7 +201,6 @@ function checkFly3Collision() {
         state = "gameover";
     }
 }
-
 
 function checkStoneCollection() {
     // if stone is already collected == nothing
