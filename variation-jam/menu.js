@@ -6,11 +6,6 @@
 
 let state ="menu";
 
-function preload(){
-    spiderBg = loadImage("wall.jpeg");
-}
-
-
 function setup() {
     createCanvas(640, 480);
     textAlign(CENTER,CENTER);

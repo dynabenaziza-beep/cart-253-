@@ -1,3 +1,9 @@
+function preload() {
+    spiderBg = loadImage("wall.jpeg");
+}
+
+
+
 let spiderFrog={
 x: 320,
     y: 240,
@@ -338,15 +344,9 @@ function variation2LoseScreen() {
     text("Click to return to menu", width/2, height/2 + 80);
 }
 
-function  variation2MousePressed(){
-    if (state== "variation2"){
-        state="menu"; //go back to menu 
+function variation2MousePressed() {
+    // only return from win or lose screens
+    if (state === "variation2_win" || state === "variation2_lose") {
+        state = "menu";
     }
-if (state === "variation2_win") {
-    state = "menu";
-}
-
-if (state === "variation2_lose") {
-    state = "menu";
-}
 }
