@@ -138,6 +138,10 @@ function  variation2MousePressed(){
     if (state== "variation2"){
         state="menu"; //go back to menu 
     }
+if (state === "win") {
+    state = "menu";
+}
+
 }
 
 function moveSpiderFrog(){
