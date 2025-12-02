@@ -73,8 +73,17 @@ let fly5 = {
 };
 
 function variation2Draw() {
+if (state === "win") {
+        winScreen();
+        return;
+    }
 
-    //load background image 
+    if (state === "gameover") {
+        loseScreen();
+        return;
+    }
+
+ //load background image 
     if(!spiderBg){
         spiderBg = loadImage("wall.jpeg");
          }
