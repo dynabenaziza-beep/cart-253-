@@ -69,6 +69,8 @@ ellipse(flyA.x, flyA.y, flyA.size);
 fill(0);
 ellipse(flyB.x, flyB.y, flyB.size);
 //draw flie c 
+fill(0);
+ellipse(flyC.x, flyC.y, flyC.size);
 
  // keep frog inside the canvas
     frog2.x = constrain(frog2.x, frog2.size/2, width - frog2.size/2);
