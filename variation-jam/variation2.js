@@ -1,6 +1,4 @@
-function preload() {
-    spiderBg = loadImage("wall.jpeg");
-}
+
 let spiderFrog={
 x: 320,
     y: 240,
@@ -80,43 +78,44 @@ if (state === "variation2_win") {
         variation2LoseScreen();
         return;
     }
-    image(spiderBg, 0, 0, width, height);
+ background(spiderBg);
 
-//move the frog //
-moveSpiderFrog();
-//drawspider
-drawSpiderFrog();
+     moveSpiderFrogV2();
+    drawSpiderFrogV2();
 
-// Stone 1 + Fly 1
-drawStone1();
-updateFly();
-drawFly();
-checkFlyCollision();
-checkStoneCollection();
+    // Stone 1 + Fly 1
+    drawStone1V2();
+    updateFly1V2();
+    drawFly1V2();
+    checkFly1CollisionV2();
+    checkStone1CollectionV2();
 
-// Stone 2 + Fly 2
-drawStone2();
-updateFly2();
-drawFly2();
-checkFly2Collision();
-checkStone2Collection();
+    // Stone 2 + Fly 2
+    drawStone2V2();
+    updateFly2V2();
+    drawFly2V2();
+    checkFly2CollisionV2();
+    checkStone2CollectionV2();
 
-// Stone 3 + Fly 3
-drawStone3();
-updateFly3();
-drawFly3();
-checkFly3Collision();
-checkStone3Collection();
+    // Stone 3 + Fly 3
+    drawStone3V2();
+    updateFly3V2();
+    drawFly3V2();
+    checkFly3CollisionV2();
+    checkStone3CollectionV2();
 
-//fly 4 
-updateFly4();
-drawFly4();
-checkFly4Collision();
+    // Fly 4 (horizontal)
+    updateFly4V2();
+    drawFly4V2();
+    checkFly4CollisionV2();
 
-//fly5
-updateFly5();
-drawFly5();
-checkFly5Collision();
+    // Fly 5 (vertical)
+    updateFly5V2();
+    drawFly5V2();
+    checkFly5CollisionV2();
+
+
+
 
 // WIN CONDITION
 if (stone.collected && stone2.collected && stone3.collected) {
@@ -124,7 +123,8 @@ if (stone.collected && stone2.collected && stone3.collected) {
 }
 
  }
-function moveSpiderFrog(){
+function moveSpiderFrogV2() {
+
 
     //W KEY UP 
     if (keyIsDown(87)){//W
@@ -148,53 +148,53 @@ spiderFrog.x = constrain(spiderFrog.x, spiderFrog.size/2, width - spiderFrog.siz
 spiderFrog.y = constrain(spiderFrog.y, spiderFrog.size/2, height - spiderFrog.size/2);
 
 }
-function drawSpiderFrog(){
+function drawSpiderFrogV2(){
     fill(0,255,0);
     ellipse(spiderFrog.x, spiderFrog.y, spiderFrog.size);
 }
-function drawStone1() {
+function drawStone1V2() {
     if (!stone.collected) {
         fill(255,215,0);
         ellipse(stone.x, stone.y, stone.size);
     }
 }
 
-function drawStone2() {
+function drawStone2V2() {
     if (!stone2.collected) {
         fill(255,215,0);
         ellipse(stone2.x, stone2.y, stone2.size);
     }
 }
 
-function drawStone3() {
+function drawStone3V2() {
     if (!stone3.collected) {
         fill(255,215,0);
         ellipse(stone3.x, stone3.y, stone3.size);
     }
 }
-function drawFly() {
+function drawFlyV2() {
     fill(0);
     ellipse(fly.x, fly.y, fly.size);
 }
-function drawFly2() {
+function drawFly2V2() {
     fill(0);
     ellipse(fly2.x, fly2.y, fly2.size);
 }
 
-function drawFly3() {
+function drawFly3V2() {
     fill(0);
     ellipse(fly3.x, fly3.y, fly3.size);
 }
-function drawFly4() { 
+function drawFly4V2() { 
     fill(0);
      ellipse(fly4.x, fly4.y, fly4.size); }
 
-function drawFly5() {
+function drawFly5V2() {
     fill(0);
     ellipse(fly5.x, fly5.y, fly5.size);
 }
 
-function updateFly() {
+function updateFlyV2() {
     // increase angle a bit every frame
     fly.angle += fly.speed;
 
@@ -202,20 +202,20 @@ function updateFly() {
     fly.x = stone.x + cos(fly.angle) * fly.radius;
     fly.y = stone.y + sin(fly.angle) * fly.radius;
 }
-function updateFly2() {
+function updateFly2V2() {
     fly2.angle += fly2.speed;
 
     fly2.x = stone2.x + cos(fly2.angle) * fly2.radius;
     fly2.y = stone2.y + sin(fly2.angle) * fly2.radius;
 }
 
-function updateFly3() {
+function updateFly3V2() {
     fly3.angle += fly3.speed;
 
     fly3.x = stone3.x + cos(fly3.angle) * fly3.radius;
     fly3.y = stone3.y + sin(fly3.angle) * fly3.radius;
 }
-function updateFly4() {
+function updateFly4V2() {
     fly4.x += fly4.speed * fly4.direction;
 
     // bounce when hitting walls
@@ -224,7 +224,7 @@ function updateFly4() {
     }
 }
 
-function updateFly5() {
+function updateFly5V2() {
     fly5.y += fly5.speed * fly5.direction;
 
     // bounce on top & bottom edges
@@ -232,7 +232,7 @@ function updateFly5() {
         fly5.direction *= -1;
     }
 }
-function checkFlyCollision() {
+function checkFlyCollisionV2() {
     let d = dist(fly.x, fly.y, spiderFrog.x, spiderFrog.y);
 
     // if the fly touches the frog
@@ -241,7 +241,7 @@ function checkFlyCollision() {
  
     }
 }
-function checkFly2Collision() {
+function checkFly2CollisionV2() {
     let d = dist(fly2.x, fly2.y, spiderFrog.x, spiderFrog.y);
 
     if (d < (fly2.size/2 + spiderFrog.size/2)) {
@@ -250,7 +250,7 @@ function checkFly2Collision() {
      
     }
 }
-function checkFly3Collision() {
+function checkFly3CollisionV2() {
     let d = dist(fly3.x, fly3.y, spiderFrog.x, spiderFrog.y);
 
     if (d < (fly3.size/2 + spiderFrog.size/2)) {
@@ -258,7 +258,7 @@ function checkFly3Collision() {
 
     }
 }
-function checkStoneCollection() {
+function checkStoneCollectionV2() {
     // if stone is already collected == nothing
     if (stone.collected) return;
 
@@ -271,7 +271,7 @@ function checkStoneCollection() {
         stone.collected = true; // stone disappears
     }
 }
-function checkStone2Collection() {
+function checkStone2CollectionV2() {
    if (stone2.collected) return;
 
     let d = dist(spiderFrog.x, spiderFrog.y, stone2.x, stone2.y);
@@ -280,7 +280,7 @@ function checkStone2Collection() {
         stone2.collected = true;
     }
 }
-function checkStone3Collection() {
+function checkStone3CollectionV2() {
     if (stone3.collected) return;
 
 
@@ -291,7 +291,7 @@ function checkStone3Collection() {
     }
 }
 
-function checkFly4Collision() {
+function checkFly4CollisionV2() {
     let d = dist(fly4.x, fly4.y, spiderFrog.x, spiderFrog.y);
 
     if (d < (fly4.size/2 + spiderFrog.size/2)) {
@@ -299,7 +299,7 @@ function checkFly4Collision() {
 
     }
 }
-function checkFly5Collision() {
+function checkFly5CollisionV2() {
     let d = dist(fly5.x, fly5.y, spiderFrog.x, spiderFrog.y);
 
     if (d < (fly5.size/2 + spiderFrog.size/2)) {
@@ -341,4 +341,31 @@ function variation2MousePressed() {
     if (state === "variation2_win" || state === "variation2_lose") {
         state = "menu";
     }
+}
+function resetVariation2() {
+
+    // Reset frog position
+    spiderFrog.x = 320;
+    spiderFrog.y = 240;
+
+    // Reset stones
+    stone.collected = false;
+    stone2.collected = false;
+    stone3.collected = false;
+
+    // Reset fly angles and positions
+    fly.angle = 0;
+    fly2.angle = 0;
+    fly3.angle = 0;
+
+    fly4.x = 100;
+    fly4.y = 50;
+    fly4.direction = 1;
+
+    fly5.x = 550;
+    fly5.y = 300;
+    fly5.direction = 1;
+
+    // Reset lose/win states just in case
+    state = "variation2";
 }

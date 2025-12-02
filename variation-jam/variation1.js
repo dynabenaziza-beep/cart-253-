@@ -1,11 +1,28 @@
 /* variation 1 - Frod Detective */
+
+function preload() {
+    bgImage = loadImage("dt.jpg");
+}
+
 let score =0; 
 let caseSolved = false;
-let bgImage;
 
-function preload(){
-bgImage = loadImage("dt.jpg");
+
+function resetVariation1() {
+    score = 0;
+    caseSolved = false;
+    gameOver = false;
+    showInstructions = false;
+    gameStarted = false;
+    trashcans = [];
+    trashcansCreated = false;
+
+    frog.body.x = 320;
+    frog.body.y = 420;
+    frog.tongue.state = "idle";
+    frog.tongue.y = 480;
 }
+
 let gameOver = false
 let trashcansCreated = false;
 let trashcans=[];
@@ -30,10 +47,6 @@ const frog = {
         state: "idle" // State can be: idle, outbound, inbound
     }
 };
-function setup(){
-createCanvas(640,480);
-   
-}
 
 function setupTrashcans() {
     trashcans.push({ //first trashcans
@@ -204,7 +217,7 @@ function drawFrogVariation1() {
     strokeWeight(frog.tongue.size);
     line(frog.tongue.x, frog.tongue.y, frog.body.x, frog.body.y);
     //Draw frog body 
-    fill("00ff00");
+    fill("#00ff00");
     noStroke();
     ellipse(frog.body.x, frog.body.y,frog.body.size);
 
@@ -353,3 +366,4 @@ function drawScoreTrashcan(x,y){
     stroke(0);
     rect(x,y,30,40,5);//small trashcan icon 
 }
+
