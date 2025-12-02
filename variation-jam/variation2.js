@@ -54,6 +54,10 @@ let fly3 = {
     radius: 60,
     speed: 0.03
 };
+/*FLY 4,5,6(DIFFERENT MOVEMNT )*/
+let fly4 = { x: 100, y: 50, size: 25, speed: 3, direction: 1 };  // left-right
+
+
 
 function variation2Draw() {
 
@@ -90,8 +94,11 @@ updateFly3();
 drawFly3();
 checkFly3Collision();
 checkStone3Collection();
+ 
+//fly 4 
+drawFly4();
 
- }
+        }
 function  variation2MousePressed(){
     if (state== "variation2"){
         state="menu"; //go back to menu 
@@ -159,7 +166,7 @@ function drawFly3() {
     fill(0);
     ellipse(fly3.x, fly3.y, fly3.size);
 }
-
+function drawFly4() { fill(0); ellipse(fly4.x, fly4.y, fly4.size); }
 
 
 function updateFly() {
@@ -183,6 +190,15 @@ function updateFly3() {
     fly3.x = stone3.x + cos(fly3.angle) * fly3.radius;
     fly3.y = stone3.y + sin(fly3.angle) * fly3.radius;
 }
+function updateFly4() {
+    fly4.x += fly4.speed * fly4.direction;
+
+    // bounce when hitting walls
+    if (fly4.x > width - fly4.size/2 || fly4.x < fly4.size/2) {
+        fly4.direction *= -1;
+    }
+}
+
 
 function checkFlyCollision() {
     let d = dist(fly.x, fly.y, spiderFrog.x, spiderFrog.y);
