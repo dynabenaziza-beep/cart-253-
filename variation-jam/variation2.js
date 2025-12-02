@@ -320,3 +320,15 @@ function checkFly5Collision() {
         state = "gameover";
     }
 }
+
+function winScreen() {
+    background(0);
+    fill(0,255,0);
+    textSize(50);
+    textAlign(CENTER, CENTER);
+    text("YOU WON!", width/2, height/2 - 100);
+    
+textSize(20);
+    fill(255);
+    text("Click to return to menu", width/2, height/2 + 120);
+}
