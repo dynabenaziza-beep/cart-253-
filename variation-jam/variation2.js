@@ -1,9 +1,6 @@
 function preload() {
     spiderBg = loadImage("wall.jpeg");
 }
-
-
-
 let spiderFrog={
 x: 320,
     y: 240,
@@ -175,8 +172,6 @@ function drawStone3() {
         ellipse(stone3.x, stone3.y, stone3.size);
     }
 }
-
-
 function drawFly() {
     fill(0);
     ellipse(fly.x, fly.y, fly.size);
@@ -246,7 +241,6 @@ function checkFlyCollision() {
  
     }
 }
-
 function checkFly2Collision() {
     let d = dist(fly2.x, fly2.y, spiderFrog.x, spiderFrog.y);
 
@@ -264,7 +258,6 @@ function checkFly3Collision() {
 
     }
 }
-
 function checkStoneCollection() {
     // if stone is already collected == nothing
     if (stone.collected) return;
@@ -313,7 +306,6 @@ function checkFly5Collision() {
         state = "variation2_lose";
     }
 }
-
 function variation2WinScreen() {
     background(0,255,0); //green = winning 
     fill(0); //black text

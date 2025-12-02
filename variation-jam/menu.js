@@ -28,8 +28,13 @@ else if(state=="variation1"){
 else if (state =="variation2"){
     variation2Draw();
     }
-    
-     }
+    else if (state === "variation2_win") {
+    variation2WinScreen();
+}
+else if (state === "variation2_lose") {
+    variation2LoseScreen();
+}
+ }
 
 function drawMenu(){
     background(0); //light grey 
