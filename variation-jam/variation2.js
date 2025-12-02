@@ -117,6 +117,12 @@ checkFly4Collision();
 updateFly5();
 drawFly5();
 checkFly5Collision();
+
+// WIN CONDITION
+if (stone.collected && stone2.collected && stone3.collected) {
+    state = "win";
+}
+
  }
 
 function  variation2MousePressed(){
