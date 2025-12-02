@@ -188,6 +188,13 @@ function checkFly2Collision() {
         state = "gameover";
     }
 }
+function checkFly3Collision() {
+    let d = dist(fly3.x, fly3.y, spiderFrog.x, spiderFrog.y);
+
+    if (d < (fly3.size/2 + spiderFrog.size/2)) {
+        state = "gameover";
+    }
+}
 
 
 function checkStoneCollection() {
