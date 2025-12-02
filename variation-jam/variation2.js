@@ -31,7 +31,7 @@ function variation2Draw() {
     if (keyIsDown(68)) frog2.x += frog2.speed; // D
 
     //draw frog
-    fill(0,255,0);
+    fill(0,60,255); //blue 
     ellipse(frog2.x, frog2.y, frog2.size);
 
 // draw stones
