@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Detective Frog  Variation 1</title>
+
+  <!-- Load p5.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
+
+  <!-- STYLE (optional, just centers the canvas) -->
+  <style>
+    body {
+      margin: 0;
+      background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Load Variation 1 only -->
+  <script src="variation1.js"></script>
+
+  <!-- Local setup for running ONLY this variation -->
+  <script>
+    let bgImage;
+
+    function preload() {
+      bgImage = loadImage("detective.jpeg");  /* Make sure the name matches exactly */
+    }
+
+    function setup() {
+      createCanvas(640, 480);
+      state = "variation1";
+      score = 0;
+      gameOver = false;
+      caseSolved = false;
+
+      resetVariation1();
+    }
+
+    function draw() {
+      if (state === "variation1") {
+        variation1Draw();
+      }
+      else if (caseSolved) {
+        variation1WinScreen();
+      }
+      else if (gameOver) {
+        variation1LoseScreen();
+      }
+    }
+
+    function mousePressed() {
+      if (caseSolved || gameOver) {
+        resetVariation1();
+        state = "variation1";
+      } else {
+        variation1MousePressed();
+      }
+    }
+  </script>
+
+</body>
+</html>
+
+
