@@ -54,6 +54,10 @@ flyB.x += flyB.dx;
 if (flyA.x > stoneA.x + 60 || flyA.x < stoneA.x - 60) {
     flyA.dx *= -1;
 }
+
+if (flyB.x > stoneB.x + 60 || flyB.x < stoneB.x - 60) {
+    flyB.dx *= -1;
+}
 // draw flies
 fill(0);
 ellipse(flyA.x, flyA.y, flyA.size);
