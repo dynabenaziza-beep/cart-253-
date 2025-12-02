@@ -215,7 +215,14 @@ function updateFly4() {
     }
 }
 
+function updateFly5() {
+    fly5.y += fly5.speed * fly5.direction;
 
+    // bounce on top & bottom edges
+    if (fly5.y > height - fly5.size/2 || fly5.y < fly5.size/2) {
+        fly5.direction *= -1;
+    }
+}
 function checkFlyCollision() {
     let d = dist(fly.x, fly.y, spiderFrog.x, spiderFrog.y);
 
