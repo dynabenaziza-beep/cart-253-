@@ -45,9 +45,10 @@ ellipse(stoneC.x, stoneC.y, stoneC.w, stoneC.h);
 fill(0);
 ellipse(flyA.x, flyA.y, flyA.size);
 
-// MOVE FLY A LEFT RIFTH 
+// MOVE FLY A ,B,C LEFT RIFTH 
 flyA.x += flyA.dx;
 flyB.x += flyB.dx;
+flyC.x += flyC.dx;
 
 // BOUNCE FLY A AROUND STONE A
 if (flyA.x > stoneA.x + 60 || flyA.x < stoneA.x - 60) {
