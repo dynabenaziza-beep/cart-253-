@@ -37,7 +37,18 @@ fill(stoneB.color);
 ellipse(stoneB.x, stoneB.y, stoneB.w, stoneB.h);
 
 fill(stoneC.color);
-ellipse(stoneC.x, stoneC.y, stoneC.w, stoneC.h);   
+ellipse(stoneC.x, stoneC.y, stoneC.w, stoneC.h); 
+
+
+//MOVE THE SAME     
+let flyA = { x: 150, y: 120, size: 25, dx: 2 };
+
+// draw flies
+fill(0);
+ellipse(flyA.x, flyA.y, flyA.size);
+
+
+
 
     // keep frog inside the canvas
     frog2.x = constrain(frog2.x, frog2.size/2, width - frog2.size/2);
