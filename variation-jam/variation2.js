@@ -53,6 +53,9 @@ flyA.x += flyA.dx;
 flyB.x += flyB.dx;
 flyC.x += flyC.dx;
 
+flyD.y += flyD.dy;
+
+
 //moove fly D, E , F 
 
 
