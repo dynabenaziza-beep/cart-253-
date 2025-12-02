@@ -1,3 +1,7 @@
+let stoneA = { x: 150, y: 150, w: 45, h: 30, color: "red" };
+
+
+
 let frog2 = {
     x: 320,
     y: 240,
@@ -36,7 +40,6 @@ function variation2MousePressed() {
 }
 
 function resetVariation2() {
-    // nothing needed, just switch state
     state = "variation2";
 }
 
