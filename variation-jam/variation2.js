@@ -69,6 +69,11 @@ if (flyB.x > stoneB.x + 60 || flyB.x < stoneB.x - 60) {
 if (flyC.x > stoneC.x + 60 || flyC.x < stoneC.x - 60) {
     flyC.dx *= -1;
 }
+
+//BOUNCE FLY  D TOP AND BOTTOM 
+if (flyD.y > 200 || flyD.y < 80) {
+    flyD.dy *= -1;
+}
 // draw flies a
 fill(0);
 ellipse(flyA.x, flyA.y, flyA.size);
