@@ -155,6 +155,13 @@ function drawFly2() {
     ellipse(fly2.x, fly2.y, fly2.size);
 }
 
+function drawFly3() {
+    fill(0);
+    ellipse(fly3.x, fly3.y, fly3.size);
+}
+
+
+
 function updateFly() {
     // increase angle a bit every frame
     fly.angle += fly.speed;
@@ -205,6 +212,7 @@ function checkStoneCollection() {
     // if stone is already collected == nothing
     if (stone.collected) return;
 
+
   // distance between frog and stone
     let d = dist(spiderFrog.x, spiderFrog.y, stone.x, stone.y);
 
@@ -214,7 +222,7 @@ function checkStoneCollection() {
     }
 }
 function checkStone2Collection() {
-    if (stone2.collected) return;
+   if (stone2.collected) return;
 
     let d = dist(spiderFrog.x, spiderFrog.y, stone2.x, stone2.y);
 
@@ -224,6 +232,7 @@ function checkStone2Collection() {
 }
 function checkStone3Collection() {
     if (stone3.collected) return;
+
 
     let d = dist(spiderFrog.x, spiderFrog.y, stone3.x, stone3.y);
 
