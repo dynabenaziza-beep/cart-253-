@@ -26,6 +26,10 @@ function variation2Draw() {
     //draw frog
     fill(0,255,0);
     ellipse(frog2.x, frog2.y, frog2.size);
+
+// draw stones
+fill(stoneA.color);
+ellipse(stoneA.x, stoneA.y, stoneA.w, stoneA.h);
    
 
     // keep frog inside the canvas
