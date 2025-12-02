@@ -96,7 +96,9 @@ checkFly3Collision();
 checkStone3Collection();
  
 //fly 4 
+updateFly4();
 drawFly4();
+checkFly4Collision();
 
         }
 function  variation2MousePressed(){
