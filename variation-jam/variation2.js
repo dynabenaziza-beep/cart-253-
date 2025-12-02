@@ -327,7 +327,13 @@ function winScreen() {
     textSize(50);
     textAlign(CENTER, CENTER);
     text("YOU WON!", width/2, height/2 - 100);
-    
+  
+    // draw the 3 stones at the bottom
+    fill(255,215,0);
+    ellipse(width/2 - 60, height/2 + 50, 40);
+    ellipse(width/2, height/2 + 50, 40);
+    ellipse(width/2 + 60, height/2 + 50, 40);
+
 textSize(20);
     fill(255);
     text("Click to return to menu", width/2, height/2 + 120);
