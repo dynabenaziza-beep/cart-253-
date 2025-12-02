@@ -76,6 +76,12 @@ if (flyC.x > stoneC.x + 60 || flyC.x < stoneC.x - 60) {
 if (flyD.y > 200 || flyD.y < 80) {
     flyD.dy *= -1;
 }
+
+//boun fly E LEFT AND RIGTH 
+if (flyE.x > 560 || flyE.x < 80) {
+    flyE.dx *= -1;
+}
+
 // draw flies a
 fill(0);
 ellipse(flyA.x, flyA.y, flyA.size);
