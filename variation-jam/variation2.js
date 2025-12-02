@@ -38,6 +38,12 @@ function variation2Draw() {
     fill(255, 0, 0);
 ellipse(frog2.x, frog2.y, frog2.size * 0.55, frog2.size * 0.4);
 
+
+// Spider-Frog eyes
+fill(255);
+ellipse(frog2.x - 20, frog2.y - frog2.size/2, 18, 18); // left eye
+ellipse(frog2.x + 20, frog2.y - frog2.size/2, 18, 18); // right eye
+
 // draw stones
 fill(stoneA.color);
 ellipse(stoneA.x, stoneA.y, stoneA.w, stoneA.h);
