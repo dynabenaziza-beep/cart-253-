@@ -19,6 +19,9 @@ function variation2Draw() {
     if (keyIsDown(65)) frog2.x -= frog2.speed; // A
     if (keyIsDown(68)) frog2.x += frog2.speed; // D
 
+    //draw frog
+    fill(0,255,0);
+    ellipse(frog2.x, frog2.y, frog2.size);
    
 }
 
