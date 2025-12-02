@@ -52,7 +52,7 @@ let fly3 = {
     size: 25,
     angle: 0,
     radius: 60,
-    speed: 0.03
+    speed: 0.05
 };
 /*FLY 4,5,6(DIFFERENT MOVEMNT )*/
 let fly4 = { 
