@@ -34,6 +34,10 @@ function variation2Draw() {
     fill(0,60,255); //blue 
     ellipse(frog2.x, frog2.y, frog2.size);
 
+    // spider man red "chest"
+    fill(255, 0, 0);
+ellipse(frog2.x, frog2.y, frog2.size * 0.55, frog2.size * 0.4);
+
 // draw stones
 fill(stoneA.color);
 ellipse(stoneA.x, stoneA.y, stoneA.w, stoneA.h);
