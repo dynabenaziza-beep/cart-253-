@@ -182,8 +182,14 @@ function drawFly3() {
     fill(0);
     ellipse(fly3.x, fly3.y, fly3.size);
 }
-function drawFly4() { fill(0); ellipse(fly4.x, fly4.y, fly4.size); }
+function drawFly4() { 
+    fill(0);
+     ellipse(fly4.x, fly4.y, fly4.size); }
 
+function drawFly5() {
+    fill(0);
+    ellipse(fly5.x, fly5.y, fly5.size);
+}
 
 function updateFly() {
     // increase angle a bit every frame
