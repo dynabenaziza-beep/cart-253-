@@ -112,9 +112,11 @@ drawFly4();
 checkFly4Collision();
 
 //fly5
-
-
-        }
+updateFly5();
+drawFly5();
+checkFly5Collision();
+ }
+ 
 function  variation2MousePressed(){
     if (state== "variation2"){
         state="menu"; //go back to menu 
