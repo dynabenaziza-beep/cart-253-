@@ -158,6 +158,13 @@ function updateFly2() {
     fly2.y = stone2.y + sin(fly2.angle) * fly2.radius;
 }
 
+function updateFly3() {
+    fly3.angle += fly3.speed;
+
+    fly3.x = stone3.x + cos(fly3.angle) * fly3.radius;
+    fly3.y = stone3.y + sin(fly3.angle) * fly3.radius;
+}
+
 function checkFlyCollision() {
     let d = dist(fly.x, fly.y, spiderFrog.x, spiderFrog.y);
 
