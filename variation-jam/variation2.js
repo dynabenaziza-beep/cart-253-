@@ -315,8 +315,8 @@ function checkFly5Collision() {
 }
 
 function variation2WinScreen() {
-    background(150);
-    fill(0,255,0);
+    background(0,255,0); //green = winning 
+    fill(0); //black text
     textSize(50);
     textAlign(CENTER, CENTER);
     text("YOU WON!", width/2, height/2 - 100);
@@ -333,8 +333,8 @@ textSize(20);
 }
 
 function variation2LoseScreen() {
-    background(150);
-    fill(255,0,0);
+    background(255,0,0); // winning
+    fill(0); //black text 
     textSize(50);
     textAlign(CENTER, CENTER);
     text("YOU LOSE!", width/2, height/2);
