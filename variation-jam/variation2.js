@@ -1,13 +1,8 @@
-
-let state = "menu";  
-let spiderBg; // background image 
-
-
 let spiderFrog={
-    x: 320,
+x: 320,
     y: 240,
     size: 80,
-    speed: 4 
+    speed: 4
 };
 //--new infinity stone and fly ---
 let stone ={
@@ -73,21 +68,15 @@ let fly5 = {
 };
 
 function variation2Draw() {
-if (state === "win") {
-        winScreen();
+if (state === "variation2_win") {
+        variation2WinScreen();
         return;
     }
 
-    if (state === "gameover") {
-        loseScreen();
+    if (state === "variation2_lose") {
+        variation2LoseScreen();
         return;
     }
-
- //load background image 
-    if(!spiderBg){
-        spiderBg = loadImage("wall.jpeg");
-         }
-
     image(spiderBg, 0, 0, width, height);
 
 //move the frog //
@@ -95,15 +84,14 @@ moveSpiderFrog();
 //drawspider
 drawSpiderFrog();
 
-//--stone 1 and ffly 1 
-drawStone();
+// Stone 1 + Fly 1
+drawStone1();
 updateFly();
 drawFly();
 checkFlyCollision();
 checkStoneCollection();
 
-
-// --- Stone 2 + Fly 2 ---
+// Stone 2 + Fly 2
 drawStone2();
 updateFly2();
 drawFly2();
@@ -116,7 +104,7 @@ updateFly3();
 drawFly3();
 checkFly3Collision();
 checkStone3Collection();
- 
+
 //fly 4 
 updateFly4();
 drawFly4();
@@ -129,21 +117,10 @@ checkFly5Collision();
 
 // WIN CONDITION
 if (stone.collected && stone2.collected && stone3.collected) {
-    state = "win";
+    state = "variation2_win";
 }
 
  }
-
-function  variation2MousePressed(){
-    if (state== "variation2"){
-        state="menu"; //go back to menu 
-    }
-if (state === "win") {
-    state = "menu";
-}
-
-}
-
 function moveSpiderFrog(){
 
     //W KEY UP 
@@ -172,25 +149,27 @@ function drawSpiderFrog(){
     fill(0,255,0);
     ellipse(spiderFrog.x, spiderFrog.y, spiderFrog.size);
 }
-function drawStone(){
-    if(!stone.collected) {
-        fill(255,215,0); //gold 
+function drawStone1() {
+    if (!stone.collected) {
+        fill(255,215,0);
         ellipse(stone.x, stone.y, stone.size);
     }
 }
 
 function drawStone2() {
     if (!stone2.collected) {
-        fill(255, 215, 0); 
+        fill(255,215,0);
         ellipse(stone2.x, stone2.y, stone2.size);
     }
 }
+
 function drawStone3() {
     if (!stone3.collected) {
-        fill(255, 215, 0);
+        fill(255,215,0);
         ellipse(stone3.x, stone3.y, stone3.size);
     }
 }
+
 
 function drawFly() {
     fill(0);
@@ -257,7 +236,8 @@ function checkFlyCollision() {
 
     // if the fly touches the frog
     if (d < (fly.size/2 + spiderFrog.size/2)) {
-        state = "gameover";  
+    state = "variation2_lose";
+ 
     }
 }
 
@@ -265,14 +245,17 @@ function checkFly2Collision() {
     let d = dist(fly2.x, fly2.y, spiderFrog.x, spiderFrog.y);
 
     if (d < (fly2.size/2 + spiderFrog.size/2)) {
-        state = "gameover";
+     state = "variation2_lose";
+
+     
     }
 }
 function checkFly3Collision() {
     let d = dist(fly3.x, fly3.y, spiderFrog.x, spiderFrog.y);
 
     if (d < (fly3.size/2 + spiderFrog.size/2)) {
-        state = "gameover";
+       state = "variation2_lose";
+
     }
 }
 
@@ -313,20 +296,20 @@ function checkFly4Collision() {
     let d = dist(fly4.x, fly4.y, spiderFrog.x, spiderFrog.y);
 
     if (d < (fly4.size/2 + spiderFrog.size/2)) {
-        state = "gameover";
+       state = "variation2_lose";
+
     }
 }
-
 function checkFly5Collision() {
     let d = dist(fly5.x, fly5.y, spiderFrog.x, spiderFrog.y);
 
     if (d < (fly5.size/2 + spiderFrog.size/2)) {
-        state = "gameover";
+        state = "variation2_lose";
     }
 }
 
-function winScreen() {
-    background(0);
+function variation2WinScreen() {
+    background(150);
     fill(0,255,0);
     textSize(50);
     textAlign(CENTER, CENTER);
@@ -341,4 +324,29 @@ function winScreen() {
 textSize(20);
     fill(255);
     text("Click to return to menu", width/2, height/2 + 120);
+}
+
+function variation2LoseScreen() {
+    background(150);
+    fill(255,0,0);
+    textSize(50);
+    textAlign(CENTER, CENTER);
+    text("YOU LOSE!", width/2, height/2);
+
+    textSize(20);
+    fill(255);
+    text("Click to return to menu", width/2, height/2 + 80);
+}
+
+function  variation2MousePressed(){
+    if (state== "variation2"){
+        state="menu"; //go back to menu 
+    }
+if (state === "variation2_win") {
+    state = "menu";
+}
+
+if (state === "variation2_lose") {
+    state = "menu";
+}
 }

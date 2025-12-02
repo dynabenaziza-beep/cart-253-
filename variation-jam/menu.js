@@ -4,7 +4,12 @@
 "use strict";
 /* say which screen we are on */
 
-let state ="menu"
+let state ="menu";
+
+function preload(){
+    spiderBg = loadImage("wall.jpeg");
+}
+
 
 function setup() {
     createCanvas(640, 480);
@@ -86,7 +91,8 @@ else if (mouseX > 150 && mouseX < 350 &&
 else if (state =="variation1"){
     variation1MousePressed();
 }
-if (state ==="variation2"){
-    variation2Draw();
+
+else if (state =="variation2"){
+    variation2MousePressed();
 }
   }
