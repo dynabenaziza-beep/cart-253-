@@ -211,3 +211,12 @@ function checkStone2Collection() {
         stone2.collected = true;
     }
 }
+function checkStone3Collection() {
+    if (stone3.collected) return;
+
+    let d = dist(spiderFrog.x, spiderFrog.y, stone3.x, stone3.y);
+
+    if (d < (spiderFrog.size/2 + stone3.size/2)) {
+        stone3.collected = true;
+    }
+}
