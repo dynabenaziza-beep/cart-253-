@@ -204,7 +204,7 @@ function checkFly3Collision() {
 
 function checkStoneCollection() {
     // if stone is already collected == nothing
-    if (stone.collected) return;
+    if (!stone.collected) return;
 
   // distance between frog and stone
     let d = dist(spiderFrog.x, spiderFrog.y, stone.x, stone.y);
@@ -215,7 +215,7 @@ function checkStoneCollection() {
     }
 }
 function checkStone2Collection() {
-    if (stone2.collected) return;
+    if (!stone2.collected) return;
 
     let d = dist(spiderFrog.x, spiderFrog.y, stone2.x, stone2.y);
 
@@ -224,7 +224,7 @@ function checkStone2Collection() {
     }
 }
 function checkStone3Collection() {
-    if (stone3.collected) return;
+    if (!stone3.collected) return;
 
     let d = dist(spiderFrog.x, spiderFrog.y, stone3.x, stone3.y);
 
