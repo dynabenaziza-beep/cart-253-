@@ -133,6 +133,13 @@ function drawStone2() {
         ellipse(stone2.x, stone2.y, stone2.size);
     }
 }
+function drawStone3() {
+    if (!stone3.collected) {
+        fill(255, 215, 0);
+        ellipse(stone3.x, stone3.y, stone3.size);
+    }
+}
+
 
 function drawFly() {
     fill(0);
