@@ -1,3 +1,11 @@
+let frog2 = {
+    x: 320,
+    y: 240,
+    size: 60,
+    speed: 4
+};
+
+
 function variation2Draw() {
     background("pink");
 
