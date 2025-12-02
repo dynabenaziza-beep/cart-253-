@@ -293,3 +293,11 @@ function checkFly4Collision() {
         state = "gameover";
     }
 }
+
+function checkFly5Collision() {
+    let d = dist(fly5.x, fly5.y, spiderFrog.x, spiderFrog.y);
+
+    if (d < (fly5.size/2 + spiderFrog.size/2)) {
+        state = "gameover";
+    }
+}
