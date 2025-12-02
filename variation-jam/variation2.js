@@ -5,6 +5,9 @@ let stoneC = { x: 490, y: 150, w: 45, h: 30, color: "green" };
 let flyA = { x: 150, y: 120, size: 25, dx: 2 };
 let flyB = { x: 320, y: 170, size: 25, dx: 2 };
 let flyC = { x: 490, y: 170, size: 25, dx: 2 };
+let flyD = { x: 250, y: 100, size: 25, dy: 2 };
+
+
 
 let frog2 = {
     x: 320,
