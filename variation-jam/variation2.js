@@ -80,7 +80,6 @@ function variation2MousePressed() {
         state = "menu";  // click anywhere to go back
     }
 }
-
 function resetVariation2() {
     state = "variation2";
 }
