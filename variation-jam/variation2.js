@@ -13,9 +13,7 @@ function variation2Draw() {
     textSize(32);
     text("VARIATION 2 IS WORKING!", width/2, height/2);
 
-    // draw frog
-    fill(0,255,0);
-    ellipse(width/2, height/2 - 100, 80);
+   
 }
 
 function variation2MousePressed() {
