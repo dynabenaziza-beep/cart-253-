@@ -43,7 +43,7 @@ let fly2 = {
     size: 25,
     angle: 0,
     radius: 60,
-    speed: 0.03
+    speed: 0.1,
 };
 
 let fly3 = {
@@ -116,7 +116,7 @@ updateFly5();
 drawFly5();
 checkFly5Collision();
  }
- 
+
 function  variation2MousePressed(){
     if (state== "variation2"){
         state="menu"; //go back to menu 
