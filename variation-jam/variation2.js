@@ -1,5 +1,6 @@
 let stoneA = { x: 150, y: 150, w: 45, h: 30, color: "red" };
-
+let stoneB = { x: 320, y: 200, w: 45, h: 30, color: "yellow" };
+let stoneC = { x: 490, y: 150, w: 45, h: 30, color: "green" };
 
 
 let frog2 = {
@@ -30,7 +31,11 @@ function variation2Draw() {
 // draw stones
 fill(stoneA.color);
 ellipse(stoneA.x, stoneA.y, stoneA.w, stoneA.h);
-   
+fill(stoneB.color);
+ellipse(stoneB.x, stoneB.y, stoneB.w, stoneB.h);
+
+fill(stoneC.color);
+ellipse(stoneC.x, stoneC.y, stoneC.w, stoneC.h);   
 
     // keep frog inside the canvas
     frog2.x = constrain(frog2.x, frog2.size/2, width - frog2.size/2);
