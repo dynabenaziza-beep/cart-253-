@@ -13,7 +13,6 @@ let frog2 = {
     speed: 4
 };
 
-
 function variation2Draw() {
     background("pink");
 
