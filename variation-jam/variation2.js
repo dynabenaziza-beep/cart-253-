@@ -2,7 +2,6 @@ let stoneA = { x: 150, y: 150, w: 45, h: 30, color: "red" };
 let stoneB = { x: 320, y: 200, w: 45, h: 30, color: "yellow" };
 let stoneC = { x: 490, y: 150, w: 45, h: 30, color: "green" };
 
-
 let flyA = { x: 150, y: 120, size: 25, dx: 2 };
 
 let frog2 = {
@@ -33,6 +32,7 @@ function variation2Draw() {
 // draw stones
 fill(stoneA.color);
 ellipse(stoneA.x, stoneA.y, stoneA.w, stoneA.h);
+
 fill(stoneB.color);
 ellipse(stoneB.x, stoneB.y, stoneB.w, stoneB.h);
 
@@ -40,17 +40,22 @@ fill(stoneC.color);
 ellipse(stoneC.x, stoneC.y, stoneC.w, stoneC.h); 
 
 
-//MOVE THE SAME     
-let flyA = { x: 150, y: 120, size: 25, dx: 2 };
-
 // draw flies
 fill(0);
 ellipse(flyA.x, flyA.y, flyA.size);
 
+// MOVE FLY A LEFT RIFTH 
+flyA.x += flyA.dx;
 
+// BOUNCE FLY A AROUND STONE A
+if (flyA.x > stoneA.x + 60 || flyA.x < stoneA.x - 60) {
+    flyA.dx *= -1;
+}
+// draw flies
+fill(0);
+ellipse(flyA.x, flyA.y, flyA.size);
 
-
-    // keep frog inside the canvas
+ // keep frog inside the canvas
     frog2.x = constrain(frog2.x, frog2.size/2, width - frog2.size/2);
     frog2.y = constrain(frog2.y, frog2.size/2, height - frog2.size/2);
 }
