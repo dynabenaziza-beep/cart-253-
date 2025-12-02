@@ -53,6 +53,10 @@ flyA.x += flyA.dx;
 flyB.x += flyB.dx;
 flyC.x += flyC.dx;
 
+//moove fly D, E , F 
+
+
+
 // BOUNCE FLY A AROUND STONE A
 if (flyA.x > stoneA.x + 60 || flyA.x < stoneA.x - 60) {
     flyA.dx *= -1;
