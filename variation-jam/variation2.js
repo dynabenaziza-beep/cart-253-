@@ -54,9 +54,13 @@ flyC.x += flyC.dx;
 if (flyA.x > stoneA.x + 60 || flyA.x < stoneA.x - 60) {
     flyA.dx *= -1;
 }
-
+//bounce fly b around stone b 
 if (flyB.x > stoneB.x + 60 || flyB.x < stoneB.x - 60) {
     flyB.dx *= -1;
+}
+//bounce fly c around stone c 
+if (flyC.x > stoneC.x + 60 || flyC.x < stoneC.x - 60) {
+    flyC.dx *= -1;
 }
 // draw flies 1
 fill(0);
