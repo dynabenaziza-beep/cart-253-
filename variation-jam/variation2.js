@@ -55,9 +55,20 @@ let fly3 = {
     speed: 0.03
 };
 /*FLY 4,5,6(DIFFERENT MOVEMNT )*/
-let fly4 = { x: 100, y: 50, size: 25, speed: 3, direction: 1 };  // left-right
+let fly4 = { 
+    x: 100, 
+    y: 50, 
+    size: 25, 
+    speed: 3, 
+    direction: 1 };  // left-right
 
-
+let fly5 = {
+    x: 550,
+    y: 300,
+    size: 25,
+    speed: 3,
+    direction: 1
+};
 
 function variation2Draw() {
 
@@ -99,6 +110,9 @@ checkStone3Collection();
 updateFly4();
 drawFly4();
 checkFly4Collision();
+
+//fly5
+
 
         }
 function  variation2MousePressed(){
