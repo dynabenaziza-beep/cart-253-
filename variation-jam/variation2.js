@@ -23,6 +23,10 @@ function variation2Draw() {
     fill(0,255,0);
     ellipse(frog2.x, frog2.y, frog2.size);
    
+
+    // keep frog inside the canvas
+    frog2.x = constrain(frog2.x, frog2.size/2, width - frog2.size/2);
+    frog2.y = constrain(frog2.y, frog2.size/2, height - frog2.size/2);
 }
 
 function variation2MousePressed() {
