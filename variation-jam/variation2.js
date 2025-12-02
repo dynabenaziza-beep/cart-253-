@@ -62,12 +62,13 @@ if (flyB.x > stoneB.x + 60 || flyB.x < stoneB.x - 60) {
 if (flyC.x > stoneC.x + 60 || flyC.x < stoneC.x - 60) {
     flyC.dx *= -1;
 }
-// draw flies 1
+// draw flies a
 fill(0);
 ellipse(flyA.x, flyA.y, flyA.size);
-//draw flies 2 
+//draw flies b
 fill(0);
 ellipse(flyB.x, flyB.y, flyB.size);
+//draw flie c 
 
  // keep frog inside the canvas
     frog2.x = constrain(frog2.x, frog2.size/2, width - frog2.size/2);
