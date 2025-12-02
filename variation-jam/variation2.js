@@ -256,3 +256,11 @@ function checkStone3Collection() {
         stone3.collected = true;
     }
 }
+
+function checkFly4Collision() {
+    let d = dist(fly4.x, fly4.y, spiderFrog.x, spiderFrog.y);
+
+    if (d < (fly4.size/2 + spiderFrog.size/2)) {
+        state = "gameover";
+    }
+}
