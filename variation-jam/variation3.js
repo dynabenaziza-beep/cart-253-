@@ -23,6 +23,71 @@ function resetVariation3() {
     timer = 30;
     flies = [];
 }
+
+function drawStartScreen3() {
+
+
+
+    // Start screen first
+    if (!gameStarted3) {
+        drawStartScreen3();
+        return;
+    }
+
+    background(255, 210, 160);
+
+    // Title
+    fill(0);
+    textAlign(CENTER, CENTER);
+    textSize(50);
+    text("GARFIELD FROG", width / 2, 120);
+
+    // Subtext
+    fill(120, 80, 0);
+    textSize(20);
+    text("Click Garfield to begin", width / 2, 180);
+
+    // Extra instructions after first click
+    if (showInstructions3) {
+        fill(0);
+        textSize(22);
+        textLeading(40);
+        text(
+            "Eat normal flies to gain score.\n" +
+            "Yellow flies = +5 seconds!\n" +
+            "Orange flies = -5 seconds!\n\n" +
+            "Catch as many as you can before time runs out!",
+            width / 2,
+            260
+        );
+
+        fill(100, 40, 0);
+        textSize(20);
+        text("Click again to start!", width / 2, 380);
+    }
+
+    // Draw Garfield head (simple cute circle version)
+    noStroke();
+    fill(255, 150, 40);
+    ellipse(width / 2, height - 80, 200, 150);
+
+    // Eyes
+    fill(255);
+    ellipse(width / 2 - 30, height - 100, 40, 40);
+    ellipse(width / 2 + 30, height - 100, 40, 40);
+
+    fill(0);
+    ellipse(width / 2 - 30, height - 100, 20, 20);
+    ellipse(width / 2 + 30, height - 100, 20, 20);
+
+    // Nose
+    fill(0);
+    triangle(
+        width / 2 - 10, height - 80,
+        width / 2 + 10, height - 80,
+        width / 2, height - 70
+    );
+}
 function variation3Draw() {
    
     // warm background so I know I'm in this variation
@@ -63,7 +128,19 @@ text("Time: " + timer.toFixed(1), 80, 70);
 
 function variation3MousePressed() {
     // i'll use this later if i want to go back to menu or restart
+// On start screen
+    if (!gameStarted3) {
 
+        // First click → show instructions
+        if (!showInstructions3) {
+            showInstructions3 = true;
+            return;
+        }
+
+        // Second click → start the game
+        gameStarted3 = true;
+        return;
+    }
 
 }
 function drawGarfieldFrog() {
