@@ -18,7 +18,7 @@ let frog2 = {
 };
 
 function variation2Draw() {
-    background("pink");
+    background("blue");
 
     fill(0);
     textSize(32);
