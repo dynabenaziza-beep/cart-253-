@@ -1,5 +1,5 @@
 let stoneA = { x: 150, y: 150, w: 45, h: 30, color: "red" };
-let stoneB = { x: 320, y: 200, w: 45, h: 30, color: "yellow" };
+let stoneB = { x: 320, y: 200, w: 45, h: 30, color: "yellow", collected: false };
 let stoneC = { x: 490, y: 150, w: 45, h: 30, color: "green" };
 
 let flyA = { x: 150, y: 120, size: 25, dx: 2 };
@@ -44,9 +44,11 @@ fill(255);
 ellipse(frog2.x - 22, frog2.y - frog2.size/2, 18, 18); // left eye
 ellipse(frog2.x + 22, frog2.y - frog2.size/2, 18, 18); // right eye
 
-// draw stones
-fill(stoneA.color);
-ellipse(stoneA.x, stoneA.y, stoneA.w, stoneA.h);
+// draw stones A
+if (!stoneA.collected) {
+    fill(stoneA.color);
+    ellipse(stoneA.x, stoneA.y, stoneA.w, stoneA.h);
+}
 
 fill(stoneB.color);
 ellipse(stoneB.x, stoneB.y, stoneB.w, stoneB.h);
@@ -110,7 +112,26 @@ ellipse(flyE.x, flyE.y, flyE.size);
 
  // keep frog inside the canvas
     frog2.x = constrain(frog2.x, frog2.size/2, width - frog2.size/2);
-    frog2.y = constrain(frog2.y, frog2.size/2, height - frog2.size/2);
+  frog2.y = constrain(frog2.y, frog2.size/2, height - frog2.size/2);
+
+let distStoneA = dist(frog2.x, frog2.y, stoneA.x, stoneA.y);
+
+if (distStoneA < (frog2.size/2 + stoneA.w/2)) {
+    stoneA.collected = true;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 
 function variation2MousePressed() {
