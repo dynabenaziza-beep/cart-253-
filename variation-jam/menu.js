@@ -3,14 +3,14 @@
 /* ---------- GLOBAL STATE ---------- */
 let state = "menu";
 
-/* ---------- GLOBAL IMAGES ---------- */
-let bgImage;     
+/* ---------- IMAGES (optional) ---------- */
+let bgImage;
 let spiderBg;
 
-/* ---------- LOAD IMAGES ---------- */
 function preload() {
-   
-        
+    // Only load if you need images
+    // bgImage = loadImage("detective.jpeg");
+    // spiderBg = loadImage("wall.jpg");
 }
 
 /* ---------- SETUP ---------- */
@@ -20,7 +20,7 @@ function setup() {
     textSize(24);
 }
 
-/* ---------- MAIN DRAW LOOP ---------- */
+/* ---------- MAIN DRAW ---------- */
 function draw() {
 
     if (state === "menu") {
@@ -32,13 +32,12 @@ function draw() {
     else if (state === "variation2") {
         variation2Draw();
     }
-    else if (state == "gameover") {
+    else if (state === "gameover") {
         gameOverScreen();
     }
-
 }
 
-/* ---------- MENU ---------- */
+/* ---------- MENU SCREEN ---------- */
 function drawMenu() {
     background(0);
 
@@ -47,18 +46,24 @@ function drawMenu() {
     textSize(40);
     text("GAME MENU", width / 2, 80);
 
-    // Button 1
-    if (mouseX > 170 && mouseX < 470 && mouseY > 150 && mouseY < 220) fill(0,255,0);
-    else fill(90,60,40);
+    // Button 1 – Detective Frog
+    if (mouseX > 170 && mouseX < 470 && mouseY > 150 && mouseY < 220)
+        fill(0,255,0);
+    else
+        fill(90,60,40);
+
     rect(170,150,300,70,10);
 
     fill(255,220,180);
     textSize(32);
     text("Detective Frog", 320,185);
 
-    // Button 2
-    if (mouseX > 170 && mouseX < 470 && mouseY > 250 && mouseY < 320) fill(0,255,0);
-    else fill(180,20,30);
+    // Button 2 – Spider Frog
+    if (mouseX > 170 && mouseX < 470 && mouseY > 250 && mouseY < 320)
+        fill(0,255,0);
+    else
+        fill(180,20,30);
+
     rect(170,250,300,70,10);
 
     fill(255);
@@ -70,22 +75,24 @@ function drawMenu() {
 function mousePressed() {
 
     if (state === "menu") {
-        // Button 1
         if (mouseX > 170 && mouseX < 470 && mouseY > 150 && mouseY < 220) {
             resetVariation1();
             state = "variation1";
             return;
         }
-        // Button 2
+
         if (mouseX > 170 && mouseX < 470 && mouseY > 250 && mouseY < 320) {
             resetVariation2();
             state = "variation2";
             return;
         }
-        
     }
-   
 
+
+    
+
+    // 3. If inside variation1 or variation2
     if (state === "variation1") variation1MousePressed();
     if (state === "variation2") variation2MousePressed();
 }
+
