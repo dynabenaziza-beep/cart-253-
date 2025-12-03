@@ -1,6 +1,8 @@
 let score = 0;
 let timer = 30; // starting time
 
+
+
 let flies = [];  // array of fly objects
 let spawnRate = 120; // every 120 frames (~2 seconds)
 
@@ -40,6 +42,12 @@ function variation3Draw() {
     moveFlies();
 
     checkFlyCollision();
+
+fill(0);
+textSize(20);
+text("Score: " + score, 80, 40);
+text("Time: " + timer.toFixed(1), 80, 70);
+
 }
     
 
@@ -176,4 +184,22 @@ for (let i = flies.length - 1; i >= 0; i--) {
     }
 
 
+}
+
+function applyFlyEffect(type) {
+    if (type === "normal") {
+        score++;
+    }
+
+    if (type === "yellow") {
+        score++;
+        timer += 5;
+    }
+
+    if (type === "orange") {
+        score++;
+        timer -= 5;
+
+        if (timer < 0) timer = 0;
+    }
 }
