@@ -133,7 +133,28 @@ function variation2Draw() {
 }
 
 function variation2MousePressed() {
-    // nothing for now
+
+    // --- start screen clicks ---
+    if (!v2_started) {
+
+        // first click = show instructions
+        if (!v2_showInstructions) {
+            v2_showInstructions = true;
+        }
+
+        // second click = begin game
+        else {
+            v2_started = true;
+        }
+
+        return;
+    }
+
+    // --- click to restart on win or lose ---
+    if (v2_win || v2_gameOver) {
+        resetVariation2();
+        return;
+    }
 }
 
 function resetVariation2() {
