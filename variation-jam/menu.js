@@ -80,7 +80,7 @@ function drawMenu() {
     else
         fill(255,140,0);  // orange like Garfield
 
-rect(170, 350, 300, 70, 10);
+rect(170, 350, 300, 70,10);
 
     fill(0);
     textSize(32);
@@ -103,7 +103,7 @@ function mousePressed() {
         }
         
 
-         if (mouseX > 170 && mouseX < 470 && mouseY > 250 && mouseY < 320) {
+         if (mouseX > 170 && mouseX < 470 && mouseY > 350 && mouseY < 420) {
             resetVariation3();
             state = "variation3";
             return;
@@ -112,9 +112,6 @@ function mousePressed() {
 
     }
 
-
-
-    
 
     // 3. If inside variation1 or variation2
     if (state === "variation1") variation1MousePressed();
