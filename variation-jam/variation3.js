@@ -7,9 +7,6 @@ let garfieldFrog;
 let gameStarted3 = false;
 let showInstructions3 = false;
 
-
-
-
 function resetVariation3() {
     // reset frog
     garfieldFrog = {
