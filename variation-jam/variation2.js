@@ -11,8 +11,8 @@ let flyE = { x: 320, y: 300, size: 25, dx: 3 };
 
 
 let frog2 = {
-    x: 320,
-    y: 240,
+    x: 540,
+    y: 60,
     size: 60,
     speed: 4
 };
