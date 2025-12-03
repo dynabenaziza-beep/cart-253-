@@ -58,7 +58,6 @@ function drawGarfieldFrog() {
     noFill();
     arc(garfieldFrog.x, garfieldFrog.y + 10, 25, 18, 0, PI);
 }
-
 function drawGarfieldTitle() {
     fill(0);
     noStroke();
