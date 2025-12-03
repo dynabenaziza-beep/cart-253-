@@ -1,5 +1,6 @@
 
 let garfieldFrog;
+
 function resetVariation3() {
     // later i'll reset all my variables here
 }
@@ -19,4 +20,8 @@ function variation3MousePressed() {
 
 }
 function drawGarfieldFrog() {
+ noStroke();
+ fill(255, 140, 0); // garfield orange
+    ellipse(garfieldFrog.x, garfieldFrog.y, garfieldFrog.size);
+
 }
