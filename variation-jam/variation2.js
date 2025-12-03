@@ -5,9 +5,6 @@ let v2_gameOver = false;         // lose condition
 let v2_win = false;              // win condition
 
 
-
-
-
 // --- STONES ---
 
 let stoneA = { x: 150, y: 150, w: 45, h: 30, color: "red", collected:false };
@@ -101,6 +98,13 @@ function variation2MousePressed() {
 }
 
 function resetVariation2() {
+
+    // reset game flow flags
+    v2_started = false;
+    v2_showInstructions = false;
+    v2_gameOver = false;
+    v2_win = false;
+    
     frog2.x = 540;
     frog2.y = 60;
 
