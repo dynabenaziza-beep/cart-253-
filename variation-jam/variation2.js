@@ -28,6 +28,34 @@ let frog2 = {
 };
 
 function variation2Draw() {
+
+// 1) BEFORE START: show start screen
+    if (!v2_started) {
+        drawV2StartScreen();
+        return;
+    }
+
+    // 2) WIN SCREEN
+    if (v2_win) {
+        background("green");
+        fill(255);
+        textSize(48);
+        text("YOU WON!", width / 2, height / 2);
+        textSize(20);
+        text("Click to restart", width / 2, height / 2 + 50);
+        return;
+    }
+
+    // 3) GAME OVER SCREEN
+    if (v2_gameOver) {
+        background("red");
+        fill(255);
+        textSize(48);
+        text("GAME OVER", width / 2, height / 2);
+        textSize(20);
+        text("Click to restart", width / 2, height / 2 + 50);
+        return;
+    }
     background("lightblue");
 
     // TITLE
