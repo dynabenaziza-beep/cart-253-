@@ -18,6 +18,13 @@ function variation3Draw() {
    
     // warm background so I know I'm in this variation
     background(255, 210, 160);
+// spawn flies
+    if (frameCount % spawnRate === 0) {
+        spawnFly();
+    }
+
+
+
 
     // step 3: actually move the frog now
     moveGarfieldFrog();
@@ -27,7 +34,7 @@ function variation3Draw() {
 // title, just so I see the name on top
     drawGarfieldTitle();
 
-//flies 
+//flies ( all colours)
     drawFlies();
 
 }
