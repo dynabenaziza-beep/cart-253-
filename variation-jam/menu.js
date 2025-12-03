@@ -35,6 +35,10 @@ function draw() {
     else if (state === "gameover") {
         gameOverScreen();
     }
+    else if (state === "variation3") {
+    variation3Draw();
+}
+
 }
 
 /* ---------- MENU SCREEN ---------- */
@@ -86,7 +90,17 @@ function mousePressed() {
             state = "variation2";
             return;
         }
+        
+
+         if (mouseX > 170 && mouseX < 470 && mouseY > 250 && mouseY < 320) {
+            resetVariation3();
+            state = "variation3";
+            return;
+        }
+
+
     }
+
 
 
     
