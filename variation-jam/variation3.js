@@ -22,6 +22,10 @@ function resetVariation3() {
     score = 0;
     timer = 30;
     flies = [];
+
+ // Reset start screen logic
+    gameStarted3 = false;
+    showInstructions3 = false;
 }
 
 function drawStartScreen3() {
