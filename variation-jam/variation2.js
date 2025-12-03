@@ -1,4 +1,15 @@
+// --- GAME STATE FLAGS FOR VARIATION 2 ---
+let v2_started = false;          // has the game started?
+let v2_showInstructions = false; // have we shown instructions?
+let v2_gameOver = false;         // lose condition
+let v2_win = false;              // win condition
+
+
+
+
+
 // --- STONES ---
+
 let stoneA = { x: 150, y: 150, w: 45, h: 30, color: "red", collected:false };
 let stoneB = { x: 320, y: 200, w: 45, h: 30, color: "yellow", collected:false };
 let stoneC = { x: 490, y: 150, w: 45, h: 30, color: "green", collected:false };
@@ -15,6 +26,7 @@ let frog2 = {
     x: 540,
     y: 60,
     size: 60,
+
     speed: 4
 };
 
