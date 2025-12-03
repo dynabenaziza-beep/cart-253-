@@ -152,3 +152,7 @@ for (let f of flies) {
 
 
 }
+
+function checkFlyCollision() {
+    
+}
