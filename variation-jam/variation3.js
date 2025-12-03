@@ -26,6 +26,8 @@ function variation3Draw() {
     drawGarfieldFrog();
 // title, just so I see the name on top
     drawGarfieldTitle();
+
+    
 }
     
 
@@ -121,5 +123,5 @@ function spawnFly() {
 
 function drawFlies(){
 
-    
+
 }
