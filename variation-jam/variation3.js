@@ -95,6 +95,33 @@ function drawStartScreen3() {
         width / 2, height - 70
     );
 }
+
+function drawGameOver3() {
+    background(120, 0, 0);
+
+    fill(255);
+    textAlign(CENTER, CENTER);
+    textSize(50);
+    text("TIME'S UP!", width / 2, height / 2 - 40);
+
+    textSize(24);
+    text("Final score: " + score, width / 2, height / 2 + 10);
+    text("Click to return to menu", width / 2, height / 2 + 60);
+}
+
+function drawWinScreen3() {
+    background(255, 200, 80);
+
+    fill(0);
+    textAlign(CENTER, CENTER);
+    textSize(50);
+    text("YOU WIN!", width / 2, height / 2 - 40);
+
+    textSize(24);
+    text("You reached " + score + " flies!", width / 2, height / 2 + 10);
+    text("Click to return to menu", width / 2, height / 2 + 60);
+}
+
 function variation3Draw() {
    
     // warm background so I know I'm in this variation
