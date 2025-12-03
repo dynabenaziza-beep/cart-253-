@@ -16,4 +16,7 @@ function variation3Draw() {
 }
 function variation3MousePressed() {
     // i'll use this later if i want to go back to menu or restart
+
+}
+function drawGarfieldFrog() {
 }
