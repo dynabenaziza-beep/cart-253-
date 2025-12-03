@@ -9,8 +9,8 @@ let spiderBg;
 
 /* ---------- LOAD IMAGES ---------- */
 function preload() {
-    bgImage = loadImage("detective.jpeg");  // Variation 1
-    spiderBg = loadImage("wall.jpg");        // <-- updated filename
+   
+        
 }
 
 /* ---------- SETUP ---------- */
@@ -32,15 +32,9 @@ function draw() {
     else if (state === "variation2") {
         variation2Draw();
     }
-    else if (state === "variation2_win") {
-        variation2WinScreen();
+    else if (state == "gameover") {
+        gameOverScreen();
     }
-    else if (state === "variation2_lose") {
-        variation2LoseScreen();
-    }
-    else if(state == "gameover"){
-    gameOverScreen();
-}
 
 }
 
@@ -74,16 +68,6 @@ function drawMenu() {
 
 /* ---------- MOUSE HANDLING ---------- */
 function mousePressed() {
-    if (state === "gameover") {
-        resetVariation2(); // reset frog, flies, stones
-        state = "menu";    // go back to menu
-    return;     
-    }
-    // If user is on win/lose screen → return to menu
-    if (state === "variation2_win" || state === "variation2_lose") {
-        state = "menu";
-        return;
-    }
 
     if (state === "menu") {
         // Button 1
@@ -105,4 +89,3 @@ function mousePressed() {
     if (state === "variation1") variation1MousePressed();
     if (state === "variation2") variation2MousePressed();
 }
-

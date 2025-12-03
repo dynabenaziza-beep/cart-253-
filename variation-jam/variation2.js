@@ -65,10 +65,6 @@ if (!stoneC.collected) {
     ellipse(stoneC.x, stoneC.y, stoneC.w, stoneC.h);
 }
 
-// draw flies
-fill(0);
-ellipse(flyA.x, flyA.y, flyA.size);
-
 // MOVE FLY A ,B,C LEFT RIFTH 
 flyA.x += flyA.dx;
 flyB.x += flyB.dx;
@@ -79,28 +75,15 @@ flyD.y += flyD.dy;
 flyE.x += flyE.dx;
 
 
-// BOUNCE FLY A AROUND STONE A
-if (flyA.x > stoneA.x + 60 || flyA.x < stoneA.x - 60) {
-    flyA.dx *= -1;
-}
-//bounce fly b around stone b 
-if (flyB.x > stoneB.x + 60 || flyB.x < stoneB.x - 60) {
-    flyB.dx *= -1;
-}
-//bounce fly c around stone c 
-if (flyC.x > stoneC.x + 60 || flyC.x < stoneC.x - 60) {
-    flyC.dx *= -1;
-}
+// bounce A,B,C
+    if (flyA.x > stoneA.x + 60 || flyA.x < stoneA.x - 60) flyA.dx *= -1;
+    if (flyB.x > stoneB.x + 60 || flyB.x < stoneB.x - 60) flyB.dx *= -1;
+    if (flyC.x > stoneC.x + 60 || flyC.x < stoneC.x - 60) flyC.dx *= -1;
 
-//BOUNCE FLY  D TOP AND BOTTOM 
-if (flyD.y > 200 || flyD.y < 80) {
-    flyD.dy *= -1;
-}
-
-//boun fly E LEFT AND RIGTH 
-if (flyE.x > 560 || flyE.x < 80) {
-    flyE.dx *= -1;
-}
+    // bounce D vertical
+    if (flyD.y > 200 || flyD.y < 80) flyD.dy *= -1;
+    // bounce E horizontal
+    if (flyE.x > 560 || flyE.x < 80) flyE.dx *= -1;
 
 // draw flies a
 fill(0);
@@ -170,13 +153,30 @@ if (dist(frog2.x, frog2.y, flyE.x, flyE.y) < (frog2.size/2 + flyE.size/2)) {
 
 
 function variation2MousePressed() {
-    if (state === "variation2") {
-        state = "menu";  // click anywhere to go back
-    }
+    
 }
 function resetVariation2() {
-    state = "variation2";
+
+    // Reset frog position
+    frog2.x = 540;
+    frog2.y = 60;
+
+    // Reset stones
+    stoneA.collected = false;
+    stoneB.collected = false;
+    stoneC.collected = false;
+
+    // Reset flies
+    flyA.x = 150;  flyA.y = 120;  flyA.dx = 2;
+    flyB.x = 320;  flyB.y = 170;  flyB.dx = 2;
+    flyC.x = 490;  flyC.y = 170;  flyC.dx = 2;
+
+    flyD.x = 250;  flyD.y = 100;  flyD.dy = 2;
+    flyE.x = 320;  flyE.y = 300;  flyE.dx = 3;
+
+    
 }
+
 
 function gameOverScreen() {
     background("black");
