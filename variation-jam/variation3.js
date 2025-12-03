@@ -6,6 +6,10 @@ let spawnRate = 120;
 let garfieldFrog;
 let gameStarted3 = false;
 let showInstructions3 = false;
+let gameOver3 = false;
+let gameWin3 = false;
+let scoreTarget3 = 20; // you can change target later
+
 
 function resetVariation3() {
     // reset frog
@@ -23,6 +27,8 @@ function resetVariation3() {
  // Reset start screen logic
     gameStarted3 = false;
     showInstructions3 = false;
+    gameOver3 = false;
+    gameWon3 = false;
 }
 
 function drawStartScreen3() {
