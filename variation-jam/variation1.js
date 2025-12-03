@@ -4,7 +4,7 @@ function preload() {
     bgImage = loadImage("dt.jpg");
 }
 
-let score =0; 
+let score1 =0; 
 let caseSolved = false;
 
 

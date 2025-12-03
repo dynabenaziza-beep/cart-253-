@@ -43,7 +43,9 @@ function draw() {
 
 /* ---------- MENU SCREEN ---------- */
 function drawMenu() {
+    state = "menu"; 
     background(0);
+    textAlign(CENTER, CENTER);
 
     noStroke();
     fill(255, 215, 120);
@@ -116,5 +118,6 @@ function mousePressed() {
     // 3. If inside variation1 or variation2
     if (state === "variation1") variation1MousePressed();
     if (state === "variation2") variation2MousePressed();
+    if (state === "variation3") variation3MousePressed();
 }
 

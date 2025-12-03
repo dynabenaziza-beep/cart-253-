@@ -1,24 +1,28 @@
 let score = 0;
-let timer = 30; // starting time
-
-
-
-let flies = [];  // array of fly objects
-let spawnRate = 120; // every 120 frames (~2 seconds)
-
+let timer = 30;
+let flies = [];  
+let spawnRate = 120;
 
 let garfieldFrog;
+let gameStarted3 = false;
+let showInstructions3 = false;
+
+
+
 
 function resetVariation3() {
-    // put the frog in the center of the screen for now
+    // reset frog
     garfieldFrog = {
         x: width / 2,
         y: height / 2,
-        size: 70 // kind of big, garfield style
+        size: 70
     };
+
+    // reset game values
+    score = 0;
+    timer = 30;
+    flies = [];
 }
-
-
 function variation3Draw() {
    
     // warm background so I know I'm in this variation
@@ -27,6 +31,11 @@ function variation3Draw() {
     if (frameCount % spawnRate === 0) {
         spawnFly();
     }
+
+// decrease timer
+    timer -= 1 / 60;
+    if (timer < 0) timer = 0;
+
 
  // step 3: actually move the frog now
     moveGarfieldFrog();
@@ -51,8 +60,10 @@ text("Time: " + timer.toFixed(1), 80, 70);
 }
     
 
+
 function variation3MousePressed() {
     // i'll use this later if i want to go back to menu or restart
+
 
 }
 function drawGarfieldFrog() {
@@ -72,6 +83,7 @@ function drawGarfieldFrog() {
         garfieldFrog.x + 5,  garfieldFrog.y - 40,
         garfieldFrog.x - 5,  garfieldFrog.y - 20
     );
+
 // eyes
     fill(255);
     ellipse(garfieldFrog.x - 12, garfieldFrog.y - 5, 18, 18);
