@@ -156,7 +156,6 @@ function variation2MousePressed() {
         return;
     }
 }
-
 function resetVariation2() {
 
     // reset game flow flags
