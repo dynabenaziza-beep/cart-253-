@@ -71,5 +71,27 @@ function drawGarfieldTitle() {
 
 }
 function moveGarfieldFrog() {
+// go left
+    if (keyIsDown(LEFT_ARROW)) {
+        garfieldFrog.x -= 4;
+    }
+
+    // go right
+    if (keyIsDown(RIGHT_ARROW)) {
+        garfieldFrog.x += 4;
+    }
+
+    // go up
+    if (keyIsDown(UP_ARROW)) {
+        garfieldFrog.y -= 4;
+    }
+
+    // go down
+    if (keyIsDown(DOWN_ARROW)) {
+        garfieldFrog.y += 4;
+    }
+
+
+
 
 }
