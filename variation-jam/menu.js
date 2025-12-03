@@ -73,8 +73,19 @@ function drawMenu() {
     fill(255);
     textSize(32);
     text("Spider Frog", 320,285);
-}
 
+    // Button 3 – Garfield Frog
+    if (mouseX > 170 && mouseX < 470 && mouseY > 350 && mouseY < 420)
+        fill(0,255,0);
+    else
+        fill(255,140,0);  // orange like Garfield
+
+rect(170, 350, 300, 70, 10);
+
+    fill(0);
+    textSize(32);
+    text("Garfield Frog", 320, 385);
+}
 /* ---------- MOUSE HANDLING ---------- */
 function mousePressed() {
 
