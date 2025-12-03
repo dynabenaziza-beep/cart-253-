@@ -151,3 +151,13 @@ function resetVariation2() {
     state = "variation2";
 }
 
+function gameOverScreen() {
+    background("black");
+    fill("red");
+    textSize(60);
+    text("GAME OVER", width/2, height/2 - 40);
+
+    fill("white");
+    textSize(25);
+    text("Click to restart", width/2, height/2 + 20);
+}
