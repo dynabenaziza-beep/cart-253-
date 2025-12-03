@@ -139,4 +139,16 @@ function drawFlies(){
         ellipse(f.x, f.y, f.size);
     }
 }
-function moveFlies() {}
+function moveFlies() {
+for (let f of flies) {
+        f.x += f.dx;
+        f.y += f.dy;
+
+        // bounce if they hit the wall
+        if (f.x < 0 || f.x > width) f.dx *= -1;
+        if (f.y < 0 || f.y > height) f.dy *= -1;
+    }
+
+
+
+}
