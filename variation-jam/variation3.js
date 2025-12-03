@@ -170,18 +170,20 @@ function variation3Draw() {
 }
     
 function variation3MousePressed() {
-    // i'll use this later if i want to go back to menu or restart
-// On start screen
+     // Start-screen behaviour
     if (!gameStarted3) {
-
-        // First click → show instructions
         if (!showInstructions3) {
-            showInstructions3 = true;
-            return;
+            showInstructions3 = true; // first click → show instructions
+        } else {
+            gameStarted3 = true;      // second click → start game
         }
+        return;
+    }
 
-        // Second click → start the game
-        gameStarted3 = true;
+    // If game over or win → click to go back to main menu
+    if (gameOver3 || gameWon3) {
+        resetVariation3();  // reset our local state
+        state = "menu";     // go back to global menu
         return;
     }
 
