@@ -16,6 +16,9 @@ function variation3Draw() {
     // warm background so I know I'm in this variation
     background(255, 210, 160);
 
+    // step 3: actually move the frog now
+    moveGarfieldFrog();
+
     // draw the frog (still static)
     drawGarfieldFrog();
 // title, just so I see the name on top
@@ -64,4 +67,9 @@ function drawGarfieldTitle() {
     textAlign(CENTER, TOP);
     textSize(30);
     text("Garfield Frog", width / 2, 20);
+
+
+}
+function moveGarfieldFrog() {
+
 }
