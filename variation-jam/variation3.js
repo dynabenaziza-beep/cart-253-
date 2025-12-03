@@ -7,8 +7,8 @@ let garfieldFrog;
 let gameStarted3 = false;
 let showInstructions3 = false;
 let gameOver3 = false;
-let gameWin3 = false;
-let scoreTarget3 = 20; // you can change target later
+let gameWon3 = false;
+let targetScore3 = 20; // you can change target later
 
 
 function resetVariation3() {
@@ -34,12 +34,6 @@ function resetVariation3() {
 function drawStartScreen3() {
 
 
-
-    // Start screen first
-    if (!gameStarted3) {
-        drawStartScreen3();
-        return;
-    }
 
     background(255, 210, 160);
 
