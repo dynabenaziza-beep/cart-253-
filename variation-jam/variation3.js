@@ -118,3 +118,8 @@ function spawnFly() {
         type: type
     });
 }
+
+function drawFlies(){
+
+    
+}
