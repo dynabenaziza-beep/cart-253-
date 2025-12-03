@@ -8,7 +8,7 @@ let bgImage;
 let spiderBg;
 
 function preload() {
-    // Only load if you need images
+    
     // bgImage = loadImage("detective.jpeg");
     // spiderBg = loadImage("wall.jpg");
 }
