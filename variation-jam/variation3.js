@@ -2,8 +2,14 @@
 let garfieldFrog;
 
 function resetVariation3() {
-    // later i'll reset all my variables here
+    // put the frog in the center of the screen for now
+    garfieldFrog = {
+        x: width / 2,
+        y: height / 2,
+        size: 70 // kind of big, garfield style
+    };
 }
+
 
 function variation3Draw() {
    
@@ -23,5 +29,16 @@ function drawGarfieldFrog() {
  noStroke();
  fill(255, 140, 0); // garfield orange
     ellipse(garfieldFrog.x, garfieldFrog.y, garfieldFrog.size);
+
+
+    // little cat ears
+    triangle(
+        garfieldFrog.x - 20, garfieldFrog.y - 20,
+        garfieldFrog.x - 5,  garfieldFrog.y - 40,
+        garfieldFrog.x + 5,  garfieldFrog.y - 20
+    );
+
+
+
 
 }
