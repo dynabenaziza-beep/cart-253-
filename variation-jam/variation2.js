@@ -1,6 +1,6 @@
-let stoneA = { x: 150, y: 150, w: 45, h: 30, color: "red" };
-let stoneB = { x: 320, y: 200, w: 45, h: 30, color: "yellow", collected: false };
-let stoneC = { x: 490, y: 150, w: 45, h: 30, color: "green" };
+let stoneA = { x: 150, y: 150, w: 45, h: 30, color: "red" , collected:false };
+let stoneB = { x: 320, y: 200, w: 45, h: 30, color: "yellow", collected:false };
+let stoneC = { x: 490, y: 150, w: 45, h: 30, color: "green", collected:false };
 
 let flyA = { x: 150, y: 120, size: 25, dx: 2 };
 let flyB = { x: 320, y: 170, size: 25, dx: 2 };
@@ -50,12 +50,17 @@ if (!stoneA.collected) {
     ellipse(stoneA.x, stoneA.y, stoneA.w, stoneA.h);
 }
 
-fill(stoneB.color);
-ellipse(stoneB.x, stoneB.y, stoneB.w, stoneB.h);
+// draw stone B only if not collected
+if (!stoneB.collected) {
+    fill(stoneB.color);
+    ellipse(stoneB.x, stoneB.y, stoneB.w, stoneB.h);
+}
 
-fill(stoneC.color);
-ellipse(stoneC.x, stoneC.y, stoneC.w, stoneC.h); 
-
+// draw stone C only if not collected
+if (!stoneC.collected) {
+    fill(stoneC.color);
+    ellipse(stoneC.x, stoneC.y, stoneC.w, stoneC.h);
+}
 
 // draw flies
 fill(0);
@@ -110,29 +115,29 @@ ellipse(flyD.x, flyD.y, flyD.size);
 fill(0);
 ellipse(flyE.x, flyE.y, flyE.size);
 
- // keep frog inside the canvas
-    frog2.x = constrain(frog2.x, frog2.size/2, width - frog2.size/2);
-  frog2.y = constrain(frog2.y, frog2.size/2, height - frog2.size/2);
 
 let distStoneA = dist(frog2.x, frog2.y, stoneA.x, stoneA.y);
-
 if (distStoneA < (frog2.size/2 + stoneA.w/2)) {
     stoneA.collected = true;
 }
 
+let distStoneB = dist(frog2.x, frog2.y, stoneB.x, stoneB.y);
+if (distStoneB < (frog2.size/2 + stoneB.w/2)) {
+    stoneB.collected = true;    
+}
 
-
-
-
-
-
-
-
-
-
-
+let distStoneC = dist(frog2.x, frog2.y, stoneC.x, stoneC.y);
+if (distStoneC< (frog2.size/2 + stoneC.w/2)) {
+    stoneC.collected = true;  
 
 }
+
+
+// keep frog inside the canvas
+    frog2.x = constrain(frog2.x, frog2.size/2, width - frog2.size/2);
+  frog2.y = constrain(frog2.y, frog2.size/2, height - frog2.size/2);
+}
+
 
 function variation2MousePressed() {
     if (state === "variation2") {
