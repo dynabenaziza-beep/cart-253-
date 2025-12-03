@@ -27,7 +27,9 @@ function variation3Draw() {
 // title, just so I see the name on top
     drawGarfieldTitle();
 
-    
+//flies 
+    drawFlies();
+
 }
     
 
@@ -122,6 +124,13 @@ function spawnFly() {
 }
 
 function drawFlies(){
+ for (let f of flies) {
+        noStroke();
 
+        if (f.type === "normal") fill(0);          // black
+        if (f.type === "yellow") fill(255, 220, 0);
+        if (f.type === "orange") fill(255, 140, 0);
 
+        ellipse(f.x, f.y, f.size);
+    }
 }
