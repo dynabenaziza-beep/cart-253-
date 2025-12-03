@@ -34,6 +34,7 @@ function variation3Draw() {
 //flies ( all colours)
     drawFlies();
 
+    moveFlies();
 }
     
 
