@@ -1,3 +1,6 @@
+let gameOver = false;
+
+
 let stoneA = { x: 150, y: 150, w: 45, h: 30, color: "red" , collected:false };
 let stoneB = { x: 320, y: 200, w: 45, h: 30, color: "yellow", collected:false };
 let stoneC = { x: 490, y: 150, w: 45, h: 30, color: "green", collected:false };
