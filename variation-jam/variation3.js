@@ -95,3 +95,26 @@ function moveGarfieldFrog() {
     }
 
 }
+function spawnFly() {
+    let typeChance = random(100);
+    let type;
+
+    if (typeChance < 70) {
+        type = "normal";  // 70% chance
+    } 
+    else if (typeChance < 90) {
+        type = "yellow";  // 20% chance
+    } 
+    else {
+        type = "orange";  // 10% chance
+    }
+
+    flies.push({
+        x: random(width),
+        y: random(height),
+        size: 20,
+        dx: random(-2, 2),
+        dy: random(-2, 2),
+        type: type
+    });
+}
