@@ -135,6 +135,33 @@ if (distStoneC< (frog2.size/2 + stoneC.w/2)) {
 
 }
 
+//DEATH COLLISIONS 
+//  FROG DIES ON FLY A
+if (dist(frog2.x, frog2.y, flyA.x, flyA.y) < (frog2.size/2 + flyA.size/2)) {
+    state = "gameover";
+}
+
+//  FROG DIES ON FLY B
+if (dist(frog2.x, frog2.y, flyB.x, flyB.y) < (frog2.size/2 + flyB.size/2)) {
+    state = "gameover";
+}
+
+//  FROG DIES ON FLY C
+if (dist(frog2.x, frog2.y, flyC.x, flyC.y) < (frog2.size/2 + flyC.size/2)) {
+    state = "gameover";
+}
+
+//  FROG DIES ON FLY D
+if (dist(frog2.x, frog2.y, flyD.x, flyD.y) < (frog2.size/2 + flyD.size/2)) {
+    state = "gameover";
+}
+
+//  FROG DIES ON FLY E
+if (dist(frog2.x, frog2.y, flyE.x, flyE.y) < (frog2.size/2 + flyE.size/2)) {
+    state = "gameover";
+}
+
+
 
 // keep frog inside the canvas
     frog2.x = constrain(frog2.x, frog2.size/2, width - frog2.size/2);
