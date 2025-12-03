@@ -37,8 +37,19 @@ function drawGarfieldFrog() {
         garfieldFrog.x - 5,  garfieldFrog.y - 40,
         garfieldFrog.x + 5,  garfieldFrog.y - 20
     );
+// eyes
+    fill(255);
+    ellipse(garfieldFrog.x - 12, garfieldFrog.y - 5, 18, 18);
+    ellipse(garfieldFrog.x + 12, garfieldFrog.y - 5, 18, 18);
 
+    fill(0);
+    ellipse(garfieldFrog.x - 12, garfieldFrog.y - 5, 6, 6);
+    ellipse(garfieldFrog.x + 12, garfieldFrog.y - 5, 6, 6);
 
-
-
+    // little smile
+    stroke(0);
+    noFill();
+    arc(garfieldFrog.x, garfieldFrog.y + 10, 25, 18, 0, PI);
 }
+
+
