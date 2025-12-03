@@ -156,7 +156,21 @@ for (let f of flies) {
 }
 
 function checkFlyCollision() {
+for (let i = flies.length - 1; i >= 0; i--) {
+        let f = flies[i];
 
+        let d = dist(
+            garfieldFrog.x,
+            garfieldFrog.y,
+            f.x,
+            f.y
+        );
+
+        if (d < garfieldFrog.size / 2 + f.size / 2) {
+            applyFlyEffect(f.type);   // apply timer/score effect
+            flies.splice(i, 1);       // remove eaten fly
+        }
+    }
 
 
 }
