@@ -77,9 +77,8 @@ function mousePressed() {
     if (state === "gameover") {
         resetVariation2(); // reset frog, flies, stones
         state = "menu";    // go back to menu
+    return;     
     }
-
-
     // If user is on win/lose screen → return to menu
     if (state === "variation2_win" || state === "variation2_lose") {
         state = "menu";
