@@ -18,9 +18,11 @@ function variation3Draw() {
 
     // draw the frog (still static)
     drawGarfieldFrog();
-
-    
+// title, just so I see the name on top
+    drawGarfieldTitle();
 }
+    
+
 function variation3MousePressed() {
     // i'll use this later if i want to go back to menu or restart
 
@@ -57,3 +59,10 @@ function drawGarfieldFrog() {
     arc(garfieldFrog.x, garfieldFrog.y + 10, 25, 18, 0, PI);
 }
 
+function drawGarfieldTitle() {
+    fill(0);
+    noStroke();
+    textAlign(CENTER, TOP);
+    textSize(30);
+    text("Garfield Frog", width / 2, 20);
+}
