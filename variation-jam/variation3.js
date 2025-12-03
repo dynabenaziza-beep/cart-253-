@@ -1,3 +1,6 @@
+let score = 0;
+let timer = 30; // starting time
+
 let flies = [];  // array of fly objects
 let spawnRate = 120; // every 120 frames (~2 seconds)
 
