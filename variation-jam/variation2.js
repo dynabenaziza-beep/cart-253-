@@ -104,7 +104,7 @@ function resetVariation2() {
     v2_showInstructions = false;
     v2_gameOver = false;
     v2_win = false;
-    
+
     frog2.x = 540;
     frog2.y = 60;
 
@@ -118,6 +118,37 @@ function resetVariation2() {
 
     flyD.x = 250; flyD.y = 100; flyD.dy = 2;
     flyE.x = 320; flyE.y = 300; flyE.dx = 3;
+}
+
+function drawV2StartScreen() {
+    background("white");
+
+    // title
+    fill("black");
+    textSize(48);
+    text("SPIDER FROG", width / 2, 110);
+
+    // first instruction
+    fill(80);
+    textSize(22);
+    text("Click to see instructions", width / 2, 180);
+
+    // after first click, show instructions
+    if (v2_showInstructions) {
+        fill(0);
+        textSize(20);
+        text(
+            "Move with W A S D\nCollect the 3 stones to win\nAvoid the flies or you lose",
+            width / 2,
+            260
+        );
+
+        text("Click again to start!", width / 2, 330);
+    }
+
+    // simple frog icon at bottom
+    fill("blue");
+    ellipse(width / 2, height - 80, 120, 90);
 }
 
 
