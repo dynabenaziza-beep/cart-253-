@@ -23,10 +23,7 @@ function variation3Draw() {
         spawnFly();
     }
 
-
-
-
-    // step 3: actually move the frog now
+ // step 3: actually move the frog now
     moveGarfieldFrog();
 
     // draw the frog (still static)
@@ -141,3 +138,4 @@ function drawFlies(){
         ellipse(f.x, f.y, f.size);
     }
 }
+function moveFlies() {}
