@@ -46,7 +46,8 @@ function drawStartScreen3() {
     // Subtext
     fill(120, 80, 0);
     textSize(20);
-    text("Click Garfield to begin", width / 2, 180);
+    text("Click Garfield to begin", width / 2, 200);
+
 
     // Extra instructions after first click
     if (showInstructions3) {
