@@ -1,5 +1,5 @@
 
-
+let garfieldFrog;
 function resetVariation3() {
     // later i'll reset all my variables here
 }
