@@ -123,43 +123,52 @@ function drawWinScreen3() {
 }
 
 function variation3Draw() {
-   
-    // warm background so I know I'm in this variation
+    // 1) Start screen first
+    if (!gameStarted3) {
+        drawStartScreen3();
+        return;
+    }
+
+    // 2) If already game over or won, show the correct screen
+    if (gameOver3) {
+        drawGameOver3();
+        return;
+    }
+
+    if (gameWon3) {
+        drawWinScreen3();
+        return;
+    }
+
+    // 3) Normal gameplay
     background(255, 210, 160);
-// spawn flies
+
+    // spawn flies
     if (frameCount % spawnRate === 0) {
         spawnFly();
     }
 
-// decrease timer
+    // decrease timer
     timer -= 1 / 60;
-    if (timer < 0) timer = 0;
+    if (timer <= 0) {
+        timer = 0;
+        gameOver3 = true;   // mark game over when time runs out
+        return;
+    }
 
-
- // step 3: actually move the frog now
     moveGarfieldFrog();
-
-    // draw the frog (still static)
     drawGarfieldFrog();
-// title, just so I see the name on top
     drawGarfieldTitle();
-
-//flies ( all colours)
     drawFlies();
-
     moveFlies();
-
     checkFlyCollision();
 
-fill(0);
-textSize(20);
-text("Score: " + score, 80, 40);
-text("Time: " + timer.toFixed(1), 80, 70);
-
+    fill(0);
+    textSize(20);
+    text("Score: " + score, 80, 40);
+    text("Time: " + timer.toFixed(1), 80, 70);
 }
     
-
-
 function variation3MousePressed() {
     // i'll use this later if i want to go back to menu or restart
 // On start screen
@@ -324,5 +333,9 @@ function applyFlyEffect(type) {
         timer -= 5;
 
         if (timer < 0) timer = 0;
+    }
+
+    if (score >= targetScore3) {
+        gameWon3 = true;
     }
 }
