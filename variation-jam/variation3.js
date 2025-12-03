@@ -35,6 +35,8 @@ function variation3Draw() {
     drawFlies();
 
     moveFlies();
+
+    checkFlyCollision();
 }
     
 
@@ -154,5 +156,7 @@ for (let f of flies) {
 }
 
 function checkFlyCollision() {
-    
+
+
+
 }
