@@ -38,6 +38,10 @@ function draw() {
     else if (state === "variation2_lose") {
         variation2LoseScreen();
     }
+    else if(state == "gameover"){
+    gameOverScreen();
+}
+
 }
 
 /* ---------- MENU ---------- */
@@ -70,6 +74,11 @@ function drawMenu() {
 
 /* ---------- MOUSE HANDLING ---------- */
 function mousePressed() {
+    if (state === "gameover") {
+        resetVariation2(); // reset frog, flies, stones
+        state = "menu";    // go back to menu
+    }
+
 
     // If user is on win/lose screen → return to menu
     if (state === "variation2_win" || state === "variation2_lose") {
@@ -90,11 +99,9 @@ function mousePressed() {
             state = "variation2";
             return;
         }
-        else if(state == "gameover"){
-    gameOverScreen();
-}
-
+        
     }
+   
 
     if (state === "variation1") variation1MousePressed();
     if (state === "variation2") variation2MousePressed();
