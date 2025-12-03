@@ -90,6 +90,10 @@ function mousePressed() {
             state = "variation2";
             return;
         }
+        else if(state == "gameover"){
+    gameOverScreen();
+}
+
     }
 
     if (state === "variation1") variation1MousePressed();
