@@ -1,3 +1,6 @@
+let flies = [];  // array of fly objects
+let spawnRate = 120; // every 120 frames (~2 seconds)
+
 
 let garfieldFrog;
 
@@ -90,8 +93,5 @@ function moveGarfieldFrog() {
     if (keyIsDown(DOWN_ARROW)) {
         garfieldFrog.y += 4;
     }
-
-
-
 
 }
