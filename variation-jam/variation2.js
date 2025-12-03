@@ -116,6 +116,17 @@ function variation2Draw() {
     if (dist(frog2.x, frog2.y, stoneB.x, stoneB.y) < frog2.size/2 + stoneB.w/2) stoneB.collected = true;
     if (dist(frog2.x, frog2.y, stoneC.x, stoneC.y) < frog2.size/2 + stoneC.w/2) stoneC.collected = true;
 
+// WIN CONDITION: all three stones collected
+    if (stoneA.collected && stoneB.collected && stoneC.collected) {
+        v2_win = true;
+    }
+
+    // LOSE CONDITION: touching any fly
+    if (dist(frog2.x, frog2.y, flyA.x, flyA.y) < frog2.size/2 + flyA.size/2) v2_gameOver = true;
+    if (dist(frog2.x, frog2.y, flyB.x, flyB.y) < frog2.size/2 + flyB.size/2) v2_gameOver = true;
+    if (dist(frog2.x, frog2.y, flyC.x, flyC.y) < frog2.size/2 + flyC.size/2) v2_gameOver = true;
+    if (dist(frog2.x, frog2.y, flyD.x, flyD.y) < frog2.size/2 + flyD.size/2) v2_gameOver = true;
+    if (dist(frog2.x, frog2.y, flyE.x, flyE.y) < frog2.size/2 + flyE.size/2) v2_gameOver = true;
     // KEEP FROG INSIDE SCREEN
     frog2.x = constrain(frog2.x, frog2.size/2, width - frog2.size/2);
     frog2.y = constrain(frog2.y, frog2.size/2, height - frog2.size/2);
