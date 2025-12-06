@@ -14,6 +14,7 @@ function preload() {
 }
 
 function setup() {
+   createCanvas(600, 400);  
 
 }
 
@@ -22,5 +23,10 @@ function setup() {
  * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
 */
 function draw() {
+ background(0);
 
+  fill("pink");
+  textAlign(CENTER, CENTER);
+  textSize(32);
+  text(carName, width / 2, height / 2);
 }
