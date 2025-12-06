@@ -47,7 +47,7 @@ function displayUI() {
 }
 
 /**
- * Display the score
+ Display the score
  */
 function displayScore() {
   push();
