@@ -58,3 +58,6 @@ function displayScore() {
   pop();
 }
 
+function keyPressed() {
+  lose();
+}
