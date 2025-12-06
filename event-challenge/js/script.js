@@ -73,3 +73,6 @@ function mousePressed() {
 function mouseWheel() {
   lose();
 }
+function lose() {
+  gameOver = true;
+}
