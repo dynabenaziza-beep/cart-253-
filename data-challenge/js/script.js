@@ -28,5 +28,11 @@ function draw() {
 }
 
 function mousePressed(){
-    
+ if (!carData || !carData.cars) {
+    carName = "Car data not loaded!";
+    return;
+  }
+
+  let randomCar = random(carData.cars);
+  carName = randomCar;    
 }
