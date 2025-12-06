@@ -61,3 +61,15 @@ function displayScore() {
 function keyPressed() {
   lose();
 }
+
+function mouseMoved() {
+  lose();
+}
+
+function mousePressed() {
+  lose();
+}
+
+function mouseWheel() {
+  lose();
+}
